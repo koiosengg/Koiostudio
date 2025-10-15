@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import Grey from "/assets/Glow/Grey.svg";
-import Yellow from "/assets/Glow/Yellow.svg";
+import Grey from "../assets/Glow/Grey.svg";
+import Yellow from "../assets/Glow/Yellow.svg";
 
 function Glow() {
   const glowRef = useRef(null);
@@ -17,7 +17,7 @@ function Glow() {
           }
         });
       },
-      { threshold: 1 }
+      { threshold: 0.5 }
     );
 
     if (glowRef.current) {
