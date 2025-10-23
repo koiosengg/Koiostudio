@@ -22,12 +22,12 @@ function Pride() {
       </div>
 
       <div className="home-pride">
-        <div className="home-pride-set">
+        <div className="home-pride-set white-top-border">
           <img src={BackgroundImage} className="background-image" alt="" />
           <img src={LML} alt="LML" className="company-image" />
         </div>
 
-        <div className="home-pride-set">
+        <div className="home-pride-set white-top-border">
           <img src={BackgroundImage} className="background-image" alt="" />
           <img
             src={LastMinGuru}
@@ -36,27 +36,27 @@ function Pride() {
           />
         </div>
 
-        <div className="home-pride-set">
+        <div className="home-pride-set white-top-border">
           <img src={BackgroundImage} className="background-image" alt="" />
           <img src={Staidrich} alt="Staidrich" className="company-image" />
         </div>
 
-        <div className="home-pride-set">
+        <div className="home-pride-set white-top-border">
           <img src={BackgroundImage} className="background-image" alt="" />
           <img src={ISK} alt="ISK" className="company-image" />
         </div>
 
-        <div className="home-pride-set">
+        <div className="home-pride-set white-top-border">
           <img src={BackgroundImage} className="background-image" alt="" />
           <img src={CilkenCave} alt="Cilken Cave" className="company-image" />
         </div>
 
-        <div className="home-pride-set">
+        <div className="home-pride-set white-top-border">
           <img src={BackgroundImage} className="background-image" alt="" />
           <img src={XLR8} alt="XLR8" className="company-image" />
         </div>
 
-        <div className="home-pride-set">
+        <div className="home-pride-set white-top-border">
           <img src={BackgroundImage} className="background-image" alt="" />
           <img
             src={NEStructures}
@@ -65,12 +65,12 @@ function Pride() {
           />
         </div>
 
-        <div className="home-pride-set">
+        <div className="home-pride-set white-top-border">
           <img src={BackgroundImage} className="background-image" alt="" />
           <img src={SEG} alt="SEG" className="company-image" />
         </div>
 
-        <div className="home-pride-set">
+        <div className="home-pride-set white-top-border">
           <img src={BackgroundImage} className="background-image" alt="" />
           <img src={TMS} alt="TMS" className="company-image" />
         </div>
