@@ -5,6 +5,9 @@ import Features from "./Home/Features";
 import Problems from "./Home/Problems";
 import Stories from "./Home/Stories";
 import About from "./Home/About";
+import Industries from "./Home/Industries";
+import Gallery from "./Home/Gallery";
+import Creations from "./Home/Creations";
 
 function Home() {
   return (
@@ -15,6 +18,9 @@ function Home() {
       <Problems />
       <Stories />
       <About />
+      <Industries />
+      <Gallery />
+      <Creations />
     </>
   );
 }

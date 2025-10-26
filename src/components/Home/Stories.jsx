@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
 function Stories() {
   const [searchTerm, setSearchTerm] = useState("");
+  const [projectCount, setProjectCount] = useState(1);
+  const [hasCounted, setHasCounted] = useState(false);
+  const projectRef = useRef(null);
 
   const pages = [
     {
@@ -31,6 +34,35 @@ function Stories() {
     page.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting && !hasCounted) {
+          setHasCounted(true);
+          let start = 1;
+          const end = 54;
+          const duration = 5000;
+          const stepTime = Math.abs(Math.floor(duration / (end - start)));
+          const counter = setInterval(() => {
+            setProjectCount((prev) => {
+              if (prev < end) return prev + 1;
+              clearInterval(counter);
+              return end;
+            });
+          }, stepTime);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (projectRef.current) observer.observe(projectRef.current);
+
+    return () => {
+      if (projectRef.current) observer.unobserve(projectRef.current);
+    };
+  }, [hasCounted]);
+
   return (
     <section className="home-stories">
       <div className="home-stories-left">
@@ -44,6 +76,7 @@ function Stories() {
 
         <div className="home-stories-left-search">
           <input
+            id="seacrh"
             type="text"
             placeholder="Search pages..."
             value={searchTerm}
@@ -70,6 +103,7 @@ function Stories() {
           </div>
         </div>
       </div>
+
       <div className="home-stories-right">
         <div className="home-stories-right-text">
           <h2>Our Success Stories</h2>
@@ -83,10 +117,12 @@ function Stories() {
             <h3>37</h3>
             <p>Clients</p>
           </div>
-          <div className="home-stories-right-numbers-set">
-            <h3>01</h3>
+
+          <div className="home-stories-right-numbers-set" ref={projectRef}>
+            <h3>{projectCount < 10 ? `0${projectCount}` : projectCount}</h3>
             <p>Projects</p>
           </div>
+
           <div className="home-stories-right-numbers-set">
             <h3>45</h3>
             <p>Team Members</p>
