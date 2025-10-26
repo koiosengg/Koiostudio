@@ -8,6 +8,9 @@ import About from "./Home/About";
 import Industries from "./Home/Industries";
 import Gallery from "./Home/Gallery";
 import Creations from "./Home/Creations";
+import Testimony from "./Home/Testimony";
+import FAQ from "./Home/FAQ";
+import Connection from "./Home/Connection";
 
 function Home() {
   return (
@@ -21,6 +24,9 @@ function Home() {
       <Industries />
       <Gallery />
       <Creations />
+      <Testimony />
+      <FAQ />
+      <Connection />
     </>
   );
 }

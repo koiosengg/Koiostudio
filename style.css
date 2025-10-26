@@ -111,7 +111,6 @@ header nav a:hover {
 
 .secondary-btn {
   display: flex;
-  height: 40px;
   padding: 8px 16px;
   align-items: center;
   gap: 4px;
@@ -223,9 +222,20 @@ header nav a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("/Home Banner Desktop Background.svg") no-repeat center center;
-  background-size: cover;
   overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.home-banner img {
+  z-index: -1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .home-banner h1 {
@@ -255,6 +265,19 @@ header nav a:hover {
   align-items: center;
   gap: 40px;
   align-self: stretch;
+  position: relative;
+  z-index: 1;
+}
+
+.template-background {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .template-heading {
@@ -1214,6 +1237,297 @@ header nav a:hover {
   100% {
     transform: translate(0px, 0px);
   }
+}
+
+.template.testimony {
+  padding: 80px 0px;
+}
+
+.home-testimony {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  align-self: stretch;
+  overflow: hidden;
+}
+
+.home-testimony-slide {
+  width: 100%;
+  display: flex;
+  padding: 0 280px;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.home-testimony-set {
+  width: 455px;
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  border-radius: 4px;
+  background: linear-gradient(
+    149deg,
+    rgba(18, 18, 18, 0.75) -0.73%,
+    rgba(18, 18, 18, 0.25) 100%
+  );
+  backdrop-filter: blur(5px);
+  align-self: stretch;
+  flex-shrink: 0;
+}
+
+.home-testimony-set-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.home-testimony-set-text span {
+  width: 29px;
+  height: 40px;
+  color: var(--Yellow-Primary, #ffbf00);
+  font-family: "Allerta Stencil";
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.home-testimony-set-text p {
+  color: var(--Grey-text-grey-text-300, #b9b9b9);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.home-testimony-set h3 {
+  color: var(--Grey-text-grey-text-300, #b9b9b9);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.home-testimony-set h3 span {
+  color: var(--Yellow-Primary, #ffbf00);
+}
+
+.home-testimony-controls {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  align-self: stretch;
+}
+
+.home-testimony-control {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 100px;
+  background: #121212;
+  transition: all 0.3s;
+}
+
+.home-testimony-control:hover {
+  background: #343333;
+}
+
+.template.faq {
+  flex-direction: row;
+}
+
+.template.faq .template-heading {
+  width: 40%;
+  align-items: flex-start;
+}
+
+.template.faq .template-heading p,
+.template.faq .template-heading h2 {
+  text-align: left;
+}
+
+.home-faq {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.faq-set {
+  width: 100%;
+  display: flex;
+  padding: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+  cursor: pointer;
+}
+
+.faq-set.active-faq {
+  cursor: default;
+}
+
+.faq-set-heading {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.faq-set span {
+  min-width: 20px;
+  flex-shrink: 0;
+  color: var(--Text-Black-Primary, #111);
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.36px;
+}
+
+.faq-set-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.faq-set-text {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+}
+
+.faq-set svg {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  aspect-ratio: 1/1;
+  transition: all 0.3s;
+}
+
+.faq-set h3 {
+  color: var(--White-text, #fff);
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.faq-set-svg {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  aspect-ratio: 1/1;
+  flex-shrink: 0;
+  border-radius: 100px;
+  background: var(--Woodsmoke-BG-woodsmoke-bg-900, #343333);
+}
+
+.faq-set svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  aspect-ratio: 1/1;
+}
+
+.active-faq svg {
+  transform: rotate(180deg);
+}
+
+.faq-set p {
+  color: var(--Grey-text-grey-text-300, #b9b9b9);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.active-faq p {
+  max-height: 500px;
+  padding-top: 16px;
+  opacity: 1;
+}
+
+.home-connection {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.home-connection-background {
+  width: 100%;
+  object-fit: cover;
+  transition: all 2s;
+}
+
+.home-connection-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.home-connection-container h2 {
+  color: var(--White-text, #fff);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 64px;
+  letter-spacing: -2.88px;
+}
+
+.home-connection-buttons {
+  display: inline-flex;
+  height: 56px;
+  align-items: flex-start;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.home-connection-buttons .primary-btn,
+.home-connection-buttons .secondary-btn {
+  padding: 16px 32px;
 }
 
 /* Footer */
