@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import Stars from "../../assets/Home/Stories/Stars.png";
 
 function Stories() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -65,6 +66,8 @@ function Stories() {
 
   return (
     <section className="home-stories">
+      <img src={Stars} className="home-stories-stars" />
+
       <div className="home-stories-left">
         <div className="home-stories-left-text">
           <h2>We Got You Covered</h2>

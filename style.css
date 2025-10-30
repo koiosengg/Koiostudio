@@ -497,6 +497,13 @@ header nav a:hover {
   justify-content: center;
   gap: 24px;
   padding: 80px 160px;
+  position: relative;
+}
+
+.home-stories-stars {
+  position: absolute;
+  right: 130px;
+  top: 50px;
 }
 
 .home-stories-left {
@@ -1498,7 +1505,7 @@ header nav a:hover {
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px; 
+  line-height: 24px;
 }
 
 .home-connection-buttons {
