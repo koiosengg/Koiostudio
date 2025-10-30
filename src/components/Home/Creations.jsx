@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Layouts from "../../assets/Home/Creations/Layouts.png";
 import Design from "../../assets/Home/Creations/Design.png";
+
 function Creations() {
   const text = "Stand Out With Creativity & Innovation";
   const [displayedText, setDisplayedText] = useState("");

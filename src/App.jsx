@@ -7,6 +7,7 @@ import Blogs from "./components/Blogs";
 import Contact from "./components/Contact";
 import ScrollToTop from "./components/ScrollToTop";
 import Glow from "./components/Glow";
+import Designing from "./components/Designing";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/">
           <Route index element={<Home />} />
+          <Route path="designing" element={<Designing />} />
           <Route path="blog/*" element={<Blogs />} />
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<Home />} />

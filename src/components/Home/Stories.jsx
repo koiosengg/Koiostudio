@@ -3,10 +3,14 @@ import { Link } from "react-router-dom";
 import Stars from "../../assets/Home/Stories/Stars.png";
 
 function Stories() {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [projectCount, setProjectCount] = useState(1);
+  const [counts, setCounts] = useState({
+    clients: 0,
+    projects: 0,
+    team: 0,
+  });
   const [hasCounted, setHasCounted] = useState(false);
-  const projectRef = useRef(null);
+  const numberSectionRef = useRef(null);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const pages = [
     {
@@ -41,32 +45,48 @@ function Stories() {
         const entry = entries[0];
         if (entry.isIntersecting && !hasCounted) {
           setHasCounted(true);
-          let start = 1;
-          const end = 54;
-          const duration = 5000;
-          const stepTime = Math.abs(Math.floor(duration / (end - start)));
+
+          const targets = { clients: 37, projects: 54, team: 45 };
+          const duration = 3000;
+          const steps = 60;
+          const intervalTime = duration / steps;
+          let step = 0;
+
           const counter = setInterval(() => {
-            setProjectCount((prev) => {
-              if (prev < end) return prev + 1;
-              clearInterval(counter);
-              return end;
+            step++;
+            setCounts({
+              clients: Math.min(
+                Math.floor((targets.clients / steps) * step),
+                targets.clients
+              ),
+              projects: Math.min(
+                Math.floor((targets.projects / steps) * step),
+                targets.projects
+              ),
+              team: Math.min(
+                Math.floor((targets.team / steps) * step),
+                targets.team
+              ),
             });
-          }, stepTime);
+
+            if (step >= steps) clearInterval(counter);
+          }, intervalTime);
         }
       },
       { threshold: 0.5 }
     );
 
-    if (projectRef.current) observer.observe(projectRef.current);
+    if (numberSectionRef.current) observer.observe(numberSectionRef.current);
 
     return () => {
-      if (projectRef.current) observer.unobserve(projectRef.current);
+      if (numberSectionRef.current)
+        observer.unobserve(numberSectionRef.current);
     };
   }, [hasCounted]);
 
   return (
     <section className="home-stories">
-      <img src={Stars} className="home-stories-stars" />
+      <img src={Stars} className="home-stories-stars" alt="Stars" />
 
       <div className="home-stories-left">
         <div className="home-stories-left-text">
@@ -79,7 +99,7 @@ function Stories() {
 
         <div className="home-stories-left-search">
           <input
-            id="seacrh"
+            id="search"
             type="text"
             placeholder="Search pages..."
             value={searchTerm}
@@ -107,7 +127,7 @@ function Stories() {
         </div>
       </div>
 
-      <div className="home-stories-right">
+      <div className="home-stories-right" ref={numberSectionRef}>
         <div className="home-stories-right-text">
           <h2>Our Success Stories</h2>
           <p>
@@ -115,19 +135,22 @@ function Stories() {
             sed mauris ut et
           </p>
         </div>
+
         <div className="home-stories-right-numbers">
           <div className="home-stories-right-numbers-set">
-            <h3>37</h3>
+            <h3>{counts.clients}</h3>
             <p>Clients</p>
           </div>
 
-          <div className="home-stories-right-numbers-set" ref={projectRef}>
-            <h3>{projectCount < 10 ? `0${projectCount}` : projectCount}</h3>
+          <div className="home-stories-right-numbers-set">
+            <h3>
+              {counts.projects < 10 ? `0${counts.projects}` : counts.projects}
+            </h3>
             <p>Projects</p>
           </div>
 
           <div className="home-stories-right-numbers-set">
-            <h3>45</h3>
+            <h3>{counts.team}</h3>
             <p>Team Members</p>
           </div>
         </div>

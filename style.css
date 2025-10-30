@@ -222,23 +222,30 @@ header nav a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
   position: relative;
-  z-index: 1;
 }
 
-.home-banner img {
-  z-index: -1;
+.home-banner-background {
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
 }
 
-.home-banner h1 {
+.home-banner-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 1;
+  transform: translateY(-30px);
+}
+
+.home-banner-text h1 {
+  display: flex;
+  padding-bottom: 6px;
   text-align: center;
   font-family: Poppins;
   font-size: 80px;
@@ -255,6 +262,17 @@ header nav a:hover {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.home-banner-text p {
+  width: 780px;
+  color: var(--Grey-text-grey-text-300, #b9b9b9);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
 }
 
 .template {
@@ -316,6 +334,16 @@ header nav a:hover {
   font-weight: 500;
   line-height: 64px;
   letter-spacing: -2.88px;
+}
+
+.template-heading span {
+  color: var(--Grey-text-grey-text-300, #b9b9b9);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
 }
 
 .home-pride {
@@ -818,7 +846,7 @@ header nav a:hover {
 
 .home-industries {
   width: 100%;
-  height: 456px;
+  height: 360px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -899,7 +927,7 @@ header nav a:hover {
 }
 
 :root {
-  --ring-radius: 440px;
+  --ring-radius: 480px;
 }
 
 .home-industries-set:nth-child(1) {
@@ -996,7 +1024,7 @@ header nav a:hover {
   gap: 40px;
   overflow: hidden;
   position: relative;
-  padding-top: 135px;
+  padding-top: 40px;
 }
 
 .gallery-container span {
@@ -1011,7 +1039,7 @@ header nav a:hover {
   line-height: 120%;
   letter-spacing: -13.8px;
   position: absolute;
-  top: 0;
+  top: -56px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -1521,65 +1549,190 @@ header nav a:hover {
   padding: 16px 32px;
 }
 
-/* Blogs */
+/* Designing */
 
-.blogs-banner {
+.designing-animation {
   width: 100%;
-  height: 100svh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
 }
 
-.blogs-banner-background {
-  position: absolute;
+.designing-animation-heading {
+  width: 100%;
+  max-width: 623px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.designing-animation h3 {
+  color: var(--White-text, #fff);
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.designing-animation p {
+  color: var(--Grey-text-grey-text-300, #b9b9b9);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.designing-animation-left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 24px;
+  grid-column: span 2;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(
+    149deg,
+    rgba(18, 18, 18, 0.75) -0.73%,
+    rgba(18, 18, 18, 0.25) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.designing-animation-left img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.blogs-banner-text {
-  max-width: 780px;
+.designing-animation-right {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  z-index: 1;
-  transform: translateY(-30px);
-}
-
-.blogs-banner-text h1 {
-  display: flex;
-  height: 110px;
-  padding-bottom: 6px;
-  text-align: center;
-  font-family: Poppins;
-  font-size: 80px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 104px;
-  letter-spacing: -4.8px;
+  gap: 40px;
+  padding: 24px 0 0 24px;
+  grid-column: span 3;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   background: linear-gradient(
-    272deg,
-    #ffbf00 -94.41%,
-    #ffebb0 4.53%,
-    #ffbf00 99.71%
+    149deg,
+    rgba(18, 18, 18, 0.75) -0.73%,
+    rgba(18, 18, 18, 0.25) 100%
   );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  overflow: hidden;
 }
 
-.blogs-banner-text p {
-  color: var(--Grey-text-grey-text-300, #b9b9b9);
-  text-align: center;
+.designing-animation-bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 24px;
+  grid-column: 1 / -1;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(
+    149deg,
+    rgba(18, 18, 18, 0.75) -0.73%,
+    rgba(18, 18, 18, 0.25) 100%
+  );
+}
+
+.designing-animation-bottom-container {
+  width: 100%;
+  display: flex;
+  gap: 8px;
+}
+
+.designing-animation-bottom-set {
+  width: 100%;
+  display: flex;
+  padding: 32px 50px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  border-radius: 8px;
+  background: linear-gradient(
+    149deg,
+    rgba(18, 18, 18, 0.75) -0.73%,
+    rgba(18, 18, 18, 0.25) 100%
+  );
+}
+
+.designing-animation-bottom-set-image {
+  width: 100%;
+  height: 80px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.designing-animation-bottom-set-image img {
+  height: 80px;
+  object-fit: cover;
+}
+
+.designing-animation-bottom-set span {
+  color: var(--Black-black-200, #929292);
   font-family: Poppins;
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
 }
+
+.designing-why-us {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.designing-why-us-set {
+  width: 100%;
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  border-radius: 8px;
+  background: linear-gradient(
+    147deg,
+    rgba(18, 18, 18, 0.5) 0%,
+    rgba(31, 31, 31, 0.82) 100.01%
+  );
+  align-self: stretch;
+}
+
+.designing-why-us-set img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+
+.designing-why-us-set:hover img {
+  opacity: 1;
+}
+
+.designing-why-us-set p {
+  color: var(--White-text, #fff);
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+/* Blogs */
 
 .our-blogs {
   width: 100%;
