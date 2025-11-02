@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import UserInterfaceDesigning from "./UserInterfaceDesigning";
-import ResponsiveWebsiteDesign from "./ResponsiveWebsiteDesign";
-import AppDesigning from "./AppDesigning";
-import WebAppDesigning from "./WebAppDesigning";
-import SaasPlatformsDesigning from "./SaasPlatformsDesigning";
+import UserInterfaceDesigning from "./Types/UserInterfaceDesigning";
+import ResponsiveWebsiteDesign from "./Types/ResponsiveWebsiteDesign";
+import AppDesigning from "./Types/AppDesigning";
+import WebAppDesigning from "./Types/WebAppDesigning";
+import SaasPlatformsDesigning from "./Types/SaasPlatformsDesigning";
 
 function Types() {
   const [activeIndex, setActiveIndex] = useState(0);

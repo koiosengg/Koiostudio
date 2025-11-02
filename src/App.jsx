@@ -8,6 +8,7 @@ import Contact from "./components/Contact";
 import ScrollToTop from "./components/ScrollToTop";
 import Glow from "./components/Glow";
 import Designing from "./components/Designing";
+import Development from "./components/Development";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/">
           <Route index element={<Home />} />
           <Route path="designing" element={<Designing />} />
+          <Route path="development" element={<Development />} />
           <Route path="blog/*" element={<Blogs />} />
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<Home />} />
