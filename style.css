@@ -1676,11 +1676,7 @@ header nav a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.designing-animation-bottom-set-image img {
-  height: 80px;
-  object-fit: cover;
+  position: relative;
 }
 
 .designing-animation-bottom-set span {
@@ -1690,6 +1686,272 @@ header nav a:hover {
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+}
+
+.designing-animation-bottom-set-image .circle-background {
+  display: flex;
+  width: 80px;
+  height: 80px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 100px;
+  background: linear-gradient(90deg, #ffbf00 0.6%, #bc7100 99.98%);
+}
+
+.designing-animation-bottom-set-image .circle-background img {
+  display: flex;
+  width: 56px;
+  height: 56px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 100px;
+  background: #fff;
+  animation: designingAnimationDelay 4s linear infinite;
+}
+
+@keyframes designingAnimationDelay {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.designing-animation-bottom-set-image .toggle {
+  display: flex;
+  width: 80px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.designing-animation-bottom-set-image .toggle .toggle-background {
+  width: 100%;
+  display: flex;
+  height: 34px;
+  padding: 3px 5px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #ffbf00 0.6%, #bc7100 99.98%);
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.designing-animation-bottom-set-image .toggle .toggle-background span {
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
+  background: #ffffff;
+  flex-shrink: 0;
+  border-radius: 50%;
+  transition: all 0.3s;
+  position: absolute;
+  left: 0;
+  animation: designingAnimationLoop1 2s linear infinite;
+}
+
+.designing-animation-bottom-set-image
+  .toggle
+  .toggle-background:last-child
+  span {
+  animation: designingAnimationLoop2 2s linear infinite;
+}
+
+@keyframes designingAnimationLoop1 {
+  0% {
+    left: 5px;
+  }
+  50% {
+    left: calc(100% - 25px);
+  }
+  100% {
+    left: 5px;
+  }
+}
+
+@keyframes designingAnimationLoop2 {
+  0% {
+    left: calc(100% - 25px);
+  }
+  50% {
+    left: 5px;
+  }
+  100% {
+    left: calc(100% - 25px);
+  }
+}
+
+.designing-animation-bottom-set-image .click-background {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #ffbf00 0.6%, #bc7100 99.98%);
+  z-index: 1;
+}
+
+.designing-animation-bottom-set-image .click-background img:first-child {
+  width: 48px;
+  height: 48px;
+  animation: designingAnimationClick 6s linear infinite;
+}
+
+@keyframes designingAnimationClick {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+  55% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.designing-animation-bottom-set-image .click-background img:last-child {
+  width: 24px;
+  height: 25px;
+  position: absolute;
+  right: 2px;
+  bottom: 6px;
+  animation: designingAnimationMouse 6s linear infinite;
+}
+
+@keyframes designingAnimationMouse {
+  0% {
+    transform: scale(1);
+  }
+  5% {
+    transform: scale(0.6);
+  }
+  10% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(0.6);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.designing-animation-bottom-set-image .click-background-1 {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #ffbf00 0.6%, #bc7100 99.98%);
+  position: absolute;
+  transition: all 0.3s;
+  z-index: 0;
+  left: 50%;
+  animation: designingAnimationClickLeft 6s linear infinite;
+}
+
+.designing-animation-bottom-set-image .click-background-1 img {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+@keyframes designingAnimationClickLeft {
+  0% {
+    transform: translateX(calc(-50% - 0px));
+  }
+  10% {
+    transform: translateX(calc(-50% - 0px));
+  }
+  15% {
+    transform: translateX(calc(-50% - 60px));
+  }
+  50% {
+    transform: translateX(calc(-50% - 60px));
+  }
+  55% {
+    transform: translateX(calc(-50% - 0px));
+  }
+  100% {
+    transform: translateX(calc(-50% - 0px));
+  }
+}
+
+.designing-animation-bottom-set-image .click-background-2 {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #ffbf00 0.6%, #bc7100 99.98%);
+  position: absolute;
+  transition: all 0.3s;
+  z-index: 0;
+  left: 50%;
+  animation: designingAnimationClickRight 6s linear infinite;
+}
+
+.designing-animation-bottom-set-image .click-background-2 img {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+@keyframes designingAnimationClickRight {
+  0% {
+    transform: translateX(calc(-50% + 0px));
+  }
+  10% {
+    transform: translateX(calc(-50% + 0px));
+  }
+  15% {
+    transform: translateX(calc(-50% + 60px));
+  }
+  50% {
+    transform: translateX(calc(-50% + 60px));
+  }
+  55% {
+    transform: translateX(calc(-50% + 0px));
+  }
+  100% {
+    transform: translateX(calc(-50% + 0px));
+  }
 }
 
 .designing-why-us {

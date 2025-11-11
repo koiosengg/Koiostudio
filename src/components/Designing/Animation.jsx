@@ -5,6 +5,9 @@ import Smiley from "../../assets/Designing/Animation/Smiley.png";
 import Toggle from "../../assets/Designing/Animation/Toggle.png";
 import Letters from "../../assets/Designing/Animation/Letters.png";
 import Click from "../../assets/Designing/Animation/Click.png";
+import Mouse from "../../assets/Designing/Animation/Mouse.png";
+import Design from "../../assets/Designing/Animation/Design.png";
+import Edit from "../../assets/Designing/Animation/Edit.png";
 
 function Animation() {
   return (
@@ -54,13 +57,22 @@ function Animation() {
           <div className="designing-animation-bottom-container">
             <div className="designing-animation-bottom-set white-top-border">
               <div className="designing-animation-bottom-set-image">
-                <img src={Smiley} alt="On Delay" />
+                <div className="circle-background">
+                  <img src={Smiley} alt="On Delay" />
+                </div>
               </div>
               <span>On Delay</span>
             </div>
             <div className="designing-animation-bottom-set white-top-border">
               <div className="designing-animation-bottom-set-image">
-                <img src={Toggle} alt="Loop" />
+                <div className="toggle">
+                  <div className="toggle-background">
+                    <span></span>
+                  </div>
+                  <div className="toggle-background">
+                    <span></span>
+                  </div>
+                </div>
               </div>
               <span>Loop</span>
             </div>
@@ -72,7 +84,16 @@ function Animation() {
             </div>
             <div className="designing-animation-bottom-set white-top-border">
               <div className="designing-animation-bottom-set-image">
-                <img src={Click} alt="Click" />
+                <div className="click-background">
+                  <img src={Click} alt="Click" />
+                  <img src={Mouse} alt="Mouse" />
+                </div>
+                <div className="click-background-1">
+                  <img src={Design} alt="Design" />
+                </div>
+                <div className="click-background-2">
+                  <img src={Edit} alt="Edit" />
+                </div>
               </div>
               <span>Click</span>
             </div>
