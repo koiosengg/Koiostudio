@@ -16,36 +16,29 @@ function SaasPlatformsDevelopment() {
         />
         <div className="designing-types-text">
           <p>
-            Lorem ipsum dolor sit amet consectetur. Tempor ultrices netus
-            aliquet nec eu sollicitudin interdum turpis neque. Lobortis
-            venenatis egestas fringilla nunc tincidunt at nec in tortor. Nunc
-            sed ridiculus dolor vitae tincidunt magna commodo quam enim. Lectus
-            convallis amet neque massa feugiat arcu feugiat. Tempor ultrices
-            netus aliquet nec eu sollicitudin interdum turpis neque. Lobortis
-            venenatis egestas fringilla nunc tincidunt at nec in tortor. Nunc
-            sed ridiculus dolor vitae tincidunt magna commodo quam enim. Lectus
-            convallis amet neque massa feugiat arcu feugiat.
+            We build SaaS platforms that feel powerful but still simple to
+            manage. Everything is structured so users can easily understand
+            features and workflows from day one. The platform grows with your
+            business, adding new modules or tools without breaking the
+            experience. It’s built to scale, stay secure, and keep performance
+            steady.
           </p>
           <div className="designing-types-text-points">
             <div className="designing-types-text-point">
               <img src={Tick} alt="Yellow Tick" />
-              <p>Lorem ipsum dolor sitor</p>
+              <p>Modular + scalable</p>
             </div>
             <div className="designing-types-text-point">
               <img src={Tick} alt="Yellow Tick" />
-              <p>Lorem ipsum dolor amet consectetur</p>
+              <p>Secure backend</p>
             </div>
             <div className="designing-types-text-point">
               <img src={Tick} alt="Yellow Tick" />
-              <p>Lorem ipsum dolor sitor</p>
+              <p>Clear workflows</p>
             </div>
             <div className="designing-types-text-point">
               <img src={Tick} alt="Yellow Tick" />
-              <p>Lorem ipsum amet consectetur</p>
-            </div>
-            <div className="designing-types-text-point">
-              <img src={Tick} alt="Yellow Tick" />
-              <p>Lorem amet consectetur</p>
+              <p>Custom integrations</p>
             </div>
           </div>
         </div>

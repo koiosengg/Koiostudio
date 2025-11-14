@@ -16,36 +16,29 @@ function ResponsiveWebsiteDevelopment() {
         />
         <div className="designing-types-text">
           <p>
-            Lorem ipsum dolor sit amet consectetur. Tempor ultrices netus
-            aliquet nec eu sollicitudin interdum turpis neque. Lobortis
-            venenatis egestas fringilla nunc tincidunt at nec in tortor. Nunc
-            sed ridiculus dolor vitae tincidunt magna commodo quam enim. Lectus
-            convallis amet neque massa feugiat arcu feugiat. Tempor ultrices
-            netus aliquet nec eu sollicitudin interdum turpis neque. Lobortis
-            venenatis egestas fringilla nunc tincidunt at nec in tortor. Nunc
-            sed ridiculus dolor vitae tincidunt magna commodo quam enim. Lectus
-            convallis amet neque massa feugiat arcu feugiat.
+            We build web apps that work smoothly on every screen, whether
+            someone is on a laptop, tablet, or mobile. The layout adjusts
+            naturally so the experience always feels organised and easy to use.
+            Pages load fast, actions feel effortless, and nothing looks cramped
+            or out of place. No matter the device, your users get a clean,
+            consistent experience.
           </p>
           <div className="designing-types-text-points">
             <div className="designing-types-text-point">
               <img src={Tick} alt="Yellow Tick" />
-              <p>Lorem ipsum dolor sitor</p>
+              <p>Works across all screen sizes</p>
             </div>
             <div className="designing-types-text-point">
               <img src={Tick} alt="Yellow Tick" />
-              <p>Lorem ipsum dolor amet consectetur</p>
+              <p>Fast and clean performance</p>
             </div>
             <div className="designing-types-text-point">
               <img src={Tick} alt="Yellow Tick" />
-              <p>Lorem ipsum dolor sitor</p>
+              <p>Consistent user experience</p>
             </div>
             <div className="designing-types-text-point">
               <img src={Tick} alt="Yellow Tick" />
-              <p>Lorem ipsum amet consectetur</p>
-            </div>
-            <div className="designing-types-text-point">
-              <img src={Tick} alt="Yellow Tick" />
-              <p>Lorem amet consectetur</p>
+              <p>Modern tech stack</p>
             </div>
           </div>
         </div>

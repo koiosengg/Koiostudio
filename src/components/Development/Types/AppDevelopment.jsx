@@ -16,36 +16,29 @@ function AppDevelopment() {
         />
         <div className="designing-types-text">
           <p>
-            Lorem ipsum dolor sit amet consectetur. Tempor ultrices netus
-            aliquet nec eu sollicitudin interdum turpis neque. Lobortis
-            venenatis egestas fringilla nunc tincidunt at nec in tortor. Nunc
-            sed ridiculus dolor vitae tincidunt magna commodo quam enim. Lectus
-            convallis amet neque massa feugiat arcu feugiat. Tempor ultrices
-            netus aliquet nec eu sollicitudin interdum turpis neque. Lobortis
-            venenatis egestas fringilla nunc tincidunt at nec in tortor. Nunc
-            sed ridiculus dolor vitae tincidunt magna commodo quam enim. Lectus
-            convallis amet neque massa feugiat arcu feugiat.
+            We turn ideas into solid, user-friendly apps that people enjoy using
+            every day. From planning to launch, everything is built thoughtfully
+            so the app feels smooth, stable, and easy to navigate. Whether
+            Android or iOS, we make sure it looks right and performs well. It’s
+            a complete build that feels natural and polished from start to
+            finish.
           </p>
           <div className="designing-types-text-points">
             <div className="designing-types-text-point">
               <img src={Tick} alt="Yellow Tick" />
-              <p>Lorem ipsum dolor sitor</p>
+              <p>Native + cross-platform options</p>
             </div>
             <div className="designing-types-text-point">
               <img src={Tick} alt="Yellow Tick" />
-              <p>Lorem ipsum dolor amet consectetur</p>
+              <p>Smooth user experience</p>
             </div>
             <div className="designing-types-text-point">
               <img src={Tick} alt="Yellow Tick" />
-              <p>Lorem ipsum dolor sitor</p>
+              <p>Strong and secure build</p>
             </div>
             <div className="designing-types-text-point">
               <img src={Tick} alt="Yellow Tick" />
-              <p>Lorem ipsum amet consectetur</p>
-            </div>
-            <div className="designing-types-text-point">
-              <img src={Tick} alt="Yellow Tick" />
-              <p>Lorem amet consectetur</p>
+              <p>End-to-end development</p>
             </div>
           </div>
         </div>

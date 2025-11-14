@@ -16,36 +16,29 @@ function AppDesigning() {
         />
         <div className="designing-types-text">
           <p>
-            Lorem ipsum dolor sit amet consectetur. Tempor ultrices netus
-            aliquet nec eu sollicitudin interdum turpis neque. Lobortis
-            venenatis egestas fringilla nunc tincidunt at nec in tortor. Nunc
-            sed ridiculus dolor vitae tincidunt magna commodo quam enim. Lectus
-            convallis amet neque massa feugiat arcu feugiat. Tempor ultrices
-            netus aliquet nec eu sollicitudin interdum turpis neque. Lobortis
-            venenatis egestas fringilla nunc tincidunt at nec in tortor. Nunc
-            sed ridiculus dolor vitae tincidunt magna commodo quam enim. Lectus
-            convallis amet neque massa feugiat arcu feugiat.
+            Apps are part of everyday life, so they should feel simple,
+            welcoming, and fast to use. We design screens that guide people
+            effortlessly from onboarding to daily actions without feeling
+            overwhelming. Every page is thoughtfully built to make the
+            experience smooth and visually pleasing. Whether for Android or iOS,
+            the app feels familiar and easy to pick up.
           </p>
           <div className="designing-types-text-points">
             <div className="designing-types-text-point">
               <img src={Tick} alt="Yellow Tick" />
-              <p>Lorem ipsum dolor sitor</p>
+              <p>Simple, friendly flow</p>
             </div>
             <div className="designing-types-text-point">
               <img src={Tick} alt="Yellow Tick" />
-              <p>Lorem ipsum dolor amet consectetur</p>
+              <p>Platform-native feel</p>
             </div>
             <div className="designing-types-text-point">
               <img src={Tick} alt="Yellow Tick" />
-              <p>Lorem ipsum dolor sitor</p>
+              <p>Easy interactions</p>
             </div>
             <div className="designing-types-text-point">
               <img src={Tick} alt="Yellow Tick" />
-              <p>Lorem ipsum amet consectetur</p>
-            </div>
-            <div className="designing-types-text-point">
-              <img src={Tick} alt="Yellow Tick" />
-              <p>Lorem amet consectetur</p>
+              <p>Clean, modern visuals</p>
             </div>
           </div>
         </div>

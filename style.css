@@ -2321,6 +2321,10 @@ header nav a:hover {
 
 .development-animation-top {
   width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
   grid-column: 3 / 6;
   grid-row: 1;
   border-radius: 8px;
@@ -2357,6 +2361,161 @@ header nav a:hover {
 
 .development-animation .designing-animation-heading {
   padding: 24px;
+}
+
+.development-animation-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+}
+
+.development-animation-section-left {
+  width: 200px;
+  height: 184px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.development-animation-section-left::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(180deg, #121212, transparent);
+
+  z-index: 10;
+}
+
+.development-animation-section-left::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(0deg, #121212, transparent);
+  z-index: 10;
+}
+
+.development-animation-wrapper {
+  width: 100%;
+  height: 184px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.development-animation-marquee {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 16px;
+  animation: marqueeUp 6s linear infinite;
+}
+
+@keyframes marqueeUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.development-animation-marquee p {
+  color: var(--White-text, #fff);
+  text-shadow: 0 4px 10px rgba(255, 255, 255, 0.5);
+  font-family: Poppins;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -1.12px;
+  flex-shrink: 0;
+}
+
+.development-animation-section-right {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+  padding-right: 20px;
+}
+
+.development-animation-section-right-top {
+  height: 50px;
+  object-fit: cover;
+}
+
+.development-animation-section-right-center {
+  display: inline-flex;
+  padding: 4px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 50px;
+  border: 1px solid var(--Black-black-400, #414141);
+  animation: DevelopmentRightCenter 3s linear infinite;
+}
+
+@keyframes DevelopmentRightCenter {
+  0%,
+  100% {
+    box-shadow: 0;
+  }
+  50% {
+    box-shadow: 0 8px 50px 0 rgba(255, 191, 0, 0.4);
+  }
+}
+
+.development-animation-section-right-center p {
+  display: flex;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: var(--Black-Primary, #121212);
+  color: var(--White-text, #fff);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.development-animation-section-right-center p span {
+  color: var(--Yellow-Primary, #ffbf00);
+}
+
+.development-animation-section-right h4 {
+  font-family: Poppins;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 64px;
+  letter-spacing: -2.88px;
+  background: linear-gradient(
+    90deg,
+    rgba(65, 65, 65, 0.3) 0%,
+    rgba(96, 96, 96, 0.3) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Blogs */

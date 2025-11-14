@@ -1,6 +1,7 @@
 import React from "react";
 import LeftBackground from "../../assets/Development/Animation/Left Background.png";
 import BottomBackground from "../../assets/Development/Animation/Bottom Background.png";
+import RightTopImg from "../../assets/Development/Animation/Right Top.png";
 function Animation() {
   return (
     <section className="template">
@@ -33,6 +34,41 @@ function Animation() {
               Lorem ipsum dolor sit amet consectetur. Suspendisse convallis
               placerat id ultrices purus.
             </p>
+          </div>
+          <div className="development-animation-section">
+            <div className="development-animation-section-left">
+              <div className="development-animation-wrapper">
+                <div className="development-animation-marquee">
+                  <p>Html</p>
+                  <p>CSS</p>
+                  <p>React</p>
+                  <p>Node</p>
+                  <p>Express</p>
+                  <p>SQL</p>
+                </div>
+                <div className="development-animation-marquee">
+                  <p>Html</p>
+                  <p>CSS</p>
+                  <p>React</p>
+                  <p>Node</p>
+                  <p>Express</p>
+                  <p>SQL</p>
+                </div>
+              </div>
+            </div>
+            <div className="development-animation-section-right">
+              <img
+                src={RightTopImg}
+                alt="Right Top Image"
+                className="development-animation-section-right-top"
+              />
+              <div className="development-animation-section-right-center">
+                <p>
+                  https.//website.<span>koiossoftwaresolutions</span>
+                </p>
+              </div>
+              <h4>Development.</h4>
+            </div>
           </div>
         </div>
         <div className="development-animation-bottom">
