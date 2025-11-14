@@ -484,9 +484,10 @@ header nav a:hover {
   justify-content: center;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
 }
 
-.home-problems-set-img img {
+.home-problems-set-img video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1679,7 +1680,7 @@ header nav a:hover {
   position: relative;
 }
 
-.designing-animation-bottom-set span {
+.designing-animation-bottom-set p {
   color: var(--Black-black-200, #929292);
   font-family: Poppins;
   font-size: 18px;
@@ -1791,6 +1792,66 @@ header nav a:hover {
   }
   100% {
     left: calc(100% - 25px);
+  }
+}
+
+.designing-animation-bottom-set-image.hover h4 {
+  text-align: center;
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 56px;
+  letter-spacing: -2.4px;
+  text-transform: uppercase;
+  display: inline-block;
+  background: linear-gradient(90deg, #ffbf00 0.6%, #bc7100 99.98%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  flex-shrink: 0;
+}
+
+.designing-animation-bottom-set-image.hover h4 span {
+  display: inline-block;
+  background: linear-gradient(90deg, #ffbf00 0.6%, #bc7100 99.98%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  animation: letterUpDown 3s ease-in-out infinite;
+}
+
+.designing-animation-bottom-set-image.hover h4 span:nth-child(1) {
+  animation-delay: 0s;
+}
+.designing-animation-bottom-set-image.hover h4 span:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.designing-animation-bottom-set-image.hover h4 span:nth-child(3) {
+  animation-delay: 1s;
+}
+.designing-animation-bottom-set-image.hover h4 span:nth-child(4) {
+  animation-delay: 1.5s;
+}
+.designing-animation-bottom-set-image.hover h4 span:nth-child(5) {
+  animation-delay: 2s;
+}
+.designing-animation-bottom-set-image.hover h4 span:nth-child(6) {
+  animation-delay: 2.5s;
+}
+
+@keyframes letterUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(-12px);
+  }
+  20% {
+    transform: translateY(0);
   }
 }
 
@@ -2003,16 +2064,20 @@ header nav a:hover {
   display: flex;
   padding: 80px 0;
   gap: 40px;
+  position: relative;
 }
 
 .designing-types-left {
   width: 300px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 32px;
   padding: 80px 48px 0px 0px;
   flex-shrink: 0;
+  position: sticky;
+  top: 84px;
 }
 
 .designing-types-left h2 {

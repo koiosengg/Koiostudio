@@ -61,7 +61,7 @@ function Animation() {
                   <img src={Smiley} alt="On Delay" />
                 </div>
               </div>
-              <span>On Delay</span>
+              <p>On Delay</p>
             </div>
             <div className="designing-animation-bottom-set white-top-border">
               <div className="designing-animation-bottom-set-image">
@@ -74,13 +74,20 @@ function Animation() {
                   </div>
                 </div>
               </div>
-              <span>Loop</span>
+              <p>Loop</p>
             </div>
             <div className="designing-animation-bottom-set white-top-border">
-              <div className="designing-animation-bottom-set-image">
-                <img src={Letters} alt="Hover" />
+              <div className="designing-animation-bottom-set-image hover">
+                <h4>
+                  <span>D</span>
+                  <span>e</span>
+                  <span>s</span>
+                  <span>i</span>
+                  <span>g</span>
+                  <span>n</span>
+                </h4>
               </div>
-              <span>Hover</span>
+              <p>Hover</p>
             </div>
             <div className="designing-animation-bottom-set white-top-border">
               <div className="designing-animation-bottom-set-image">
@@ -95,7 +102,7 @@ function Animation() {
                   <img src={Edit} alt="Edit" />
                 </div>
               </div>
-              <span>Click</span>
+              <p>Click</p>
             </div>
           </div>
         </div>
