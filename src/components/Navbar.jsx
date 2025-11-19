@@ -14,6 +14,7 @@ function Navbar() {
           <Link to="/designing">Designing</Link>
           <Link to="/development">Development</Link>
           <Link to="/branding">Branding</Link>
+          <Link to="/marketing">Digital Marketing</Link>
           <Link to="/about-us">About Us</Link>
           <Link to="/blog">Blog</Link>
         </nav>

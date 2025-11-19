@@ -10,6 +10,7 @@ import Glow from "./components/Glow";
 import Designing from "./components/Designing";
 import Development from "./components/Development";
 import Branding from "./components/Branding";
+import Marketing from "./components/Marketing";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="designing" element={<Designing />} />
           <Route path="development" element={<Development />} />
           <Route path="branding" element={<Branding />} />
+          <Route path="marketing" element={<Marketing />} />
           <Route path="blog/*" element={<Blogs />} />
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<Home />} />
