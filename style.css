@@ -3052,6 +3052,341 @@ header nav a:hover {
   }
 }
 
+/* Marketing */
+
+.marketing-animation-left {
+  width: 100%;
+  min-height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.marketing-animation-left h3 {
+  width: 100%;
+  padding: 0px 72px;
+  color: var(--Yellow-Primary, #ffbf00);
+  font-family: Poppins;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: -2.88px;
+}
+
+.marketing-animation-left h3 span {
+  color: var(--Black-black-200, #929292);
+}
+
+.marketing-animation-left-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.marketing-animation-left-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 72px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: #121212;
+  opacity: 0.8;
+}
+
+.marketing-animation-left-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 72px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  background: #121212;
+  opacity: 0.8;
+}
+
+.marketing-animation-left-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.marquee-group {
+  display: flex;
+}
+
+.marketing-animation-left-marquee h4 {
+  margin: 0;
+  white-space: nowrap;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marketing-animation-left-marquee h4 {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 64px;
+  letter-spacing: -2.88px;
+}
+
+.marketing-animation-top {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Dark overlay */
+.marketing-animation-top::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7); /* darkness level */
+  pointer-events: none;
+
+  /* IMPORTANT: mask defines the flashlight */
+  mask-image: radial-gradient(
+    circle 120px at var(--x, 50%) var(--y, 50%),
+    transparent 0%,
+    transparent 40%,
+    black 60%
+  );
+  -webkit-mask-image: radial-gradient(
+    circle 120px at var(--x, 50%) var(--y, 50%),
+    transparent 0%,
+    transparent 40%,
+    black 60%
+  );
+}
+
+.marketing-animation-top-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* The moving flashlight trigger */
+.marketing-animation-top .search {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none; /* no blocking */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marketing-animation-top .search img {
+  width: 200px;
+  object-fit: cover;
+  transform: translate(-22px, 30px);
+  z-index: 2;
+}
+
+.marketing-animation-bottom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 20px;
+  align-self: stretch;
+  padding: 0px 80px;
+  position: relative;
+}
+
+.marketing-animation-bottom .google {
+  width: auto;
+  height: 72px;
+  flex-shrink: 0;
+  object-fit: cover;
+  animation: marketingAnimationGoogle 10s linear infinite;
+}
+
+@keyframes marketingAnimationGoogle {
+  0% {
+    opacity: 1;
+    filter: grayscale(1);
+  }
+  7.5% {
+    filter: grayscale(1);
+  }
+  10% {
+    filter: grayscale(0);
+  }
+  12.5% {
+    filter: grayscale(0);
+  }
+  37.5% {
+    filter: grayscale(0);
+  }
+  40% {
+    filter: grayscale(0);
+  }
+  42.5% {
+    filter: grayscale(0);
+  }
+  50% {
+    opacity: 1;
+    filter: grayscale(0);
+  }
+  52.5% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.marketing-animation-bottom .meta {
+  width: auto;
+  height: 72px;
+  flex-shrink: 0;
+  object-fit: cover;
+  animation: marketingAnimationMeta 10s linear infinite;
+}
+
+@keyframes marketingAnimationMeta {
+  0% {
+    opacity: 1;
+    filter: grayscale(1);
+  }
+  7.5% {
+    filter: grayscale(1);
+  }
+  10% {
+    filter: grayscale(1);
+  }
+  12.5% {
+    filter: grayscale(1);
+  }
+  37.5% {
+    filter: grayscale(1);
+  }
+  40% {
+    filter: grayscale(0);
+  }
+  42.5% {
+    filter: grayscale(0);
+  }
+  50% {
+    opacity: 1;
+    filter: grayscale(0);
+  }
+  52.5% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.marketing-animation-bottom .click {
+  position: absolute;
+  width: 30px;
+  object-fit: cover;
+  left: 50%;
+  top: 50%;
+  transform: translate(calc(-50% - 40px), calc(-50% + 40px));
+  animation: marketingAnimationClick 10s linear infinite;
+}
+
+@keyframes marketingAnimationClick {
+  0% {
+    opacity: 0;
+    transform: translate(calc(-50% - 40px), calc(-50% + 40px));
+  }
+  2.5% {
+    opacity: 1;
+  }
+  7.5% {
+    left: 104px;
+    transform: translate(0px, calc(-50% + 40px));
+  }
+  10% {
+    left: 104px;
+    transform: translate(0px, calc(-50% + 40px)) scale(0.6);
+  }
+  12.5% {
+    left: 104px;
+    transform: translate(0px, calc(-50% + 40px)) scale(1);
+  }
+  37.5% {
+    left: calc(100% - 130px);
+    transform: translate(0px, calc(-50% + 40px));
+  }
+  40% {
+    left: calc(100% - 130px);
+    transform: translate(0px, calc(-50% + 40px)) scale(0.6);
+  }
+  42.5% {
+    left: calc(100% - 130px);
+    transform: translate(0px, calc(-50% + 40px)) scale(1);
+  }
+  47.2% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    left: calc(100% - 130px);
+    transform: translate(0px, calc(-50% + 40px)) scale(1);
+  }
+  52.5% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.marketing-animation-bottom h3 {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 56px;
+  letter-spacing: -2.4px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: marketingAnimationText 10s linear infinite;
+}
+
+@keyframes marketingAnimationText {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  55% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 /* Blogs */
 
 .our-blogs {
