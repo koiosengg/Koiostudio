@@ -11,6 +11,7 @@ import Designing from "./components/Designing";
 import Development from "./components/Development";
 import Branding from "./components/Branding";
 import Marketing from "./components/Marketing";
+import About from "./components/About";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="branding" element={<Branding />} />
           <Route path="marketing" element={<Marketing />} />
           <Route path="blog/*" element={<Blogs />} />
+          <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<Home />} />
         </Route>

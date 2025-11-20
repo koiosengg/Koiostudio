@@ -2185,7 +2185,7 @@ header nav a:hover {
 }
 
 .designing-types-text {
-  width: 100%;
+  width: 75%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -3153,15 +3153,13 @@ header nav a:hover {
   overflow: hidden;
 }
 
-/* Dark overlay */
 .marketing-animation-top::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.7); /* darkness level */
+  background: rgba(0, 0, 0, 0.7);
   pointer-events: none;
 
-  /* IMPORTANT: mask defines the flashlight */
   mask-image: radial-gradient(
     circle 120px at var(--x, 50%) var(--y, 50%),
     transparent 0%,
@@ -3182,13 +3180,12 @@ header nav a:hover {
   object-fit: cover;
 }
 
-/* The moving flashlight trigger */
 .marketing-animation-top .search {
   width: 120px;
   height: 120px;
   border-radius: 50%;
   position: absolute;
-  pointer-events: none; /* no blocking */
+  pointer-events: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3388,6 +3385,62 @@ header nav a:hover {
   100% {
     opacity: 0;
   }
+}
+
+/* About */
+
+.about-numbers {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 100px 160px;
+}
+
+.about-numbers-set {
+  display: flex;
+  width: 100%;
+  min-height: 230px;
+  padding: 32px 50px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 8px;
+  background: linear-gradient(
+      149deg,
+      rgba(18, 18, 18, 0.75) -0.73%,
+      rgba(18, 18, 18, 0.25) 100%
+    ),
+    linear-gradient(
+      148deg,
+      rgba(49, 49, 49, 0.5) 1.39%,
+      rgba(0, 0, 0, 0.25) 72.83%
+    );
+}
+
+.about-numbers-set h3 {
+  color: var(--White-text, #fff);
+  font-family: Poppins;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 88px;
+  letter-spacing: -3.84px;
+}
+
+.about-numbers-set p {
+  color: var(--Grey-text-grey-text-300, #b9b9b9);
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+.about-vision .home-about-text{
+  max-width: 100%;
 }
 
 /* Blogs */
