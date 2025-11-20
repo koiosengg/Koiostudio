@@ -2521,12 +2521,14 @@ header nav a:hover {
 /* Branding */
 
 .branding-animation-left {
-  height: 846px;
+  height: 100%;
+  min-height: 846px;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
   gap: 20px;
+  align-self: stretch;
 }
 
 .branding-animation-left-heading {
@@ -2676,6 +2678,7 @@ header nav a:hover {
 .branding-animation-left-container-1 img {
   width: 100%;
   object-fit: cover;
+  padding-left: 20px;
 }
 
 .branding-animation-left-container-1 img:first-child {
