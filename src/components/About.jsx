@@ -3,6 +3,12 @@ import Banner from "./About/Banner";
 import Numbers from "./About/Numbers";
 import Company from "./About/Company";
 import Vision from "./About/Vision";
+import Vertical from "./About/Vertical";
+import Possibilities from "./About/Possibilities";
+import Gallery from "./Home/Gallery";
+import Content from "./About/Content";
+import FAQ from "./Home/FAQ";
+import Connection from "./Home/Connection";
 
 function About() {
   return (
@@ -10,7 +16,13 @@ function About() {
       <Banner />
       <Numbers />
       <Company />
-      <Vision/>
+      <Vision />
+      <Vertical />
+      <Possibilities />
+      <Gallery />
+      <Content />
+      <FAQ />
+      <Connection />
     </>
   );
 }
