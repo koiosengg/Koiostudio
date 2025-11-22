@@ -18,7 +18,7 @@ function Navbar() {
           <Link to="/about">About Us</Link>
           <Link to="/blog">Blog</Link>
         </nav>
-        <Primary text="Contact Us" toLink="/" />
+        <Primary text="Contact Us" toLink="/contact" />
       </div>
     </header>
   );

@@ -84,6 +84,7 @@ header nav a:hover {
   display: flex;
   padding: 8px 16px;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   flex-shrink: 0;
   border-radius: 8px;
@@ -98,6 +99,7 @@ header nav a:hover {
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
+  cursor: pointer;
 }
 
 .primary-btn svg {
@@ -131,6 +133,7 @@ header nav a:hover {
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
+  cursor: pointer;
 }
 
 .secondary-btn svg {
@@ -157,6 +160,7 @@ header nav a:hover {
   border-radius: 8px;
   backdrop-filter: blur(2px);
   text-decoration: none;
+  cursor: pointer;
 }
 
 .tertiary-btn p {
@@ -305,6 +309,7 @@ header nav a:hover {
   justify-content: center;
   align-items: center;
   gap: 8px;
+  z-index: 1;
 }
 
 .template-heading p {
@@ -3976,6 +3981,281 @@ header nav a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* Contact */
+
+.contact-banner {
+  width: 100%;
+  min-height: 100svh;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-banner-background {
+  width: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.contact-banner-container {
+  width: 100%;
+  padding: 80px 160px;
+  padding-top: 270px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 98px;
+  z-index: 1;
+}
+
+.contact-banner-heading {
+  display: flex;
+  width: 781px;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-banner-heading h1 {
+  text-align: center;
+  font-family: Poppins;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 104px;
+  letter-spacing: -4.8px;
+  background: linear-gradient(
+    272deg,
+    #ffbf00 -94.41%,
+    #ffebb0 4.53%,
+    #ffbf00 99.71%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-banner-heading p {
+  color: var(--Grey-text-grey-text-300, #b9b9b9);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.contact-banner-div {
+  width: 100%;
+  display: flex;
+  padding: 48px;
+  align-items: center;
+  gap: 24px;
+  border-radius: 16px;
+  background: linear-gradient(
+    273deg,
+    #121212 15%,
+    rgba(18, 18, 18, 0.6) 94.52%
+  );
+  backdrop-filter: blur(15px);
+}
+
+.contact-banner-div iframe {
+  width: 100%;
+  align-self: stretch;
+  border: none;
+  border-radius: 8px;
+}
+
+.contact-banner form {
+  width: 100%;
+  display: flex;
+  padding: 24px 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--Woodsmoke-BG-woodsmoke-bg-600, #706f6f);
+}
+
+.contact-banner .inputs-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.contact-banner .input-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.contact-banner .input-container label {
+  color: var(--Grey-text-Primary, #979797);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.contact-banner .input-container label span {
+  color: var(--White-text, #fff);
+}
+
+.contact-banner .input-container input {
+  width: 100%;
+  display: flex;
+  padding: 12px 16px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 4px;
+  border: 0.7px solid var(--Woodsmoke-BG-woodsmoke-bg-600, #706f6f);
+  background: none;
+  color: var(--White-text, #fff);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  outline: none;
+}
+
+.contact-banner .input-container input:focus {
+  border: 1px solid #fff;
+}
+
+.contact-banner .input-container textarea {
+  outline: none;
+  resize: none;
+  height: 180px;
+  width: 100%;
+  display: flex;
+  padding: 12px 16px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 4px;
+  border: 0.7px solid var(--Woodsmoke-BG-woodsmoke-bg-600, #706f6f);
+  background: none;
+  color: var(--White-text, #fff);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.contact-banner .input-container textarea:focus {
+  border: 1px solid #fff;
+}
+
+.contact-banner .primary-btn {
+  width: 100%;
+  border: none;
+  padding: 16px 32px;
+}
+
+.contact-links {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0px 160px 80px 160px;
+  position: relative;
+}
+
+.contact-links-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-links-container {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+  z-index: 1;
+}
+
+.contact-links-set {
+  display: flex;
+  width: 100%;
+  padding: 36px 24px 24px 24px;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 8px;
+  background: #121212;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.contact-links-set:hover {
+  background: #252525;
+}
+
+.contact-links-set::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, #fff, transparent 80%);
+  z-index: 2;
+}
+
+.contact-links-set-heading {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  align-self: stretch;
+}
+
+.contact-links-set h3 {
+  color: var(--White-text, #fff);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.contact-links-set p {
+  color: var(--Grey-text-Primary, #979797);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
 }
 
 /* Footer */

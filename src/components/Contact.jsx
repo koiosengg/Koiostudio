@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import Banner from "./Contact/Banner";
+import Glow from "./Contact/Glow";
+import Links from "./Contact/Links";
 
 function Contact() {
   return (
-    <div>Contact</div>
-  )
+    <>
+      <Banner />
+      <Glow />
+      <Links />
+    </>
+  );
 }
 
-export default Contact
+export default Contact;
