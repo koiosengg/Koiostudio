@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import DesktopBackground from "../../assets/Home/Connection/Desktop Background.png";
+import MobileBackground from "../../assets/Home/Connection/Mobile Background.png";
 import Primary from "../Buttons/Primary";
 import Secondary from "../Buttons/Secondary";
 
@@ -27,14 +28,22 @@ function Connection() {
       <img
         src={DesktopBackground}
         alt="Background"
-        className="home-connection-background"
+        className="home-connection-background desktop"
         style={{
-          opacity: isVisible ? 1 : 0
+          opacity: isVisible ? 1 : 0,
+        }}
+      />
+      <img
+        src={MobileBackground}
+        alt="Background"
+        className="home-connection-background mobile"
+        style={{
+          opacity: isVisible ? 1 : 0,
         }}
       />
       <div className="home-connection-container">
         <h2>
-          Lets Establish A <br className="desktop" /> Connection
+          Lets Establish A <br /> Connection
         </h2>
         <div className="home-connection-buttons">
           <Primary text="Call Us" toLink="/" />

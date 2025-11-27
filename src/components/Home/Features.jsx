@@ -5,7 +5,7 @@ import Lead from "../../assets/Home/Features/Lead.png";
 
 function Features() {
   return (
-    <section className="template">
+    <section className="template home-features-container">
       <div className="template-heading">
         <p>Features</p>
         <h2>Build . Trust . Boost</h2>

@@ -131,7 +131,6 @@ function Gallery() {
         <div
           className="gallery-controls"
           style={{
-            display: "flex",
             gap: "20px",
             justifyContent: "center",
             marginTop: "20px",

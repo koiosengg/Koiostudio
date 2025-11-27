@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import DesktopBackground from "../../assets/Home/Banner/Desktop Background.svg";
+import MobileBackground from "../../assets/Home/Banner/Mobile Background.svg";
 
 function Banner() {
   const [opacity, setOpacity] = useState(0);
@@ -30,7 +31,13 @@ function Banner() {
         src={DesktopBackground}
         alt="Designing Banner Background"
         style={{ opacity }}
-        className="home-banner-background"
+        className="home-banner-background desktop"
+      />
+      <img
+        src={MobileBackground}
+        alt="Designing Banner Background"
+        style={{ opacity }}
+        className="home-banner-background mobile"
       />
       <div className="home-banner-text">
         <h1>
