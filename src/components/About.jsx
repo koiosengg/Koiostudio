@@ -9,6 +9,7 @@ import Gallery from "./Home/Gallery";
 import Content from "./About/Content";
 import FAQ from "./Home/FAQ";
 import Connection from "./Home/Connection";
+import Pride from "./Home/Pride";
 
 function About() {
   return (
@@ -16,6 +17,7 @@ function About() {
       <Banner />
       <Numbers />
       <Company />
+      <Pride />
       <Vision />
       <Vertical />
       <Possibilities />

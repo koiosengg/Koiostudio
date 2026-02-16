@@ -1,18 +1,18 @@
 import React from "react";
-import BackgroundImage from "../../assets/Home/Pride/Background Image.png";
-import LML from "../../assets/Home/Pride/LML.png";
-import LastMinGuru from "../../assets/Home/Pride/Last Min Guru.png";
-import Staidrich from "../../assets/Home/Pride/Staidrich.png";
-import ISK from "../../assets/Home/Pride/ISK.png";
-import CilkenCave from "../../assets/Home/Pride/Cilken Cave.png";
-import XLR8 from "../../assets/Home/Pride/XLR8.png";
-import NEStructures from "../../assets/Home/Pride/NE Structures.png";
-import SEG from "../../assets/Home/Pride/SEG.png";
+import Mahi from "../../assets/Home/Pride/Mahi.png";
+import AllOk from "../../assets/Home/Pride/AllOk.png";
+import Jason from "../../assets/Home/Pride/Jason.png";
 import TMS from "../../assets/Home/Pride/TMS.png";
+import XLR8 from "../../assets/Home/Pride/XLR8.png";
+import Muth from "../../assets/Home/Pride/Muth.png";
+import Malgudi from "../../assets/Home/Pride/Malgudi.png";
+import Jukebox from "../../assets/Home/Pride/Jukebox.png";
+import Prima from "../../assets/Home/Pride/Prima.png";
+import CilkenCave from "../../assets/Home/Pride/CilkenCave.png";
 
 function Pride() {
   return (
-    <section className="template">
+    <section className="template home-pride-template">
       <div className="template-heading">
         <p>Our Pride</p>
         <h2>
@@ -22,57 +22,47 @@ function Pride() {
       </div>
 
       <div className="home-pride">
-        <div className="home-pride-set white-top-border">
-          <img src={BackgroundImage} className="background-image" alt="" />
-          <img src={LML} alt="LML" className="company-image" />
-        </div>
-
-        <div className="home-pride-set white-top-border">
-          <img src={BackgroundImage} className="background-image" alt="" />
-          <img
-            src={LastMinGuru}
-            alt="Last Min Guru"
-            className="company-image"
-          />
-        </div>
-
-        <div className="home-pride-set white-top-border">
-          <img src={BackgroundImage} className="background-image" alt="" />
-          <img src={Staidrich} alt="Staidrich" className="company-image" />
-        </div>
-
-        <div className="home-pride-set white-top-border">
-          <img src={BackgroundImage} className="background-image" alt="" />
-          <img src={ISK} alt="ISK" className="company-image" />
-        </div>
-
-        <div className="home-pride-set white-top-border">
-          <img src={BackgroundImage} className="background-image" alt="" />
-          <img src={CilkenCave} alt="Cilken Cave" className="company-image" />
-        </div>
-
-        <div className="home-pride-set white-top-border">
-          <img src={BackgroundImage} className="background-image" alt="" />
-          <img src={XLR8} alt="XLR8" className="company-image" />
-        </div>
-
-        <div className="home-pride-set white-top-border">
-          <img src={BackgroundImage} className="background-image" alt="" />
-          <img
-            src={NEStructures}
-            alt="NE Structures"
-            className="company-image"
-          />
-        </div>
-
-        <div className="home-pride-set white-top-border">
-          <img src={BackgroundImage} className="background-image" alt="" />
-          <img src={SEG} alt="SEG" className="company-image" />
-        </div>
-
-        <div className="home-pride-set white-top-border">
-          <img src={BackgroundImage} className="background-image" alt="" />
-          <img src={TMS} alt="TMS" className="company-image" />
+        <div className="home-pride-marquee">
+          <img src={Mahi} alt="Mahi" />
+          <img src={AllOk} alt="AllOk" />
+          <img src={Jason} alt="Jason" />
+          <img src={TMS} alt="TMS" />
+          <img src={XLR8} alt="XLR8" />
+          <img src={Muth} alt="Muth" />
+          <img src={Malgudi} alt="Malgudi" />
+          <img src={Jukebox} alt="Jukebox" />
+          <img src={Prima} alt="Prima" />
+          <img src={CilkenCave} alt="CilkenCave" />
+          <img src={Mahi} alt="Mahi" />
+          <img src={AllOk} alt="AllOk" />
+          <img src={Jason} alt="Jason" />
+          <img src={TMS} alt="TMS" />
+          <img src={XLR8} alt="XLR8" />
+          <img src={Muth} alt="Muth" />
+          <img src={Malgudi} alt="Malgudi" />
+          <img src={Jukebox} alt="Jukebox" />
+          <img src={Prima} alt="Prima" />
+          <img src={CilkenCave} alt="CilkenCave" />
+          <img src={Mahi} alt="Mahi" />
+          <img src={AllOk} alt="AllOk" />
+          <img src={Jason} alt="Jason" />
+          <img src={TMS} alt="TMS" />
+          <img src={XLR8} alt="XLR8" />
+          <img src={Muth} alt="Muth" />
+          <img src={Malgudi} alt="Malgudi" />
+          <img src={Jukebox} alt="Jukebox" />
+          <img src={Prima} alt="Prima" />
+          <img src={CilkenCave} alt="CilkenCave" />
+          <img src={Mahi} alt="Mahi" />
+          <img src={AllOk} alt="AllOk" />
+          <img src={Jason} alt="Jason" />
+          <img src={TMS} alt="TMS" />
+          <img src={XLR8} alt="XLR8" />
+          <img src={Muth} alt="Muth" />
+          <img src={Malgudi} alt="Malgudi" />
+          <img src={Jukebox} alt="Jukebox" />
+          <img src={Prima} alt="Prima" />
+          <img src={CilkenCave} alt="CilkenCave" />
         </div>
       </div>
     </section>
