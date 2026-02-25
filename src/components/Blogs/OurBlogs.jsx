@@ -25,7 +25,7 @@ function OurBlogs() {
                 egestas cursus varius ultrices odio.
               </p>
             </div>
-            <Tertiary toLink="/blog/inner-page" buttonLabel="Read More" />
+            <Tertiary toLink="/blog/blog-1" buttonLabel="Read More" />
           </div>
         </div>
         <div className="our-blogs-set white-top-border">
