@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import DesktopBackground from "../../assets/Designing/Banner/Desktop Background.png";
+import MobileBackground from "../../assets/Designing/Banner/Mobile Background.png";
 
 function Banner() {
   const [opacity, setOpacity] = useState(0);
@@ -14,7 +15,7 @@ function Banner() {
           hasFadedIn.current = true;
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
 
     if (bannerRef.current) observer.observe(bannerRef.current);
@@ -30,7 +31,13 @@ function Banner() {
         src={DesktopBackground}
         alt="Designing Banner Background"
         style={{ opacity }}
-        className="home-banner-background"
+        className="home-banner-background desktop"
+      />
+      <img
+        src={MobileBackground}
+        alt="Designing Banner Background"
+        style={{ opacity }}
+        className="home-banner-background mobile"
       />
       <div className="home-banner-text">
         <h1>Designing</h1>
