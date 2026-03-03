@@ -5,7 +5,7 @@ import Engg from "../../assets/About/Vertical/Koios Enginerring Solutions.png";
 
 function Vertical() {
   return (
-      <section className="home-about">
+      <section className="home-about about-vertical-div">
         <img src={DesktopBackground} className="home-about-background" />
         <div className="about-vertical">
           <div className="about-vertical-container">

@@ -1,11 +1,14 @@
 import React from "react";
 import DesktopBackground from "../../assets/About/Vision/Desktop Background.png";
+import MobileDesktop from "../../assets/About/Vision/Mobile Background.png";
 
 function Vision() {
   return (
     <section className="template">
       <div className="home-about about-vision">
-        <img src={DesktopBackground} className="home-about-background" />
+        <img src={DesktopBackground} className="home-about-background desktop" />
+        <img src={MobileDesktop} className="home-about-background mobile" />
+
         <div className="home-about-text-container">
           <div className="template-heading">
             <p>Our Vision</p>

@@ -1,10 +1,13 @@
 import React from "react";
 import DesktopBackground from "../../assets/About/Content/Desktop Background.png";
+import MobileDesktop from "../../assets/About/Content/Mobile Background.png";
 
 function Content() {
   return (
     <section className="home-about about-content">
-      <img src={DesktopBackground} className="home-about-background" />
+      <img src={DesktopBackground} className="home-about-background desktop" />
+      <img src={MobileDesktop} className="home-about-background mobile" />
+
       <div className="home-about-text-container">
         <div className="home-about-text">
           <p>

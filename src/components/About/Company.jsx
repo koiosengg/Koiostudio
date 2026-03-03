@@ -1,16 +1,21 @@
 import React from "react";
 import DesktopBackground from "../../assets/About/Company/Desktop Background.png";
+import MobileDesktop from "../../assets/About/Company/Mobile Background.png";
 
 function Company() {
   return (
     <section className="template ">
       <div className="home-about">
-        <img src={DesktopBackground} className="home-about-background" />
+        <img
+          src={DesktopBackground}
+          className="home-about-background desktop"
+        />
+        <img src={MobileDesktop} className="home-about-background mobile" />
         <div className="home-about-text-container">
           <div className="template-heading">
             <p>About Us</p>
             <h2>
-              Empowering <br className="desktop" />
+              Empowering <br />
               Connections & Innovations
             </h2>
           </div>

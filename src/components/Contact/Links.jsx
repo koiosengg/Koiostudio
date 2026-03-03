@@ -1,19 +1,24 @@
 import React from "react";
 import DesktopBackground from "../../assets/Contact/Links/Desktop Background.png";
-
+import MobileBackground from "../../assets/Contact/Links/Mobile Background.png";
 function Links() {
   return (
     <section className="contact-links">
       <img
         src={DesktopBackground}
         alt="Background"
-        className="contact-links-background"
+        className="contact-links-background desktop"
+      />
+      <img
+        src={MobileBackground}
+        alt="Background"
+        className="contact-links-background mobile"
       />
       <div className="template-heading">
         <p>Your Support Network</p>
         <h2>
           We’re Here Whenever
-          <br className="desktop" />
+          <br />
           You Need Us
         </h2>
       </div>
