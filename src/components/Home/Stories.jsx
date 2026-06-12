@@ -10,6 +10,7 @@ function Stories() {
   });
   const [hasCounted, setHasCounted] = useState(false);
   const numberSectionRef = useRef(null);
+  const searchInputRef = useRef(null);
   const [searchTerm, setSearchTerm] = useState("");
 
   const pages = [
@@ -40,6 +41,10 @@ function Stories() {
   );
 
   useEffect(() => {
+    if (searchInputRef.current) {
+      searchInputRef.current.focus();
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
@@ -76,11 +81,12 @@ function Stories() {
       { threshold: 0.5 }
     );
 
-    if (numberSectionRef.current) observer.observe(numberSectionRef.current);
+    const numberSectionElement = numberSectionRef.current;
+
+    if (numberSectionElement) observer.observe(numberSectionElement);
 
     return () => {
-      if (numberSectionRef.current)
-        observer.unobserve(numberSectionRef.current);
+      if (numberSectionElement) observer.unobserve(numberSectionElement);
     };
   }, [hasCounted]);
 
@@ -99,9 +105,11 @@ function Stories() {
 
         <div className="home-stories-left-search">
           <input
+            ref={searchInputRef}
             id="search"
             type="text"
             placeholder="Search pages..."
+            autoFocus
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />

@@ -2,10 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import BlogImg1 from "../../../assets/Blogs/Our Blogs/Blog Image 2.png";
 import Posts from "../Posts";
+import Connection from "../../Home/Connection";
 
 function Blog1() {
   return (
-    <section className="blogs-inner-page">
+    <>
+      <section className="blogs-inner-page">
       <div className="back-button">
         <Link to="/blog">
           <svg
@@ -323,7 +325,9 @@ function Blog1() {
           <Posts />
         </div>
       </div>
-    </section>
+      </section>
+      <Connection />
+    </>
   );
 }
 

@@ -35,7 +35,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 24px 48px;
+  padding: 12px 48px;
   gap: 24px;
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -95,7 +95,7 @@ header nav a:hover {
   color: var(--Black-Primary, #121212);
   text-align: center;
   font-family: Poppins;
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
@@ -109,6 +109,10 @@ header nav a:hover {
 
 .primary-btn:hover {
   box-shadow: 0 4px 20px 0 rgba(255, 255, 255, 0.35);
+}
+
+.about-possibilities-btn {
+  padding: 16px 32px;
 }
 
 .secondary-btn {
@@ -183,16 +187,48 @@ header nav a:hover {
 .tertiary-btn:hover svg path {
   fill: var(--Yellow-yellow-200, #ffe28a);
 }
-
-/* Utility*/
-
 .white-top-border {
   position: relative;
   overflow: hidden;
 }
 
 .white-top-border::before {
-  content: " ";
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  border: 1px solid transparent;
+  background: radial-gradient(ellipse 265px 100% at top, #ffffff, transparent)
+    border-box;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.white-top-border.small-hover::before {
+  background: radial-gradient(ellipse 235px 100% at top, #ffffff, transparent)
+    border-box;
+}
+
+.white-top-border.blog-hover::before {
+  background: radial-gradient(ellipse 400px 100% at top, #ffffff, transparent)
+    border-box;
+}
+
+.white-top-border::after {
+  content: "";
   position: absolute;
   top: 0;
   left: 50%;
@@ -200,7 +236,18 @@ header nav a:hover {
   width: 100%;
   height: 1px;
   background: linear-gradient(90deg, transparent 10%, #fff, transparent 90%);
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.3s ease;
   z-index: 1;
+}
+
+.white-top-border:hover::before {
+  opacity: 1;
+}
+
+.white-top-border:hover::after {
+  opacity: 0;
 }
 
 .no-scrollbar {
@@ -279,7 +326,7 @@ header nav a:hover {
   padding: 80px 160px;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 60px;
   align-self: stretch;
   position: relative;
   z-index: 1;
@@ -359,7 +406,7 @@ header nav a:hover {
   overflow: hidden;
   display: inline-flex;
   align-items: center;
-  animation: marquee 30s linear infinite;
+  animation: marquee 33s linear infinite;
 }
 
 @keyframes marquee {
@@ -1255,14 +1302,14 @@ header nav a:hover {
   border-radius: 4px;
   background: linear-gradient(
     149deg,
-    rgba(18, 18, 18, 0.75) -0.73%,
+    rgba(18, 18, 18, 0.75) -0.75%,
     rgba(18, 18, 18, 0.25) 100%
   );
   backdrop-filter: blur(5px);
   align-self: stretch;
   flex-shrink: 0;
+  transition: all 0.3s ease;
 }
-
 .home-testimony-set-text {
   width: 100%;
   display: flex;
@@ -2083,7 +2130,14 @@ header nav a:hover {
   align-items: flex-start;
   gap: 20px;
 }
-
+.designing-types-section {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 36px;
+}
 .designing-types-set {
   width: 100%;
   display: flex;
@@ -2256,7 +2310,7 @@ header nav a:hover {
   object-fit: cover;
   border-radius: 8px;
   object-position: top;
-  transition: transform 5s ease;
+  transition: transform 30s linear;
 }
 
 .designing-services-set-card:hover img {
@@ -3404,6 +3458,7 @@ header nav a:hover {
       rgba(49, 49, 49, 0.5) 1.39%,
       rgba(0, 0, 0, 0.25) 72.83%
     );
+  transition: all 0.3s ease;
 }
 
 .about-numbers-set h3 {
@@ -3624,6 +3679,7 @@ header nav a:hover {
     rgba(31, 31, 31, 0.82) 100.01%
   );
   position: relative;
+  transition: all 0.3s ease;
 }
 
 .our-blogs-set-img {
@@ -4106,6 +4162,7 @@ header nav a:hover {
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
+  transition: color 0.3s ease;
 }
 
 .contact-banner .input-container label span {
@@ -4205,25 +4262,35 @@ header nav a:hover {
   gap: 8px;
   align-self: stretch;
   border-radius: 8px;
-  background: #121212;
+  background:
+    linear-gradient(
+      149deg,
+      rgba(18, 18, 18, 0.75) -0.73%,
+      rgba(18, 18, 18, 0.25) 100%
+    ),
+    linear-gradient(
+      148deg,
+      rgba(49, 49, 49, 0.5) 1.39%,
+      rgba(0, 0, 0, 0.25) 72.83%
+    );
+  backdrop-filter: blur(5px);
   position: relative;
   text-decoration: none;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
 }
 
 .contact-links-set:hover {
-  background: #252525;
-}
-
-.contact-links-set::before {
-  content: " ";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 80%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent 0%, #fff, transparent 80%);
-  z-index: 2;
+  background:
+    linear-gradient(
+      149deg,
+      rgba(18, 18, 18, 0.5) -0.73%,
+      rgba(18, 18, 18, 0.25) 100%
+    ),
+    linear-gradient(
+      148deg,
+      rgba(49, 49, 49, 0.5) 1.39%,
+      rgba(0, 0, 0, 0.25) 72.83%
+    );
 }
 
 .contact-links-set-heading {
@@ -4662,7 +4729,7 @@ footer {
     display: flex;
     padding: 48px 20px;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 40px;
   }
 
@@ -4690,6 +4757,60 @@ footer {
     letter-spacing: -1.44px;
   }
 
+  .back-button a svg {
+    width: 16px;
+    height: 16px;
+  }
+  .blogs-inner-page {
+    padding: 64px 20px 48px;
+    gap: 40px;
+  }
+  .back-button p {
+    font-size: 16px;
+  }
+  .back-button a {
+    height: 32px;
+    width: 32px;
+  }
+  .blogs-inner-page-heading h1,
+  .blogs-posts-container h2 {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: normal;
+  }
+  .blogs-inner-page-heading p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .blogs-inner-page-container {
+    gap: 48px;
+  }
+  .blogs-inner-page-content {
+    flex-direction: column;
+  }
+  .blogs-inner-page-text p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .blogs-inner-page-text-heading {
+    gap: 16px;
+  }
+  .blogs-posts-set-text h3 {
+    font-size: 16px;
+    line-height: normal;
+  }
+  .blogs-inner-page-content {
+    gap: 48px;
+  }
+  .blogs-posts {
+    width: 100%;
+  }
+  .blogs-posts-container {
+    padding: 16px;
+  }
+  .blogs-posts-set {
+    width: 100%;
+  }
   .home-features-container {
     padding: 48px 0px;
   }
@@ -4918,10 +5039,14 @@ footer {
   .gallery-set .our-blogs-set-content {
     padding: 8px;
   }
+  .our-blogs {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 21px;
+  }
 
   .our-blogs-set-text h3 {
     color: var(--White-text, #fff);
-    text-align: center;
+    text-align: left;
     font-family: Poppins;
     font-size: 18px;
     font-style: normal;
@@ -4975,7 +5100,10 @@ footer {
   .home-testimony-slide::-webkit-scrollbar {
     display: none;
   }
-
+  .white-top-border::before {
+    background: radial-gradient(circle 165px at top, #ffffff, transparent)
+      border-box;
+  }
   .home-testimony-set {
     width: 90%;
     flex-shrink: 0;
@@ -4994,7 +5122,17 @@ footer {
   .home-testimony-controls {
     display: none;
   }
-
+  .vision {
+    padding: 48px 20px;
+  }
+  .vision-text {
+    font-size: 14px;
+  }
+  .vision-background {
+    left: auto;
+    top: auto;
+    transform: none;
+  }
   .template.faq {
     flex-direction: column;
   }
@@ -5029,6 +5167,15 @@ footer {
     font-weight: 400;
     line-height: 20px;
     padding: 0;
+  }
+
+  .home-connection {
+    height: 100svh;
+  }
+
+  .home-connection-background {
+    height: 100%;
+    object-fit: cover;
   }
 
   .home-connection-container {
@@ -5343,7 +5490,7 @@ footer {
   }
 
   .contact-links-set {
-    width: 80%;
+    width: 100%;
     align-self: auto;
   }
 

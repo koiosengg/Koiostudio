@@ -1,10 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useLocation } from "react-router-dom";
 import Grey from "../assets/Glow/Grey.svg";
 import Yellow from "../assets/Glow/Yellow.svg";
 
 function Glow() {
   const glowRef = useRef(null);
   const [isActive, setIsActive] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    setIsActive(false);
+  }, [location.pathname]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -17,7 +23,7 @@ function Glow() {
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.2 }
     );
 
     if (glowRef.current) {

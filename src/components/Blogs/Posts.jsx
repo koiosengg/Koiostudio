@@ -11,7 +11,7 @@ function Posts() {
       <div className="blogs-posts-container">
         <h2>Related Posts</h2>
         <div className="blogs-posts-set-container">
-          <Link to="/" className="blogs-posts-set">
+          <Link to="/blog/blog-1" className="blogs-posts-set">
             <img src={BlogImg1} alt="Blog Image 1" />
             <div className="blogs-posts-set-text">
               <h3>
@@ -20,14 +20,14 @@ function Posts() {
               <p>July 27, 2025</p>
             </div>
           </Link>
-          <Link to="/" className="blogs-posts-set">
+          <Link to="/blog/blog-1" className="blogs-posts-set">
             <img src={BlogImg2} alt="Blog Image 1" />
             <div className="blogs-posts-set-text">
               <h3>Color Psychology: How Colors Influence User Perception </h3>
               <p>July 27, 2025</p>
             </div>
           </Link>
-          <Link to="/" className="blogs-posts-set">
+          <Link to="/blog/blog-1" className="blogs-posts-set">
             <img src={BlogImg3} alt="Blog Image 1" />
             <div className="blogs-posts-set-text">
               <h3>
@@ -37,7 +37,7 @@ function Posts() {
               <p>July 27, 2025</p>
             </div>
           </Link>
-          <Link to="/" className="blogs-posts-set">
+          <Link to="/blog/blog-1" className="blogs-posts-set">
             <img src={BlogImg4} alt="Blog Image 1" />
             <div className="blogs-posts-set-text">
               <h3>

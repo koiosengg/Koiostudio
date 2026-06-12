@@ -13,7 +13,7 @@ function OurBlogs() {
         <h2>The Koios Perspective</h2>
       </div>
       <div className="our-blogs">
-        <div className="our-blogs-set white-top-border">
+        <div className="our-blogs-set white-top-border blog-hover">
           <div className="our-blogs-set-img">
             <img src={BlogImg1} alt="Blog Image 1" />
           </div>
@@ -28,7 +28,7 @@ function OurBlogs() {
             <Tertiary toLink="/blog/blog-1" buttonLabel="Read More" />
           </div>
         </div>
-        <div className="our-blogs-set white-top-border">
+        <div className="our-blogs-set white-top-border blog-hover">
           <div className="our-blogs-set-img">
             <img src={BlogImg2} alt="Blog Image 2" />
           </div>
@@ -42,10 +42,10 @@ function OurBlogs() {
                 egestas cursus varius ultrices odio.
               </p>
             </div>
-            <Tertiary toLink="/" buttonLabel="Read More" />
+            <Tertiary toLink="/blog/blog-1" buttonLabel="Read More" />
           </div>
         </div>
-        <div className="our-blogs-set white-top-border">
+        <div className="our-blogs-set white-top-border blog-hover">
           <div className="our-blogs-set-img">
             <img src={BlogImg3} alt="Blog Image 3" />
           </div>
@@ -57,10 +57,10 @@ function OurBlogs() {
                 egestas cursus varius ultrices odio.
               </p>
             </div>
-            <Tertiary toLink="/" buttonLabel="Read More" />
+            <Tertiary toLink="/blog/blog-1" buttonLabel="Read More" />
           </div>
         </div>
-        <div className="our-blogs-set white-top-border">
+        <div className="our-blogs-set white-top-border blog-hover">
           <div className="our-blogs-set-img">
             <img src={BlogImg4} alt="Blog Image 4" />
           </div>
@@ -72,7 +72,7 @@ function OurBlogs() {
                 egestas cursus varius ultrices odio.
               </p>
             </div>
-            <Tertiary toLink="/" buttonLabel="Read More" />
+            <Tertiary toLink="/blog/blog-1" buttonLabel="Read More" />
           </div>
         </div>
       </div>

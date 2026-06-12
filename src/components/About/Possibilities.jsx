@@ -21,7 +21,7 @@ function Possibilities() {
             tailored just for you!
           </p>
         </div>
-        <Primary text="View Services" toLink="/" />
+        <Primary text="View Services" toLink="/" className="about-possibilities-btn" />
         <div className="about-possibilities-socials">
           <a href="#" className="about-possibilities-socials-set">
             <svg

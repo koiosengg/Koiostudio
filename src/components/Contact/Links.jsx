@@ -26,7 +26,7 @@ function Links() {
         <a
           href="mailto:info@koios.com"
           target="_blank"
-          className="contact-links-set"
+          className="contact-links-set white-top-border"
         >
           <div className="contact-links-set-heading">
             <svg
@@ -48,7 +48,7 @@ function Links() {
         <a
           href="https://maps.app.goo.gl/5e5LEQWqokpB7SZK8"
           target="_blank"
-          className="contact-links-set"
+          className="contact-links-set white-top-border"
         >
           <div className="contact-links-set-heading">
             <svg
@@ -73,7 +73,7 @@ function Links() {
         <a
           href="tel:+918909765654"
           target="'_blank"
-          className="contact-links-set"
+          className="contact-links-set white-top-border"
         >
           <div className="contact-links-set-heading">
             <svg
