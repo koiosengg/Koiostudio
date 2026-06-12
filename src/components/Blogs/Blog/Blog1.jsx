@@ -9,7 +9,7 @@ function Blog1() {
     <>
       <section className="blogs-inner-page">
       <div className="back-button">
-        <Link to="/blog">
+        <Link to="/blog" aria-label="Back to blogs">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -54,7 +54,7 @@ function Blog1() {
         <div className="blogs-inner-page-content">
           <div className="blogs-inner-page-text">
             <div className="blogs-inner-page-text-heading">
-              <img src={BlogImg1} alt="Blog Image 1" />
+              <img src={BlogImg1} alt="Digital marketing strategy concept" />
               <p>
                 Almost every serious client conversation at Koiostudio begins
                 with two simple sounding questions.

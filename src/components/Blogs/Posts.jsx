@@ -12,7 +12,7 @@ function Posts() {
         <h2>Related Posts</h2>
         <div className="blogs-posts-set-container">
           <Link to="/blog/blog-1" className="blogs-posts-set">
-            <img src={BlogImg1} alt="Blog Image 1" />
+            <img src={BlogImg1} alt="Unified brand design blueprint" />
             <div className="blogs-posts-set-text">
               <h3>
                 Consistency is Key: How Unified Design Builds Stronger Brands
@@ -21,14 +21,14 @@ function Posts() {
             </div>
           </Link>
           <Link to="/blog/blog-1" className="blogs-posts-set">
-            <img src={BlogImg2} alt="Blog Image 1" />
+            <img src={BlogImg2} alt="Color psychology palette" />
             <div className="blogs-posts-set-text">
               <h3>Color Psychology: How Colors Influence User Perception </h3>
               <p>July 27, 2025</p>
             </div>
           </Link>
           <Link to="/blog/blog-1" className="blogs-posts-set">
-            <img src={BlogImg3} alt="Blog Image 1" />
+            <img src={BlogImg3} alt="Typography font combinations" />
             <div className="blogs-posts-set-text">
               <h3>
                 Typography Trends: Choosing the Right Fonts for Modern
@@ -38,7 +38,7 @@ function Posts() {
             </div>
           </Link>
           <Link to="/blog/blog-1" className="blogs-posts-set">
-            <img src={BlogImg4} alt="Blog Image 1" />
+            <img src={BlogImg4} alt="Brand consistency mockup" />
             <div className="blogs-posts-set-text">
               <h3>
                 Consistency is Key: How Unified Design Builds Stronger Brands

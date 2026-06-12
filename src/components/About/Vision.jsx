@@ -6,8 +6,8 @@ function Vision() {
   return (
     <section className="template">
       <div className="home-about about-vision">
-        <img src={DesktopBackground} className="home-about-background desktop" />
-        <img src={MobileDesktop} className="home-about-background mobile" />
+        <img src={DesktopBackground} alt="Vision background desktop" className="home-about-background desktop" />
+        <img src={MobileDesktop} alt="Vision background mobile" className="home-about-background mobile" />
 
         <div className="home-about-text-container">
           <div className="template-heading">

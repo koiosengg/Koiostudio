@@ -25,19 +25,19 @@ function CompanyBranding() {
           </p>
           <div className="designing-types-text-points">
             <div className="designing-types-text-point">
-              <img src={Tick} alt="Yellow Tick" />
+              <img src={Tick} alt="Check" />
               <p>Complete visual identity</p>
             </div>
             <div className="designing-types-text-point">
-              <img src={Tick} alt="Yellow Tick" />
+              <img src={Tick} alt="Check" />
               <p>Clear brand tone and personality</p>
             </div>
             <div className="designing-types-text-point">
-              <img src={Tick} alt="Yellow Tick" />
+              <img src={Tick} alt="Check" />
               <p>Colour palette + typography</p>
             </div>
             <div className="designing-types-text-point">
-              <img src={Tick} alt="Yellow Tick" />
+              <img src={Tick} alt="Check" />
               <p>Strong, cohesive storytelling</p>
             </div>
           </div>

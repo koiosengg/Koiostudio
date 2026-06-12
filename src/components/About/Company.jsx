@@ -8,9 +8,10 @@ function Company() {
       <div className="home-about">
         <img
           src={DesktopBackground}
+          alt="Company background desktop"
           className="home-about-background desktop"
         />
-        <img src={MobileDesktop} className="home-about-background mobile" />
+        <img src={MobileDesktop} alt="Company background mobile" className="home-about-background mobile" />
         <div className="home-about-text-container">
           <div className="template-heading">
             <p>About Us</p>

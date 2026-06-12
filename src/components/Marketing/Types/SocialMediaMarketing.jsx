@@ -23,19 +23,19 @@ function SocialMediaMarketing() {
           </p>
           <div className="designing-types-text-points">
             <div className="designing-types-text-point">
-              <img src={Tick} alt="Yellow Tick" />
+              <img src={Tick} alt="Check" />
               <p>Builds real online presence</p>
             </div>
             <div className="designing-types-text-point">
-              <img src={Tick} alt="Yellow Tick" />
+              <img src={Tick} alt="Check" />
               <p>Engaging and consistent content</p>
             </div>
             <div className="designing-types-text-point">
-              <img src={Tick} alt="Yellow Tick" />
+              <img src={Tick} alt="Check" />
               <p>Strong brand storytelling</p>
             </div>
             <div className="designing-types-text-point">
-              <img src={Tick} alt="Yellow Tick" />
+              <img src={Tick} alt="Check" />
               <p>Better audience reach & trust</p>
             </div>
           </div>

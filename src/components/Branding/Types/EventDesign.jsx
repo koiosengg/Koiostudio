@@ -24,19 +24,19 @@ function EventDesign() {
           </p>
           <div className="designing-types-text-points">
             <div className="designing-types-text-point">
-              <img src={Tick} alt="Yellow Tick" />
+              <img src={Tick} alt="Check" />
               <p>Custom theme styling</p>
             </div>
             <div className="designing-types-text-point">
-              <img src={Tick} alt="Yellow Tick" />
+              <img src={Tick} alt="Check" />
               <p>Designs for print + digital</p>
             </div>
             <div className="designing-types-text-point">
-              <img src={Tick} alt="Yellow Tick" />
+              <img src={Tick} alt="Check" />
               <p>Consistent event identity</p>
             </div>
             <div className="designing-types-text-point">
-              <img src={Tick} alt="Yellow Tick" />
+              <img src={Tick} alt="Check" />
               <p>Flexible for all event sizes</p>
             </div>
           </div>

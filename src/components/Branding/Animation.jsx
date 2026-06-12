@@ -38,21 +38,22 @@ function Animation() {
           <div className="branding-animation-left-heading">
             <h3>BRANDING</h3>
             <h3>MERCHANDISE</h3>
-            <img src={RightAnimationClick} />
+            <img src={RightAnimationClick} alt="Click selector indicator" />
           </div>
           <div className="branding-animation-left-container">
             <div className="branding-animation-left-container-1">
-              <img src={RightAnimationImg1} />
-              <img src={RightAnimationImg2} />
+              <img src={RightAnimationImg1} alt="Branded cap mockup" />
+              <img src={RightAnimationImg2} alt="Branded t-shirt mockup" />
             </div>
             <div className="branding-animation-left-container-2">
-              <img src={RightAnimationImg3} />
+              <img src={RightAnimationImg3} alt="Branded hoodie mockup" />
             </div>
           </div>
         </div>
         <div className="development-animation-top branding-animation-top">
           <img
             src={BrandingAnimationTopBackground}
+            alt="Branding animation background"
             className="branding-animation-top-background"
           />
           <div className="branding-animation-top-container">
@@ -96,6 +97,7 @@ function Animation() {
 
               <img
                 src={TopAnimationClick}
+                alt="Cursor pointer icon"
                 style={{
                   top: `${16 + activeSetIndex * 47}px`,
                   transition: "top 0.3s ease",
@@ -114,9 +116,9 @@ function Animation() {
           </div>
           <div className="branding-animation-bottom-container">
             <div className="branding-animation-bottom-container-img">
-              <img src={BottomAnimationImg1} />
-              <img src={BottomAnimationImg2} />
-              <img src={BottomAnimationClick} />
+              <img src={BottomAnimationImg1} alt="Business card mockup" />
+              <img src={BottomAnimationImg2} alt="Email template design mockup" />
+              <img src={BottomAnimationClick} alt="Click indicator icon" />
               <div className="branding-animation-bottom-text">
                 <p>We also design</p>
                 <h4>BUSINESS CARDS</h4>

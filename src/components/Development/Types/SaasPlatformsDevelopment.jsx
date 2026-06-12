@@ -25,19 +25,19 @@ function SaasPlatformsDevelopment() {
           </p>
           <div className="designing-types-text-points">
             <div className="designing-types-text-point">
-              <img src={Tick} alt="Yellow Tick" />
+              <img src={Tick} alt="Check" />
               <p>Modular + scalable</p>
             </div>
             <div className="designing-types-text-point">
-              <img src={Tick} alt="Yellow Tick" />
+              <img src={Tick} alt="Check" />
               <p>Secure backend</p>
             </div>
             <div className="designing-types-text-point">
-              <img src={Tick} alt="Yellow Tick" />
+              <img src={Tick} alt="Check" />
               <p>Clear workflows</p>
             </div>
             <div className="designing-types-text-point">
-              <img src={Tick} alt="Yellow Tick" />
+              <img src={Tick} alt="Check" />
               <p>Custom integrations</p>
             </div>
           </div>

@@ -25,19 +25,19 @@ function CompanyCollaterals() {
           </p>
           <div className="designing-types-text-points">
             <div className="designing-types-text-point">
-              <img src={Tick} alt="Yellow Tick" />
+              <img src={Tick} alt="Check" />
               <p>Business cards, letterheads, envelopes</p>
             </div>
             <div className="designing-types-text-point">
-              <img src={Tick} alt="Yellow Tick" />
+              <img src={Tick} alt="Check" />
               <p>On-brand layouts + colours</p>
             </div>
             <div className="designing-types-text-point">
-              <img src={Tick} alt="Yellow Tick" />
+              <img src={Tick} alt="Check" />
               <p>Print-ready files included</p>
             </div>
             <div className="designing-types-text-point">
-              <img src={Tick} alt="Yellow Tick" />
+              <img src={Tick} alt="Check" />
               <p>Designed for everyday use</p>
             </div>
           </div>

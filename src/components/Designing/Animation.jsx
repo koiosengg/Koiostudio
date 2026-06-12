@@ -31,7 +31,7 @@ function Animation() {
               placerat id ultrices purus.
             </p>
           </div>
-          <img src={LeftBackground} alt="Background" />
+          <img src={LeftBackground} alt="Interactive left background" />
         </div>
         <div className="designing-animation-right">
           <div className="designing-animation-heading">
@@ -42,7 +42,7 @@ function Animation() {
             </p>
           </div>
           <div className="home-creations-right-img">
-            <img src={RightBackground} alt="Background" />
+            <img src={RightBackground} alt="Interactive right background" />
           </div>
         </div>
         <div className="designing-animation-bottom">
@@ -58,7 +58,7 @@ function Animation() {
             <div className="designing-animation-bottom-set white-top-border">
               <div className="designing-animation-bottom-set-image">
                 <div className="circle-background">
-                  <img src={Smiley} alt="On Delay" />
+                  <img src={Smiley} alt="Smiley face icon" />
                 </div>
               </div>
               <p>On Delay</p>
@@ -92,14 +92,14 @@ function Animation() {
             <div className="designing-animation-bottom-set white-top-border">
               <div className="designing-animation-bottom-set-image">
                 <div className="click-background">
-                  <img src={Click} alt="Click" />
-                  <img src={Mouse} alt="Mouse" />
+                  <img src={Click} alt="Pointer click indicator" />
+                  <img src={Mouse} alt="Mouse cursor icon" />
                 </div>
                 <div className="click-background-1">
-                  <img src={Design} alt="Design" />
+                  <img src={Design} alt="Creative design icon" />
                 </div>
                 <div className="click-background-2">
-                  <img src={Edit} alt="Edit" />
+                  <img src={Edit} alt="Edit tools icon" />
                 </div>
               </div>
               <p>Click</p>

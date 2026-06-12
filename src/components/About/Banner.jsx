@@ -29,13 +29,13 @@ function Banner() {
     <section className="home-banner" ref={bannerRef}>
       <img
         src={DesktopBackground}
-        alt="Designing Banner Background"
+        alt="About Us banner background"
         style={{ opacity }}
         className="home-banner-background desktop"
       />
       <img
         src={MobileBackground}
-        alt="Designing Banner Background"
+        alt="About Us banner background"
         style={{ opacity }}
         className="home-banner-background mobile"
       />

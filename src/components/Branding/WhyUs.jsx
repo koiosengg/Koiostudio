@@ -16,15 +16,15 @@ function WhyUs() {
       </div>
       <div className="designing-why-us">
         <div className="designing-why-us-set white-top-border">
-          <img src={Point1} alt="Design" />
+          <img src={Point1} alt="Identity icon" />
           <p>Transforming ideas into memorable visual identities.</p>
         </div>
         <div className="designing-why-us-set white-top-border">
-          <img src={Point2} alt="Design" />
+          <img src={Point2} alt="Cohesion icon" />
           <p>Cohesive brand touchpoints across all mediums.</p>
         </div>
         <div className="designing-why-us-set white-top-border">
-          <img src={Point3} alt="Design" />
+          <img src={Point3} alt="Impact icon" />
           <p>Designs that stick in minds effortlessly.</p>
         </div>
       </div>

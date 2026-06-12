@@ -48,7 +48,7 @@ function Navbar() {
             />
           </svg>
         </Link>
-        <div className="mobile-navbar-button mobile" onClick={toggleMobileNav}>
+        <div className="mobile-navbar-button mobile" role="button" aria-label="Toggle Navigation Menu" onClick={toggleMobileNav}>
           <img
             src={Menu}
             alt="Mobile navbar open"
@@ -114,7 +114,7 @@ function Navbar() {
               </svg>
             </Link>
             <div className="mobileNavbar-socials">
-              <a href="#" target="_blank" onClick={handleLinkClick}>
+              <a href="#" aria-label="Instagram" target="_blank" onClick={handleLinkClick}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="18"
@@ -128,7 +128,7 @@ function Navbar() {
                   />
                 </svg>
               </a>
-              <a href="#" target="_blank" onClick={handleLinkClick}>
+              <a href="#" aria-label="LinkedIn" target="_blank" onClick={handleLinkClick}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="18"

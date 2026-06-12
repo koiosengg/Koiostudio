@@ -93,18 +93,18 @@ function Animation() {
         >
           <img
             src={TopBackground}
-            alt="Top Background"
+            alt="Marketing animation background"
             className="marketing-animation-top-background"
           />
           <div className="search" ref={searchRef}>
-            <img src={Search} alt="Search" />
+            <img src={Search} alt="Search icon pointer" />
           </div>
         </div>
 
         <div className="development-animation-bottom marketing-animation-bottom">
-          <img src={Google} alt="Google" className="google" />
-          <img src={Meta} alt="Meta" className="meta" />
-          <img src={Click} alt="Mouse Click" className="click" />
+          <img src={Google} alt="Google Ads logo" className="google" />
+          <img src={Meta} alt="Meta Ads logo" className="meta" />
+          <img src={Click} alt="Click indicator icon" className="click" />
           <h3>AD SUCCESS</h3>
         </div>
       </div>

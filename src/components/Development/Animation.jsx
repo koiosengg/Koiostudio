@@ -25,7 +25,7 @@ function Animation() {
               placerat id ultrices purus.
             </p>
           </div>
-          <img src={LeftBackground} alt="Background" />
+          <img src={LeftBackground} alt="Development left background" />
         </div>
         <div className="development-animation-top">
           <div className="designing-animation-heading">
@@ -59,7 +59,7 @@ function Animation() {
             <div className="development-animation-section-right">
               <img
                 src={RightTopImg}
-                alt="Right Top Image"
+                alt="Development showcase dashboard"
                 className="development-animation-section-right-top"
               />
               <div className="development-animation-section-right-center">
@@ -79,7 +79,7 @@ function Animation() {
               placerat id ultrices purus.
             </p>
           </div>
-          <img src={BottomBackground} alt="Background" />
+          <img src={BottomBackground} alt="Development bottom background" />
         </div>
       </div>
     </section>

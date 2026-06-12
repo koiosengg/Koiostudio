@@ -83,7 +83,7 @@ function Creations() {
             ></div>
           </div>
           <div className="home-creations-right-img">
-            <img src={Design} />
+            <img src={Design} alt="Creative design portfolio" />
           </div>
         </div>
       </div>

@@ -5,7 +5,7 @@ import Primary from "../Buttons/Primary";
 function Possibilities() {
   return (
     <section className="home-about about-possibilities">
-      <img src={DesktopBackground} className="home-about-background" />
+      <img src={DesktopBackground} alt="Possibilities background" className="home-about-background" />
       <div className="home-about-text-container">
         <div className="template-heading">
           <h2>
@@ -23,7 +23,7 @@ function Possibilities() {
         </div>
         <Primary text="View Services" toLink="/" className="about-possibilities-btn" />
         <div className="about-possibilities-socials">
-          <a href="#" className="about-possibilities-socials-set">
+          <a href="#" aria-label="Instagram" className="about-possibilities-socials-set">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -37,7 +37,7 @@ function Possibilities() {
               />
             </svg>
           </a>
-          <a href="#" className="about-possibilities-socials-set">
+          <a href="#" aria-label="Facebook" className="about-possibilities-socials-set">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="25"
@@ -51,7 +51,7 @@ function Possibilities() {
               />
             </svg>
           </a>
-          <a href="#" className="about-possibilities-socials-set">
+          <a href="#" aria-label="LinkedIn" className="about-possibilities-socials-set">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"

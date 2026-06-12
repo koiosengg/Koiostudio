@@ -15,7 +15,7 @@ function OurBlogs() {
       <div className="our-blogs">
         <div className="our-blogs-set white-top-border blog-hover">
           <div className="our-blogs-set-img">
-            <img src={BlogImg1} alt="Blog Image 1" />
+            <img src={BlogImg1} alt="Future of creative agencies concept" />
           </div>
           <div className="our-blogs-set-content">
             <div className="our-blogs-set-text">
@@ -30,7 +30,7 @@ function OurBlogs() {
         </div>
         <div className="our-blogs-set white-top-border blog-hover">
           <div className="our-blogs-set-img">
-            <img src={BlogImg2} alt="Blog Image 2" />
+            <img src={BlogImg2} alt="Unified brand design mockup" />
           </div>
           <div className="our-blogs-set-content">
             <div className="our-blogs-set-text">
@@ -47,7 +47,7 @@ function OurBlogs() {
         </div>
         <div className="our-blogs-set white-top-border blog-hover">
           <div className="our-blogs-set-img">
-            <img src={BlogImg3} alt="Blog Image 3" />
+            <img src={BlogImg3} alt="Creative process design layout" />
           </div>
           <div className="our-blogs-set-content">
             <div className="our-blogs-set-text">
@@ -62,7 +62,7 @@ function OurBlogs() {
         </div>
         <div className="our-blogs-set white-top-border blog-hover">
           <div className="our-blogs-set-img">
-            <img src={BlogImg4} alt="Blog Image 4" />
+            <img src={BlogImg4} alt="Creative agency workflow mockup" />
           </div>
           <div className="our-blogs-set-content">
             <div className="our-blogs-set-text">

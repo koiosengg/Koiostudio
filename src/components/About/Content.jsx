@@ -5,8 +5,8 @@ import MobileDesktop from "../../assets/About/Content/Mobile Background.png";
 function Content() {
   return (
     <section className="home-about about-content">
-      <img src={DesktopBackground} className="home-about-background desktop" />
-      <img src={MobileDesktop} className="home-about-background mobile" />
+      <img src={DesktopBackground} alt="About content background desktop" className="home-about-background desktop" />
+      <img src={MobileDesktop} alt="About content background mobile" className="home-about-background mobile" />
 
       <div className="home-about-text-container">
         <div className="home-about-text">

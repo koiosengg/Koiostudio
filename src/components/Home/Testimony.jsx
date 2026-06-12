@@ -48,7 +48,7 @@ function Testimony() {
   };
   return (
     <section className="template testimony">
-      <img src={DesktopBackground} className="template-background" />
+      <img src={DesktopBackground} alt="Testimonial background" className="template-background" />
       <div className="template-heading">
         <p>Our Pride</p>
         <h2>

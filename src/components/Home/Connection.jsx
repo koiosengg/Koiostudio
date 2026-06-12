@@ -27,7 +27,7 @@ function Connection() {
     <section ref={sectionRef} className="home-connection">
       <img
         src={DesktopBackground}
-        alt="Background"
+        alt="Connection background desktop"
         className="home-connection-background desktop"
         style={{
           opacity: isVisible ? 1 : 0,
@@ -35,7 +35,7 @@ function Connection() {
       />
       <img
         src={MobileBackground}
-        alt="Background"
+        alt="Connection background mobile"
         className="home-connection-background mobile"
         style={{
           opacity: isVisible ? 1 : 0,
