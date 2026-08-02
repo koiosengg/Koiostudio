@@ -63,9 +63,7 @@ function Animation() {
                 className="development-animation-section-right-top"
               />
               <div className="development-animation-section-right-center">
-                <p>
-                  https.//website.<span>koiossoftwaresolutions</span>
-                </p>
+                <p>https.//website.<span>koiossoftwaresolutions</span></p>
               </div>
               <h4>Development.</h4>
             </div>

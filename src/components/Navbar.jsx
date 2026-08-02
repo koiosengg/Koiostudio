@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Logo from "/Logo.png";
 import Menu from "/menu.svg";
@@ -7,6 +7,33 @@ import MenuCancel from "/menu cancel.svg";
 function Navbar() {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   const [hasToggled, setHasToggled] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    if (isMobileNavOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMobileNavOpen]);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsServicesOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const toggleMobileNav = () => {
     setIsMobileNavOpen(!isMobileNavOpen);
@@ -26,29 +53,85 @@ function Navbar() {
           <img src={Logo} alt="Koiostudio Logo" />
         </Link>
         <nav className="desktop">
-          <Link to="/designing">Designing</Link>
-          <Link to="/development">Development</Link>
-          <Link to="/branding">Branding</Link>
-          <Link to="/marketing">Digital Marketing</Link>
+          <div
+            className="nav-dropdown"
+            ref={dropdownRef}
+            onMouseEnter={() => setIsServicesOpen(true)}
+            onMouseLeave={() => setIsServicesOpen(false)}
+          >
+            <button
+              className={`nav-dropdown-btn ${isServicesOpen ? "active" : ""}`}
+              onClick={() => setIsServicesOpen(!isServicesOpen)}
+              type="button"
+            >
+              Our Services
+              <svg
+                className={`dropdown-chevron ${isServicesOpen ? "open" : ""}`}
+                width="12"
+                height="7"
+                viewBox="0 0 12 7"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 1L6 6L11 1"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+
+            {isServicesOpen && (
+              <div className="nav-dropdown-menu">
+                <Link to="/designing" onClick={() => setIsServicesOpen(false)}>
+                  Designing
+                </Link>
+                <Link
+                  to="/development"
+                  onClick={() => setIsServicesOpen(false)}
+                >
+                  Development
+                </Link>
+                <Link to="/branding" onClick={() => setIsServicesOpen(false)}>
+                  Branding
+                </Link>
+                <Link to="/marketing" onClick={() => setIsServicesOpen(false)}>
+                  Digital Marketing
+                </Link>
+              </div>
+            )}
+          </div>
           <Link to="/about">About Us</Link>
           <Link to="/blog">Blog</Link>
         </nav>
-        <Link to="/contact" className="primary-btn desktop">
-          Contact Us
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="8"
-            height="14"
-            viewBox="0 0 8 14"
-            fill="none"
-          >
-            <path
-              d="M1.81111 13.707L0.400116 12.293L5.68911 6.99998L0.400116 1.70698L1.81511 0.292976L7.1001 5.58598C7.47505 5.96103 7.68568 6.46965 7.68568 6.99998C7.68568 7.5303 7.47505 8.03892 7.1001 8.41397L1.81111 13.707Z"
-              fill="#121212"
-            />
-          </svg>
-        </Link>
-        <div className="mobile-navbar-button mobile" role="button" aria-label="Toggle Navigation Menu" onClick={toggleMobileNav}>
+        <div className="navbar-buttons desktop">
+          <Link to="/#portfolio" className="portfolio-btn">
+            Our Portfolio
+          </Link>
+          <Link to="/contact" className="primary-btn">
+            Contact Us
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="8"
+              height="14"
+              viewBox="0 0 8 14"
+              fill="none"
+            >
+              <path
+                d="M1.81111 13.707L0.400116 12.293L5.68911 6.99998L0.400116 1.70698L1.81511 0.292976L7.1001 5.58598C7.47505 5.96103 7.68568 6.46965 7.68568 6.99998C7.68568 7.5303 7.47505 8.03892 7.1001 8.41397L1.81111 13.707Z"
+                fill="#121212"
+              />
+            </svg>
+          </Link>
+        </div>
+        <div
+          className="mobile-navbar-button mobile"
+          role="button"
+          aria-label="Toggle Navigation Menu"
+          onClick={toggleMobileNav}
+        >
           <img
             src={Menu}
             alt="Mobile navbar open"
@@ -114,7 +197,12 @@ function Navbar() {
               </svg>
             </Link>
             <div className="mobileNavbar-socials">
-              <a href="#" aria-label="Instagram" target="_blank" onClick={handleLinkClick}>
+              <a
+                href="#"
+                aria-label="Instagram"
+                target="_blank"
+                onClick={handleLinkClick}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="18"
@@ -128,7 +216,12 @@ function Navbar() {
                   />
                 </svg>
               </a>
-              <a href="#" aria-label="LinkedIn" target="_blank" onClick={handleLinkClick}>
+              <a
+                href="#"
+                aria-label="LinkedIn"
+                target="_blank"
+                onClick={handleLinkClick}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="18"

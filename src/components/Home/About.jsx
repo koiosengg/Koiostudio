@@ -27,7 +27,7 @@ function About() {
               services. We specialize in electric vehicles and offer website and
               brand development solutions to craft impactful digital presence.
             </p>
-            <Secondary text="View more" toLink="/" />
+            <Secondary text="View more" toLink="/about" />
           </div>
         </div>
       </div>

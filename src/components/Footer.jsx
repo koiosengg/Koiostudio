@@ -28,6 +28,48 @@ function Footer() {
               </div>
             </div>
             <div className="footer-side-container">
+              <svg
+                className="footer-side-glow"
+                xmlns="http://www.w3.org/2000/svg"
+                width="449"
+                height="327"
+                viewBox="0 0 449 327"
+                fill="none"
+              >
+                <g filter="url(#filter0_f_2630_1240)">
+                  <ellipse
+                    cx="224.5"
+                    cy="163.5"
+                    rx="74.5"
+                    ry="13.5"
+                    fill="white"
+                    fillOpacity="0.8"
+                  />
+                </g>
+                <defs>
+                  <filter
+                    id="filter0_f_2630_1240"
+                    x="0"
+                    y="0"
+                    width="449"
+                    height="327"
+                    filterUnits="userSpaceOnUse"
+                    colorInterpolationFilters="sRGB"
+                  >
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                    <feBlend
+                      mode="normal"
+                      in="SourceGraphic"
+                      in2="BackgroundImageFix"
+                      result="shape"
+                    />
+                    <feGaussianBlur
+                      stdDeviation="75"
+                      result="effect1_foregroundBlur_2630_1240"
+                    />
+                  </filter>
+                </defs>
+              </svg>
               <div className="footer-side-container-text">
                 <h2>Your Journey Continues Here</h2>
                 <p>Head here for more services offered to you</p>

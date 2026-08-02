@@ -78,6 +78,146 @@ header nav a:hover {
   color: #fff;
 }
 
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-dropdown-btn {
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--Grey-text-Primary, #979797);
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  transition: color 0.3s ease;
+}
+
+.nav-dropdown-btn:hover,
+.nav-dropdown-btn.active {
+  color: #fff;
+}
+
+.dropdown-chevron {
+  transition: transform 0.3s ease;
+}
+
+.dropdown-chevron.open {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 28px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  width: 230px;
+  padding: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  border-radius: 8px;
+  background: linear-gradient(
+    147deg,
+    rgba(18, 18, 18, 0.85) 0%,
+    rgba(31, 31, 31, 0.95) 100.01%
+  );
+  backdrop-filter: blur(20px);
+  z-index: 1000;
+  animation: navFadeInDown 0.2s ease-out;
+}
+
+.nav-dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: -35px;
+  left: 0;
+  width: 100%;
+  height: 35px;
+}
+
+.nav-dropdown-menu::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 10%, #fff, transparent 90%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.nav-dropdown-menu a {
+  color: var(--White-text, #fff);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.nav-dropdown-menu a:hover {
+  color: var(--Yellow-Primary, #ffbf00);
+}
+
+@keyframes navFadeInDown {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -8px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+.portfolio-btn {
+  display: flex;
+  height: 40px;
+  padding: 12px 16px;
+  align-items: center;
+  gap: 4px;
+  border-radius: 8px;
+  background:
+    linear-gradient(0deg, rgba(18, 18, 18, 0.7) 0%, rgba(18, 18, 18, 0.7) 100%),
+    #414141;
+  backdrop-filter: blur(20px);
+  color: var(--White-text, #fff);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  text-decoration: none;
+}
+.portfolio-btn:hover {
+  background:
+    linear-gradient(0deg, rgba(18, 18, 18, 0.4) 0%, rgba(18, 18, 18, 0.4) 100%),
+    #414141;
+  backdrop-filter: blur(20px);
+}
+.navbar-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
 /* Buttons */
 
 .primary-btn {
@@ -1408,6 +1548,12 @@ header nav a:hover {
   gap: 12px;
   align-self: stretch;
   cursor: pointer;
+  border-radius: 8px;
+  background: linear-gradient(
+    149deg,
+    rgba(65, 65, 65, 0.1) -0.73%,
+    rgba(18, 18, 18, 0.25) 100%
+  );
 }
 
 .faq-set.active-faq {
@@ -1618,6 +1764,7 @@ header nav a:hover {
 
 .designing-animation-left {
   width: 100%;
+  height: 463px;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -1642,7 +1789,7 @@ header nav a:hover {
 
 .designing-animation-right {
   width: 100%;
-  height: 100%;
+  height: 463px;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -1664,6 +1811,7 @@ header nav a:hover {
 
 .designing-animation-bottom {
   width: 100%;
+  height: 412px;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -2245,7 +2393,7 @@ header nav a:hover {
   display: flex;
   align-items: flex-start;
   gap: 16px;
-  flex-wrap: wrap;
+  flex-wrap: balance;
 }
 
 .designing-types-text-point {
@@ -2519,11 +2667,8 @@ header nav a:hover {
 }
 
 .development-animation-section-right-center p {
-  display: flex;
-  padding: 8px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+  text-align: center;
+  padding: 8px 16px;
   align-self: stretch;
   border-radius: 50px;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -2560,8 +2705,7 @@ header nav a:hover {
 /* Branding */
 
 .branding-animation-left {
-  height: 100%;
-  min-height: 846px;
+  height: 840px;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -2810,7 +2954,7 @@ header nav a:hover {
 
 .branding-animation-top {
   width: 100%;
-  height: 100%;
+  height: 412px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2946,7 +3090,7 @@ header nav a:hover {
 }
 
 .branding-animation-bottom {
-  height: 100%;
+  height: 412px;
   display: flex;
   gap: 0px;
 }
@@ -2971,6 +3115,7 @@ header nav a:hover {
 .branding-animation-bottom-container-img img {
   width: 100%;
   height: 100%;
+  max-height: 253px;
   object-fit: cover;
 }
 
@@ -3098,7 +3243,7 @@ header nav a:hover {
 
 .marketing-animation-left {
   width: 100%;
-  min-height: 800px;
+  height: 840px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3188,7 +3333,7 @@ header nav a:hover {
 .marketing-animation-top {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 412px;
   overflow: hidden;
 }
 
@@ -3239,6 +3384,7 @@ header nav a:hover {
 
 .marketing-animation-bottom {
   width: 100%;
+  height: 412px;
   display: flex;
   align-items: center;
   justify-content: space-between;

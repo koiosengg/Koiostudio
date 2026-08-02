@@ -93,8 +93,11 @@ function Gallery() {
   return (
     <section className="template gallery">
       <div className="template-heading">
-        <p>Our Blogs</p>
-        <h2>The Koios Perspective</h2>
+        <p>Gallery of Success</p>
+        <h2>
+          Showcasing <br />
+          Creativity & Impact
+        </h2>
       </div>
 
       <div className="gallery-container">
