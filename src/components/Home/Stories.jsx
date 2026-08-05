@@ -17,22 +17,27 @@ function Stories() {
     {
       title: "Website Development",
       desc: "Responsive, UI/UX, Web design",
-      link: "/",
+      link: "/development",
     },
     {
       title: "Website Design",
       desc: "Responsive, UI/UX, Web design",
-      link: "/",
+      link: "/designing",
     },
     {
       title: "App Development",
-      desc: "Responsive, UI/UX, Web design",
-      link: "/",
+      desc: "Mobile & Web Applications",
+      link: "/development",
     },
     {
       title: "Company Branding",
-      desc: "Responsive, UI/UX, Web design",
-      link: "/",
+      desc: "Brand Identity, Strategy & Design",
+      link: "/branding",
+    },
+    {
+      title: "Digital Marketing",
+      desc: "SEO, Social Media & Growth",
+      link: "/marketing",
     },
   ];
 

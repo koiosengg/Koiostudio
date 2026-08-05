@@ -36,7 +36,7 @@ function Footer() {
                 viewBox="0 0 449 327"
                 fill="none"
               >
-                <g filter="url(#filter0_f_2630_1240)">
+                <g filter="url(#filter0_f_2644_1513)">
                   <ellipse
                     cx="224.5"
                     cy="163.5"
@@ -48,7 +48,7 @@ function Footer() {
                 </g>
                 <defs>
                   <filter
-                    id="filter0_f_2630_1240"
+                    id="filter0_f_2644_1513"
                     x="0"
                     y="0"
                     width="449"
@@ -65,7 +65,7 @@ function Footer() {
                     />
                     <feGaussianBlur
                       stdDeviation="75"
-                      result="effect1_foregroundBlur_2630_1240"
+                      result="effect1_foregroundBlur_2644_1513"
                     />
                   </filter>
                 </defs>
