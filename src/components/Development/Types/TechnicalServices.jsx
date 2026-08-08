@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "../../../assets/Development/Types/Technical Services.png";
+import Image from "../../../assets/Development/Types/Technical Services.webp";
 import Tick from "../../../assets/Development/Types/Tick.svg";
 
 function TechnicalServices() {

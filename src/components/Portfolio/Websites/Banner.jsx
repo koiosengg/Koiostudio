@@ -1,0 +1,45 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import DesktopBanner from "../../../assets/Portfolio/Websites/Desktop Banner.webp";
+import DesktopBannerImg from "../../../assets/Portfolio/Websites/Desktop Banner Img.webp";
+import DesktopBannerImg1 from "../../../assets/Portfolio/Websites/Desktop Banner Img 1.webp";
+import DesktopBannerImg2 from "../../../assets/Portfolio/Websites/Desktop Banner Img 2.webp";
+function Banner() {
+  return (
+    <div className="portfolio-websites-banner" id="banner">
+      <img src={DesktopBanner} className="portfolio-home-banner-background" />
+      <div className="portfolio-websites-banner-container">
+        <div className="portfolio-home-banner-container">
+          <section>
+            <h2>Design & Development</h2>
+            <h1>
+              Websites <br />
+              <span>that Wow</span>
+            </h1>
+            <p>Building websites that inspire trust and deliver results.</p>
+          </section>
+          <Link to="/contact" className="portfolio-primary-button">
+            <div className="portfolio-primary-button-background"></div>
+            <p>Build Your Website with us </p>
+          </Link>
+        </div>
+        <div className="portfolio-websites-banner-imgs">
+          <img
+            className="portfolio-websites-banner-img"
+            src={DesktopBannerImg}
+          />
+          <img
+            src={DesktopBannerImg1}
+            className="portfolio-websites-banner-img-1"
+          ></img>
+          <img
+            src={DesktopBannerImg2}
+            className="portfolio-websites-banner-img-2"
+          ></img>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Banner;

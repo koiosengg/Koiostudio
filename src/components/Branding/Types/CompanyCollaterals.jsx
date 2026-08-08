@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "../../../assets/Branding/Types/Company Collaterals.png";
+import Image from "../../../assets/Branding/Types/Company Collaterals.webp";
 import Tick from "../../../assets/Branding/Types/Tick.svg";
 
 function CompanyCollaterals() {

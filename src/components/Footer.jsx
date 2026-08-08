@@ -1,10 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Logo from "/Logo.png";
+import { Link, useLocation } from "react-router-dom";
+import Logo from "/Logo.webp";
 import Primary from "./Buttons/Primary";
 import Secondary from "./Buttons/Secondary";
 
 function Footer() {
+  const location = useLocation();
+  const isPortfolioPage = location.pathname.startsWith("/portfolio");
+
+  if (isPortfolioPage) {
+    return null;
+  }
+
   return (
     <>
       <footer>

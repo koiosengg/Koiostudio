@@ -1,6 +1,6 @@
 import React from "react";
-import DesktopBackground from "../../assets/About/Vision/Desktop Background.png";
-import MobileDesktop from "../../assets/About/Vision/Mobile Background.png";
+import DesktopBackground from "../../assets/About/Vision/Desktop Background.webp";
+import MobileDesktop from "../../assets/About/Vision/Mobile Background.webp";
 
 function Vision() {
   return (

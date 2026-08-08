@@ -1,13 +1,13 @@
 import React from "react";
-import LeftBackground from "../../assets/Designing/Animation/Left Background.png";
-import RightBackground from "../../assets/Designing/Animation/Right Background.png";
-import Smiley from "../../assets/Designing/Animation/Smiley.png";
-import Toggle from "../../assets/Designing/Animation/Toggle.png";
-import Letters from "../../assets/Designing/Animation/Letters.png";
-import Click from "../../assets/Designing/Animation/Click.png";
-import Mouse from "../../assets/Designing/Animation/Mouse.png";
-import Design from "../../assets/Designing/Animation/Design.png";
-import Edit from "../../assets/Designing/Animation/Edit.png";
+import LeftBackground from "../../assets/Designing/Animation/Left Background.webp";
+import RightBackground from "../../assets/Designing/Animation/Right Background.webp";
+import Smiley from "../../assets/Designing/Animation/Smiley.webp";
+import Toggle from "../../assets/Designing/Animation/Toggle.webp";
+import Letters from "../../assets/Designing/Animation/Letters.webp";
+import Click from "../../assets/Designing/Animation/Click.webp";
+import Mouse from "../../assets/Designing/Animation/Mouse.webp";
+import Design from "../../assets/Designing/Animation/Design.webp";
+import Edit from "../../assets/Designing/Animation/Edit.webp";
 
 function Animation() {
   return (

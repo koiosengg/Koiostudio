@@ -1,6 +1,6 @@
 import React from "react";
-import DesktopBackground from "../../assets/About/Company/Desktop Background.png";
-import MobileDesktop from "../../assets/About/Company/Mobile Background.png";
+import DesktopBackground from "../../assets/About/Company/Desktop Background.webp";
+import MobileDesktop from "../../assets/About/Company/Mobile Background.webp";
 
 function Company() {
   return (

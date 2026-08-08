@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "../../../assets/Marketing/Types/Social Media Marketing.png";
+import Image from "../../../assets/Marketing/Types/Social Media Marketing.webp";
 import Tick from "../../../assets/Marketing/Types/Tick.svg";
 
 function SocialMediaMarketing() {

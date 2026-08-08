@@ -1,7 +1,7 @@
 import React from "react";
-import DesktopBackground from "../../assets/About/Vertical/Desktop Background.png";
-import Koiostudio from "../../assets/About/Vertical/Koiostudio.png";
-import Engg from "../../assets/About/Vertical/Koios Enginerring Solutions.png";
+import DesktopBackground from "../../assets/About/Vertical/Desktop Background.webp";
+import Koiostudio from "../../assets/About/Vertical/Koiostudio.webp";
+import Engg from "../../assets/About/Vertical/Koios Enginerring Solutions.webp";
 
 function Vertical() {
   return (

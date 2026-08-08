@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "../../../assets/Branding/Types/Company Branding.png";
+import Image from "../../../assets/Branding/Types/Company Branding.webp";
 import Tick from "../../../assets/Branding/Types/Tick.svg";
 
 function CompanyBranding() {

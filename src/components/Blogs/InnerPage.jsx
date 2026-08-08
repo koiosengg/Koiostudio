@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import BlogImg1 from "../../assets/Blogs/Our Blogs/Blog Image 2.png";
+import BlogImg1 from "../../assets/Blogs/Our Blogs/Blog Image 2.webp";
 import Posts from "./Posts";
 
 function InnerPage() {

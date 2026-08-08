@@ -1,6 +1,6 @@
 import React from "react";
-import DesktopBackground from "../../assets/Contact/Links/Desktop Background.png";
-import MobileBackground from "../../assets/Contact/Links/Mobile Background.png";
+import DesktopBackground from "../../assets/Contact/Links/Desktop Background.webp";
+import MobileBackground from "../../assets/Contact/Links/Mobile Background.webp";
 function Links() {
   return (
     <section className="contact-links">

@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "../../../assets/Development/Types/App Development.png";
+import Image from "../../../assets/Development/Types/App Development.webp";
 import Tick from "../../../assets/Development/Types/Tick.svg";
 
 function AppDevelopment() {

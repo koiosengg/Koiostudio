@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import Stars from "../../assets/Home/Stories/Stars.png";
+import Stars from "../../assets/Home/Stories/Stars.webp";
 
 function Stories() {
   const [counts, setCounts] = useState({

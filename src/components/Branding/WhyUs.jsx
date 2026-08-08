@@ -1,7 +1,7 @@
 import React from "react";
-import Point1 from "../../assets/Branding/Why Us/Point 1.png";
-import Point2 from "../../assets/Branding/Why Us/Point 2.png";
-import Point3 from "../../assets/Branding/Why Us/Point 3.png";
+import Point1 from "../../assets/Branding/Why Us/Point 1.webp";
+import Point2 from "../../assets/Branding/Why Us/Point 2.webp";
+import Point3 from "../../assets/Branding/Why Us/Point 3.webp";
 
 function WhyUs() {
   return (

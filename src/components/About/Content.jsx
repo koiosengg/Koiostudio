@@ -1,6 +1,6 @@
 import React from "react";
-import DesktopBackground from "../../assets/About/Content/Desktop Background.png";
-import MobileDesktop from "../../assets/About/Content/Mobile Background.png";
+import DesktopBackground from "../../assets/About/Content/Desktop Background.webp";
+import MobileDesktop from "../../assets/About/Content/Mobile Background.webp";
 
 function Content() {
   return (

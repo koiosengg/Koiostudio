@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import DesktopBackground from "../../assets/Home/Testimony/Desktop Background.png";
+import DesktopBackground from "../../assets/Home/Testimony/Desktop Background.webp";
 
 function Testimony() {
   const slides = [

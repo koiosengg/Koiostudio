@@ -1,0 +1,92 @@
+import React, { useState, useRef } from "react";
+import DesktopBackground from "../../../assets/Portfolio/Home/Desktop Numbers.webp";
+import HeadingDesign from "../../../assets/Portfolio/Home/Section Heading Design.webp";
+
+function Numbers() {
+  const [cursorPos, setCursorPos] = useState({ x: 250, y: 250 });
+  const divRef = useRef(null);
+
+  const handleMouseMove = (e) => {
+    if (divRef.current) {
+      const rect = divRef.current.getBoundingClientRect();
+
+      const rawX = e.clientX - rect.left;
+      const rawY = e.clientY - rect.top;
+
+      const x = Math.max(250, Math.min(rawX, rect.width - 100));
+      const y = Math.max(150, Math.min(rawY, rect.height - 150));
+
+      setCursorPos({ x, y });
+    }
+  };
+
+  return (
+    <div className="portfolio-home-numbers">
+      <div className="portfolio-home-numbers-container">
+        <div className="portfolio-section-heading">
+          <img src={HeadingDesign} className="portfolio-section-heading-img" alt="Decorative heading line design" />
+          <h2>
+            <span>Numbers</span> that speak for themselves
+          </h2>
+          <p>
+            Proven results and measurable impact are the foundation of lasting
+            partnerships. Each project is approached with precision, delivering
+            outcomes that consistently exceed expectations and strengthen client
+            success.
+          </p>
+          <a href="#footer" className="portfolio-primary-button" aria-label="Scroll to footer contact information">
+            <div className="portfolio-primary-button-background"></div>
+            <p>My turn to shine</p>
+          </a>
+        </div>
+        <div
+          className="portfolio-home-numbers-div"
+          ref={divRef}
+          onMouseMove={handleMouseMove}
+        >
+          <img
+            src={DesktopBackground}
+            className="portfolio-home-numbers-background"
+            alt="Desktop showcase stats background"
+          />
+          <div
+            className="portfolio-home-cursor-glow"
+            style={{
+              left: `${cursorPos.x}px`,
+              top: `${cursorPos.y}px`,
+            }}
+          ></div>
+          <div
+            className="portfolio-home-flashlight-overlay"
+            style={{
+              maskImage: `radial-gradient(circle 180px at ${cursorPos.x}px ${cursorPos.y}px, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 1) 80%)`,
+              WebkitMaskImage: `radial-gradient(circle 180px at ${cursorPos.x}px ${cursorPos.y}px, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 1) 80%)`,
+            }}
+          ></div>
+          <section>
+            <div className="portfolio-home-numbers-set">
+              <h3>45+</h3>
+              <p>Happy Clients</p>
+            </div>
+            <div className="portfolio-home-numbers-set">
+              <h3>75+</h3>
+              <p>Successful Projects</p>
+            </div>
+          </section>
+          <section>
+            <div className="portfolio-home-numbers-set">
+              <h3>100%</h3>
+              <p>Custom Solutions</p>
+            </div>
+            <div className="portfolio-home-numbers-set">
+              <h3>15+</h3>
+              <p>Expert Team</p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Numbers;

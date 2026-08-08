@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import DesktopBackground from "../../assets/Designing/Banner/Desktop Background.png";
-import MobileBackground from "../../assets/Designing/Banner/Mobile Background.png";
+import DesktopBackground from "../../assets/Designing/Banner/Desktop Background.webp";
+import MobileBackground from "../../assets/Designing/Banner/Mobile Background.webp";
 
 function Banner() {
   const [opacity, setOpacity] = useState(0);

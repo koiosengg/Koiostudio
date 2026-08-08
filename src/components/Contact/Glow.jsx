@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import DesktopBackground from "../../assets/Contact/Glow/Desktop Background.png";
+import DesktopBackground from "../../assets/Contact/Glow/Desktop Background.webp";
 
 function Glow() {
   const [opacity, setOpacity] = useState(0);

@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "../../../assets/Designing/Types/Saas Platforms Designing.png";
+import Image from "../../../assets/Designing/Types/Saas Platforms Designing.webp";
 import Tick from "../../../assets/Designing/Types/Tick.svg";
 
 function SaasPlatformsDesigning() {

@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "../../../assets/Branding/Types/Event Design.png";
+import Image from "../../../assets/Branding/Types/Event Design.webp";
 import Tick from "../../../assets/Branding/Types/Tick.svg";
 
 function EventDesign() {

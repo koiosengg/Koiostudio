@@ -1,14 +1,14 @@
 import React from "react";
-import Mahi from "../../assets/Home/Pride/Mahi.png";
-import AllOk from "../../assets/Home/Pride/AllOk.png";
-import Jason from "../../assets/Home/Pride/Jason.png";
-import TMS from "../../assets/Home/Pride/TMS.png";
-import XLR8 from "../../assets/Home/Pride/XLR8.png";
-import Muth from "../../assets/Home/Pride/Muth.png";
-import Malgudi from "../../assets/Home/Pride/Malgudi.png";
-import Jukebox from "../../assets/Home/Pride/Jukebox.png";
-import Prima from "../../assets/Home/Pride/Prima.png";
-import CilkenCave from "../../assets/Home/Pride/CilkenCave.png";
+import Mahi from "../../assets/Home/Pride/Mahi.webp";
+import AllOk from "../../assets/Home/Pride/AllOk.webp";
+import Jason from "../../assets/Home/Pride/Jason.webp";
+import TMS from "../../assets/Home/Pride/TMS.webp";
+import XLR8 from "../../assets/Home/Pride/XLR8.webp";
+import Muth from "../../assets/Home/Pride/Muth.webp";
+import Malgudi from "../../assets/Home/Pride/Malgudi.webp";
+import Jukebox from "../../assets/Home/Pride/Jukebox.webp";
+import Prima from "../../assets/Home/Pride/Prima.webp";
+import CilkenCave from "../../assets/Home/Pride/CilkenCave.webp";
 
 function Pride() {
   return (

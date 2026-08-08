@@ -1,7 +1,7 @@
 import React from "react";
-import Clients from "../../assets/Home/Features/Clients.png";
-import Growth from "../../assets/Home/Features/Growth.png";
-import Lead from "../../assets/Home/Features/Lead.png";
+import Clients from "../../assets/Home/Features/Clients.webp";
+import Growth from "../../assets/Home/Features/Growth.webp";
+import Lead from "../../assets/Home/Features/Lead.webp";
 
 function Features() {
   return (

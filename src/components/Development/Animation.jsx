@@ -1,7 +1,7 @@
 import React from "react";
-import LeftBackground from "../../assets/Development/Animation/Left Background.png";
-import BottomBackground from "../../assets/Development/Animation/Bottom Background.png";
-import RightTopImg from "../../assets/Development/Animation/Right Top.png";
+import LeftBackground from "../../assets/Development/Animation/Left Background.webp";
+import BottomBackground from "../../assets/Development/Animation/Bottom Background.webp";
+import RightTopImg from "../../assets/Development/Animation/Right Top.webp";
 function Animation() {
   return (
     <section className="template">

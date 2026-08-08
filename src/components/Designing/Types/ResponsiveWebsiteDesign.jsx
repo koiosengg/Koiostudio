@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "../../../assets/Designing/Types/Responsive Website Design.png";
+import Image from "../../../assets/Designing/Types/Responsive Website Design.webp";
 import Tick from "../../../assets/Designing/Types/Tick.svg";
 
 function ResponsiveWebsiteDesign() {

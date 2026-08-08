@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import RightAnimationClick from "../../assets/Branding/Animation/Right Animation Click.png";
-import RightAnimationImg1 from "../../assets/Branding/Animation/Right Animation Image 1.png";
-import RightAnimationImg2 from "../../assets/Branding/Animation/Right Animation Image 2.png";
-import RightAnimationImg3 from "../../assets/Branding/Animation/Right Animation Image 3.png";
-import BrandingAnimationTopBackground from "../../assets/Branding/Animation/Branding Animation Top Background.png";
-import TopAnimationClick from "../../assets/Branding/Animation/Top Animation Click.png";
-import BottomAnimationImg1 from "../../assets/Branding/Animation/Bottom Animation Image 1.png";
-import BottomAnimationImg2 from "../../assets/Branding/Animation/Bottom Animation Image 2.png";
-import BottomAnimationClick from "../../assets/Branding/Animation/Bottom Animation Click.png";
+import RightAnimationClick from "../../assets/Branding/Animation/Right Animation Click.webp";
+import RightAnimationImg1 from "../../assets/Branding/Animation/Right Animation Image 1.webp";
+import RightAnimationImg2 from "../../assets/Branding/Animation/Right Animation Image 2.webp";
+import RightAnimationImg3 from "../../assets/Branding/Animation/Right Animation Image 3.webp";
+import BrandingAnimationTopBackground from "../../assets/Branding/Animation/Branding Animation Top Background.webp";
+import TopAnimationClick from "../../assets/Branding/Animation/Top Animation Click.webp";
+import BottomAnimationImg1 from "../../assets/Branding/Animation/Bottom Animation Image 1.webp";
+import BottomAnimationImg2 from "../../assets/Branding/Animation/Bottom Animation Image 2.webp";
+import BottomAnimationClick from "../../assets/Branding/Animation/Bottom Animation Click.webp";
 
 function Animation() {
   const [activeSetIndex, setActiveSetIndex] = useState(0);

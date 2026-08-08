@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import DesktopBackground from "../../assets/Blogs/Connection/Desktop Background.png";
+import DesktopBackground from "../../assets/Blogs/Connection/Desktop Background.webp";
 import Primary from "../Buttons/Primary";
 import Secondary from "../Buttons/Secondary";
 

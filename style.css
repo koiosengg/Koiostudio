@@ -1,18 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   letter-spacing: normal;
+  font-family: "Poppins", sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+body,
 #root {
   position: relative;
   background: var(--Black-Primary, #121212);
+  font-family: "Poppins", sans-serif;
 }
 
 /* Navbar */
@@ -159,7 +162,7 @@ header nav a:hover {
 
 .nav-dropdown-menu a {
   color: var(--White-text, #fff);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif !important;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -198,7 +201,7 @@ header nav a:hover {
   backdrop-filter: blur(20px);
   color: var(--White-text, #fff);
   text-align: center;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif !important;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -234,7 +237,7 @@ header nav a:hover {
   transition: all 0.3s;
   color: var(--Black-Primary, #121212);
   text-align: center;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif !important;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -269,7 +272,7 @@ header nav a:hover {
   transition: all 0.3s;
   color: var(--White-text, #fff);
   text-align: center;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -304,7 +307,7 @@ header nav a:hover {
 .tertiary-btn p {
   color: var(--Yellow-Primary, #ffbf00);
   text-align: center;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -432,7 +435,7 @@ header nav a:hover {
   display: flex;
   padding-bottom: 6px;
   text-align: center;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 80px;
   font-style: normal;
   font-weight: 500;
@@ -453,7 +456,7 @@ header nav a:hover {
   width: 780px;
   color: var(--Grey-text-grey-text-300, #b9b9b9);
   text-align: center;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -495,7 +498,7 @@ header nav a:hover {
 
 .template-heading p {
   text-align: center;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
@@ -514,7 +517,7 @@ header nav a:hover {
 .template-heading h2 {
   color: var(--White-text, #fff);
   text-align: center;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 48px;
   font-style: normal;
   font-weight: 500;
@@ -525,7 +528,7 @@ header nav a:hover {
 .template-heading span {
   color: var(--Grey-text-grey-text-300, #b9b9b9);
   text-align: center;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -605,7 +608,7 @@ header nav a:hover {
 .home-features-set-text h3 {
   color: #fff;
   text-align: center;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
@@ -615,7 +618,7 @@ header nav a:hover {
 .home-features-set-text p {
   color: rgba(231, 231, 231, 0.7);
   text-align: center;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -671,7 +674,7 @@ header nav a:hover {
 
 .home-problems-set-text h3 {
   color: #fff;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
@@ -680,7 +683,7 @@ header nav a:hover {
 
 .home-problems-set-text p {
   color: var(--Black-black-100, #b6b6b6);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -725,7 +728,7 @@ header nav a:hover {
 
 .home-stories-left-text h2 {
   color: var(--Black-Primary, #121212);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
@@ -734,7 +737,7 @@ header nav a:hover {
 
 .home-stories-left-text p {
   color: var(--Black-black-400, #414141);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -757,7 +760,7 @@ header nav a:hover {
   border-radius: 8px 8px 0 0;
   background: var(--White-text, #fff);
   color: var(--Black-black-300, #606060);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -802,7 +805,7 @@ header nav a:hover {
 
 .home-stories-left-search-set h3 {
   color: var(--Black-Primary, #121212);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -811,7 +814,7 @@ header nav a:hover {
 
 .home-stories-left-search-set p {
   color: var(--Grey-text-grey-text-800, #535353);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -863,7 +866,7 @@ header nav a:hover {
 
 .home-stories-right-text h2 {
   color: var(--White-text, #fff);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
@@ -872,7 +875,7 @@ header nav a:hover {
 
 .home-stories-right-text p {
   color: var(--Grey-text-grey-text-300, #b9b9b9);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -926,7 +929,7 @@ header nav a:hover {
   text-align: center;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: var(--Grey-text-grey-text-50, #f5f5f5);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 80px;
   font-style: normal;
   font-weight: 700;
@@ -937,7 +940,7 @@ header nav a:hover {
 .home-stories-right-numbers-set p {
   color: var(--White-text, #fff);
   text-align: center;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
@@ -948,7 +951,7 @@ header nav a:hover {
   color: var(--Yellow-Primary, #ffbf00);
   -webkit-text-stroke-width: 0px;
   text-align: center;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 80px;
   font-style: normal;
   font-weight: 700;
@@ -959,7 +962,7 @@ header nav a:hover {
 .home-stories-right-numbers-set:nth-child(2) p {
   color: var(--Yellow-Primary, #ffbf00);
   text-align: center;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
@@ -1006,7 +1009,7 @@ header nav a:hover {
 .home-about-text p {
   color: var(--Grey-text-grey-text-100, #dfdfdf);
   text-align: center;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 28px;
   font-style: normal;
   font-weight: 400;
@@ -1074,7 +1077,7 @@ header nav a:hover {
 
 .home-industries-set-text h3 {
   color: var(--Grey-text-Primary, #979797);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
@@ -1085,7 +1088,7 @@ header nav a:hover {
 
 .home-industries-set-text p {
   color: var(--Grey-text-grey-text-300, #b9b9b9);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -1202,7 +1205,7 @@ header nav a:hover {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #febe0033;
   -webkit-text-fill-color: transparent;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 230px;
   font-style: normal;
   font-weight: 500;
@@ -1254,8 +1257,34 @@ header nav a:hover {
   object-fit: cover;
 }
 
+.gallery-set::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 75%;
+  background: linear-gradient(
+    to top,
+    rgba(18, 18, 18, 0.96) 0%,
+    rgba(18, 18, 18, 0.75) 50%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
 .gallery-set .our-blogs-set-content {
-  padding: 20px;
+  padding: 24px 20px;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(18, 18, 18, 0.85) 40%,
+    rgba(18, 18, 18, 0.98) 100%
+  );
 }
 
 .gallery-controls {
@@ -1331,7 +1360,7 @@ header nav a:hover {
 
 .home-creations-right-text h3 {
   color: var(--White-text, #fff);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
@@ -1340,7 +1369,7 @@ header nav a:hover {
 
 .home-creations-right-text p {
   color: var(--Grey-text-grey-text-300, #b9b9b9);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -1358,7 +1387,7 @@ header nav a:hover {
 
 .home-creations-right-typewriter p {
   color: #fff;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 28px;
   font-style: normal;
   font-weight: 600;
@@ -1471,7 +1500,7 @@ header nav a:hover {
 
 .home-testimony-set-text p {
   color: var(--Grey-text-grey-text-300, #b9b9b9);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -1480,7 +1509,7 @@ header nav a:hover {
 
 .home-testimony-set h3 {
   color: var(--Grey-text-grey-text-300, #b9b9b9);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -1572,7 +1601,7 @@ header nav a:hover {
   min-width: 20px;
   flex-shrink: 0;
   color: var(--Text-Black-Primary, #111);
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
@@ -1606,7 +1635,7 @@ header nav a:hover {
 
 .faq-set h3 {
   color: var(--White-text, #fff);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -1639,7 +1668,7 @@ header nav a:hover {
 
 .faq-set p {
   color: var(--Grey-text-grey-text-300, #b9b9b9);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -1695,7 +1724,7 @@ header nav a:hover {
 .home-connection-container h2 {
   color: var(--White-text, #fff);
   text-align: center;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 48px;
   font-style: normal;
   font-weight: 600;
@@ -1706,7 +1735,7 @@ header nav a:hover {
 .home-connection-container p {
   color: var(--Grey-text-grey-text-200, #cfcfcf);
   text-align: center;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -1746,7 +1775,7 @@ header nav a:hover {
 
 .designing-animation h3 {
   color: var(--White-text, #fff);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
@@ -1755,7 +1784,7 @@ header nav a:hover {
 
 .designing-animation p {
   color: var(--Grey-text-grey-text-300, #b9b9b9);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -1860,7 +1889,7 @@ header nav a:hover {
 
 .designing-animation-bottom-set p {
   color: var(--Black-black-200, #929292);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -1975,7 +2004,7 @@ header nav a:hover {
 
 .designing-animation-bottom-set-image.hover h4 {
   text-align: center;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
@@ -2230,7 +2259,7 @@ header nav a:hover {
 
 .designing-why-us-set p {
   color: var(--White-text, #fff);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
@@ -2264,7 +2293,7 @@ header nav a:hover {
   align-items: center;
   gap: 10px;
   color: var(--White-text, #fff);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
@@ -2318,7 +2347,7 @@ header nav a:hover {
 
 .designing-types-set p {
   color: var(--Grey-text-grey-text-300, #b9b9b9);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -2345,7 +2374,7 @@ header nav a:hover {
 
 .designing-types-right h2 {
   color: var(--White-text, #fff);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 48px;
   font-style: normal;
   font-weight: 600;
@@ -2381,7 +2410,7 @@ header nav a:hover {
 
 .designing-types-text p {
   color: var(--Grey-text-grey-text-200, #cfcfcf);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -2467,7 +2496,7 @@ header nav a:hover {
 
 .designing-services-set h3 {
   color: var(--White-text, #fff);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
@@ -2621,7 +2650,7 @@ header nav a:hover {
 .development-animation-marquee p {
   color: var(--White-text, #fff);
   text-shadow: 0 4px 10px rgba(255, 255, 255, 0.5);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 28px;
   font-style: normal;
   font-weight: 700;
@@ -2674,7 +2703,7 @@ header nav a:hover {
   border: 1px solid rgba(255, 255, 255, 0.2);
   background: var(--Black-Primary, #121212);
   color: var(--White-text, #fff);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -2686,7 +2715,7 @@ header nav a:hover {
 }
 
 .development-animation-section-right h4 {
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 48px;
   font-style: normal;
   font-weight: 600;
@@ -2726,7 +2755,7 @@ header nav a:hover {
 
 .branding-animation-left-heading h3 {
   color: #606060;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 48px;
   font-style: normal;
   font-weight: 600;
@@ -2984,7 +3013,7 @@ header nav a:hover {
 
 .branding-animation-top-container h3 {
   color: var(--White-text, #fff);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
@@ -3004,7 +3033,7 @@ header nav a:hover {
 
 .branding-animation-top-search-container p {
   color: var(--Grey-text-grey-text-300, #b9b9b9);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -3058,7 +3087,7 @@ header nav a:hover {
   background: var(--Woodsmoke-BG-woodsmoke-bg-900, #343333);
   color: var(--Grey-text-Primary, #979797);
   text-align: center;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
@@ -3068,7 +3097,7 @@ header nav a:hover {
 
 .branding-animation-top-set p {
   color: var(--Grey-text-Primary, #979797);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -3169,7 +3198,7 @@ header nav a:hover {
 
 .branding-animation-bottom-text p {
   color: var(--Grey-text-Primary, #979797);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -3178,7 +3207,7 @@ header nav a:hover {
 
 .branding-animation-bottom-text h4 {
   color: var(--White-text, #fff);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
@@ -3254,7 +3283,7 @@ header nav a:hover {
   width: 100%;
   padding: 0px 72px;
   color: var(--Yellow-Primary, #ffbf00);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 48px;
   font-style: normal;
   font-weight: 600;
@@ -3322,7 +3351,7 @@ header nav a:hover {
 
 .marketing-animation-left-marquee h4 {
   color: #fff;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 48px;
   font-style: normal;
   font-weight: 600;
@@ -3541,7 +3570,7 @@ header nav a:hover {
 
 .marketing-animation-bottom h3 {
   color: #fff;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
@@ -3609,7 +3638,7 @@ header nav a:hover {
 
 .about-numbers-set h3 {
   color: var(--White-text, #fff);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 64px;
   font-style: normal;
   font-weight: 600;
@@ -3619,7 +3648,7 @@ header nav a:hover {
 
 .about-numbers-set p {
   color: var(--Grey-text-grey-text-300, #b9b9b9);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
@@ -3679,7 +3708,7 @@ header nav a:hover {
   color: var(--Yellow-Primary, #ffbf00);
   text-align: center;
   text-shadow: 0 4px 20px rgba(255, 191, 0, 0.4);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 32px;
   font-style: normal;
   font-weight: 600;
@@ -3698,7 +3727,7 @@ header nav a:hover {
 .about-vertical-container p {
   color: #fff;
   text-align: center;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 32px;
   font-style: italic;
   font-weight: 275;
@@ -3736,7 +3765,7 @@ header nav a:hover {
 .about-possibilities .home-about-text p {
   color: var(--Grey-text-grey-text-300, #b9b9b9);
   text-align: center;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -3795,7 +3824,7 @@ header nav a:hover {
   max-width: 900px;
   color: var(--White-text, #fff);
   text-align: center;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 28px;
   font-style: normal;
   font-weight: 500;
@@ -3862,7 +3891,7 @@ header nav a:hover {
 
 .our-blogs-set-text h3 {
   color: #fff;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
@@ -3871,7 +3900,7 @@ header nav a:hover {
 
 .our-blogs-set-text p {
   color: var(--Black-black-100, #b6b6b6);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -3924,7 +3953,7 @@ header nav a:hover {
 
 .back-button p {
   color: #fff;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -3951,7 +3980,7 @@ header nav a:hover {
 
 .blogs-inner-page-heading h1 {
   color: #fff;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 48px;
   font-style: normal;
   font-weight: 600;
@@ -3961,7 +3990,7 @@ header nav a:hover {
 
 .blogs-inner-page-heading p {
   color: var(--Grey-text-grey-text-300, #b9b9b9);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -4003,7 +4032,7 @@ header nav a:hover {
 
 .blogs-inner-page-text p {
   color: var(--Grey-text-grey-text-300, #b9b9b9);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -4012,7 +4041,7 @@ header nav a:hover {
 
 .blogs-inner-page-text a {
   color: var(--Grey-text-grey-text-300, #b9b9b9);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -4036,7 +4065,7 @@ header nav a:hover {
 
 .blogs-inner-page-text h2 {
   color: #fff;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 32px;
   font-style: normal;
   font-weight: 600;
@@ -4084,7 +4113,7 @@ header nav a:hover {
 
 .blogs-posts-container h2 {
   color: #fff;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 28px;
   font-style: normal;
   font-weight: 600;
@@ -4132,7 +4161,7 @@ header nav a:hover {
 
 .blogs-posts-set-text h3 {
   color: #fff;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
@@ -4141,7 +4170,7 @@ header nav a:hover {
 
 .blogs-posts-set-text p {
   color: var(--Grey-text-grey-text-300, #b9b9b9);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -4165,7 +4194,7 @@ header nav a:hover {
 .vision-text {
   color: var(--Grey-text-grey-text-300, #b9b9b9);
   text-align: center;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -4225,7 +4254,7 @@ header nav a:hover {
 
 .contact-banner-heading h1 {
   text-align: center;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 80px;
   font-style: normal;
   font-weight: 500;
@@ -4245,7 +4274,7 @@ header nav a:hover {
 .contact-banner-heading p {
   color: var(--Grey-text-grey-text-300, #b9b9b9);
   text-align: center;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -4303,7 +4332,7 @@ header nav a:hover {
 
 .contact-banner .input-container label {
   color: var(--Grey-text-Primary, #979797);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -4326,7 +4355,7 @@ header nav a:hover {
   border: 0.7px solid var(--Woodsmoke-BG-woodsmoke-bg-600, #706f6f);
   background: none;
   color: var(--White-text, #fff);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -4352,7 +4381,7 @@ header nav a:hover {
   border: 0.7px solid var(--Woodsmoke-BG-woodsmoke-bg-600, #706f6f);
   background: none;
   color: var(--White-text, #fff);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -4451,7 +4480,7 @@ header nav a:hover {
 .contact-links-set h3 {
   color: var(--White-text, #fff);
   text-align: center;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
@@ -4461,7 +4490,7 @@ header nav a:hover {
 .contact-links-set p {
   color: var(--Grey-text-Primary, #979797);
   text-align: center;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -4511,7 +4540,7 @@ footer {
 
 .footer-links h2 {
   color: var(--Black-black-300, #606060);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -4520,7 +4549,7 @@ footer {
 
 .footer-links a {
   color: var(--Grey-text-grey-text-200, #cfcfcf);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -4562,7 +4591,7 @@ footer {
 
 .footer-side-container-text h2 {
   color: #fff;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
@@ -4571,7 +4600,7 @@ footer {
 
 .footer-side-container-text p {
   color: var(--Grey-text-Primary, #979797);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -4610,7 +4639,7 @@ footer {
 
 .footer-bottom p {
   color: var(--Grey-text-grey-text-300, #b9b9b9);
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -4751,12 +4780,12 @@ footer {
     top: 55px;
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
     align-items: flex-start;
-    justify-content: space-between;
-    gap: 32px;
-    padding: 20px 20px 80px 20px;
+    padding: 30px 20px 40px 20px;
+    box-sizing: border-box;
   }
 
   @keyframes slideIn {
@@ -4807,7 +4836,7 @@ footer {
     gap: 10px;
     align-self: stretch;
     color: var(--White-text, #fff);
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -4864,7 +4893,7 @@ footer {
 
   .home-banner-text h1 {
     text-align: center;
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     font-size: 48px;
     font-style: normal;
     font-weight: 500;
@@ -4899,7 +4928,7 @@ footer {
 
   .template-heading p {
     text-align: center;
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
@@ -4909,7 +4938,7 @@ footer {
   .template-heading h2 {
     color: var(--White-text, #fff);
     text-align: center;
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
@@ -4996,7 +5025,7 @@ footer {
   .home-features-set-text h3 {
     color: #fff;
     text-align: center;
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
@@ -5006,7 +5035,7 @@ footer {
   .home-features-set-text p {
     color: var(--Grey-text-grey-text-300, #b9b9b9);
     text-align: center;
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -5026,7 +5055,7 @@ footer {
 
   .home-problems-set-text h3 {
     color: #fff;
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
@@ -5035,7 +5064,7 @@ footer {
 
   .home-problems-set-text p {
     color: var(--Black-black-100, #b6b6b6);
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -5060,7 +5089,7 @@ footer {
 
   .home-stories-left-text h2 {
     color: var(--Black-Primary, #121212);
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
@@ -5069,7 +5098,7 @@ footer {
 
   .home-stories-left-text p {
     color: var(--Black-black-400, #414141);
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -5082,7 +5111,7 @@ footer {
 
   .home-stories-left-search-set p {
     color: var(--Grey-text-grey-text-800, #535353);
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -5119,7 +5148,7 @@ footer {
   .home-stories-right-numbers-set p,
   .home-stories-right-numbers-set:nth-child(2) p {
     text-align: center;
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     font-size: 13px;
     font-style: normal;
     font-weight: 600;
@@ -5129,7 +5158,7 @@ footer {
   .home-about-text p {
     color: var(--Grey-text-grey-text-100, #dfdfdf);
     text-align: center;
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -5147,7 +5176,7 @@ footer {
   }
 
   .home-industries-set-text h3 {
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
@@ -5156,7 +5185,7 @@ footer {
 
   .home-industries-set-text p {
     color: var(--Grey-text-grey-text-300, #b9b9b9);
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -5176,7 +5205,7 @@ footer {
 
   .gallery-container span {
     text-align: center;
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     font-size: 68px;
     font-style: normal;
     font-weight: 500;
@@ -5207,7 +5236,7 @@ footer {
   .our-blogs-set-text h3 {
     color: var(--White-text, #fff);
     text-align: left;
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
@@ -5216,7 +5245,7 @@ footer {
 
   .our-blogs-set-text p {
     color: var(--Grey-text-grey-text-300, #b9b9b9);
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -5312,7 +5341,7 @@ footer {
 
   .faq-set h3 {
     color: var(--White-text, #fff);
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -5321,7 +5350,7 @@ footer {
 
   .active-faq p {
     color: var(--Grey-text-grey-text-300, #b9b9b9);
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -5346,7 +5375,7 @@ footer {
   .home-connection-container h2 {
     color: var(--White-text, #fff);
     text-align: center;
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
@@ -5382,7 +5411,7 @@ footer {
 
   .designing-animation h3 {
     color: var(--White-text, #fff);
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
@@ -5391,7 +5420,7 @@ footer {
 
   .designing-animation p {
     color: var(--Grey-text-grey-text-300, #b9b9b9);
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -5427,7 +5456,7 @@ footer {
 
   .designing-why-us-set p {
     color: var(--White-text, #fff);
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
@@ -5462,7 +5491,7 @@ footer {
   }
 
   .designing-types-right h2 {
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
@@ -5477,7 +5506,7 @@ footer {
 
   .designing-types-text p {
     color: var(--Grey-text-grey-text-300, #b9b9b9);
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -5493,7 +5522,7 @@ footer {
     width: 100%;
     text-align: center;
     color: var(--White-text, #fff);
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -5546,7 +5575,7 @@ footer {
 
   .about-numbers-set h3 {
     color: var(--White-text, #fff);
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
@@ -5556,7 +5585,7 @@ footer {
 
   .about-numbers-set p {
     color: var(--Grey-text-grey-text-300, #b9b9b9);
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -5571,7 +5600,7 @@ footer {
   .about-content .home-about-text p {
     color: var(--White-text, #fff);
     text-align: center;
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -5595,7 +5624,7 @@ footer {
   }
 
   .contact-banner-heading h1 {
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     font-size: 48px;
     font-style: normal;
     font-weight: 500;
@@ -5606,7 +5635,7 @@ footer {
   .contact-banner-heading p {
     color: var(--Grey-text-grey-text-300, #b9b9b9);
     text-align: center;
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -5701,3 +5730,4 @@ footer {
     }
   }
 }
+

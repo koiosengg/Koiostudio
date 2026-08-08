@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "../../../assets/Branding/Types/Logo Designing.png";
+import Image from "../../../assets/Branding/Types/Logo Designing.webp";
 import Tick from "../../../assets/Branding/Types/Tick.svg";
 
 function LogoDesigning() {

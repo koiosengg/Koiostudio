@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import BlogImg1 from "../../assets/Blogs/Our Blogs/Blog Image 1.png";
-import BlogImg2 from "../../assets/Blogs/Our Blogs/Blog Image 2.png";
-import BlogImg3 from "../../assets/Blogs/Our Blogs/Blog Image 3.png";
-import BlogImg4 from "../../assets/Blogs/Our Blogs/Blog Image 4.png";
+import BlogImg1 from "../../assets/Blogs/Our Blogs/Blog Image 1.webp";
+import BlogImg2 from "../../assets/Blogs/Our Blogs/Blog Image 2.webp";
+import BlogImg3 from "../../assets/Blogs/Our Blogs/Blog Image 3.webp";
+import BlogImg4 from "../../assets/Blogs/Our Blogs/Blog Image 4.webp";
 
 function Posts() {
   return (

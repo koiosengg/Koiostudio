@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "../../../assets/Branding/Types/Brochure Design.png";
+import Image from "../../../assets/Branding/Types/Brochure Design.webp";
 import Tick from "../../../assets/Branding/Types/Tick.svg";
 
 function BrochureDesign() {

@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "../../../assets/Marketing/Types/Google Ads and Meta Ads.png";
+import Image from "../../../assets/Marketing/Types/Google Ads and Meta Ads.webp";
 import Tick from "../../../assets/Marketing/Types/Tick.svg";
 
 function GoogleAdsAndMetaAds() {

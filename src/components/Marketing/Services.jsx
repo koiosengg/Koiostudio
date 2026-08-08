@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Designing from "../../assets/Designing/Services/Designing.png";
-import Development from "../../assets/Designing/Services/Development.png";
-import CompanyBranding from "../../assets/Designing/Services/Company Branding.png";
-import DigitalMarketing from "../../assets/Designing/Services/Digital Marketing.png";
+import Designing from "../../assets/Designing/Services/Designing.webp";
+import Development from "../../assets/Designing/Services/Development.webp";
+import CompanyBranding from "../../assets/Designing/Services/Company Branding.webp";
+import DigitalMarketing from "../../assets/Designing/Services/Digital Marketing.webp";
 
 function Services({ hide }) {
   const handleMouseEnter = (e) => {

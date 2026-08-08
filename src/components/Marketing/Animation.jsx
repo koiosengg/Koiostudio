@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from "react";
-import TopBackground from "../../assets/Marketing/Animation/Top Background.png";
-import Search from "../../assets/Marketing/Animation/Search.png";
-import Google from "../../assets/Marketing/Animation/Google.png";
-import Meta from "../../assets/Marketing/Animation/Meta.png";
-import Click from "../../assets/Marketing/Animation/Click.png";
+import TopBackground from "../../assets/Marketing/Animation/Top Background.webp";
+import Search from "../../assets/Marketing/Animation/Search.webp";
+import Google from "../../assets/Marketing/Animation/Google.webp";
+import Meta from "../../assets/Marketing/Animation/Meta.webp";
+import Click from "../../assets/Marketing/Animation/Click.webp";
 
 function Animation() {
   const topRef = useRef(null);

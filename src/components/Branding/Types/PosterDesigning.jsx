@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "../../../assets/Branding/Types/Poster Designing.png";
+import Image from "../../../assets/Branding/Types/Poster Designing.webp";
 import Tick from "../../../assets/Branding/Types/Tick.svg";
 
 function PosterDesigning() {

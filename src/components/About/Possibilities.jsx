@@ -1,5 +1,5 @@
 import React from "react";
-import DesktopBackground from "../../assets/About/Possibilities/Desktop Background.png";
+import DesktopBackground from "../../assets/About/Possibilities/Desktop Background.webp";
 import Primary from "../Buttons/Primary";
 
 function Possibilities() {

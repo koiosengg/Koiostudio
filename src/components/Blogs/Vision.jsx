@@ -1,5 +1,5 @@
 import React from "react";
-import DesktopBackground from "../../assets/Blogs/Vision/Desktop Background.png";
+import DesktopBackground from "../../assets/Blogs/Vision/Desktop Background.webp";
 
 function Vision() {
   return (

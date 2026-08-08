@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Layouts from "../../assets/Home/Creations/Layouts.png";
-import Design from "../../assets/Home/Creations/Design.png";
+import Layouts from "../../assets/Home/Creations/Layouts.webp";
+import Design from "../../assets/Home/Creations/Design.webp";
 
 function Creations() {
   const text = "Stand Out With Creativity & Innovation";

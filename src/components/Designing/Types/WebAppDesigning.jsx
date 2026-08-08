@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "../../../assets/Designing/Types/Web App Designing.png";
+import Image from "../../../assets/Designing/Types/Web App Designing.webp";
 import Tick from "../../../assets/Designing/Types/Tick.svg";
 
 function WebAppDesigning() {

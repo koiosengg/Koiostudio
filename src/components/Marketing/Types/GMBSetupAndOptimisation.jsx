@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "../../../assets/Marketing/Types/GMB Setup and Optimisation.png";
+import Image from "../../../assets/Marketing/Types/GMB Setup and Optimisation.webp";
 import Tick from "../../../assets/Marketing/Types/Tick.svg";
 
 function GMBSetupAndOptimisation() {

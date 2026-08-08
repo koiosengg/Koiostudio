@@ -1,6 +1,6 @@
 import React from "react";
-import DesktopBackground from "../../assets/Home/About/Desktop Background.png";
-import MobileBackground from "../../assets/Home/About/Mobile Background.png";
+import DesktopBackground from "../../assets/Home/About/Desktop Background.webp";
+import MobileBackground from "../../assets/Home/About/Mobile Background.webp";
 import Secondary from "../Buttons/Secondary";
 
 function About() {

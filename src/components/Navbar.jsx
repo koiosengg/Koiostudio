@@ -1,10 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
-import Logo from "/Logo.png";
+import { Link, useLocation } from "react-router-dom";
+import Logo from "/Logo.webp";
 import Menu from "/menu.svg";
 import MenuCancel from "/menu cancel.svg";
+import PortfolioNavbar from "./Portfolio/PortfolioNavbar";
 
 function Navbar() {
+  const location = useLocation();
+  const isPortfolioPage = location.pathname.startsWith("/portfolio");
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   const [hasToggled, setHasToggled] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -45,6 +48,10 @@ function Navbar() {
       setIsMobileNavOpen(false);
     }
   };
+
+  if (isPortfolioPage) {
+    return <PortfolioNavbar />;
+  }
 
   return (
     <header>
