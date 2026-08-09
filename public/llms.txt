@@ -1,0 +1,27 @@
+# KOIOS Studio
+
+> KOIOS Studio is a full-service digital product agency specializing in modern web design, custom web application development, brand identity, and performance digital marketing.
+
+## Overview
+KOIOS Studio partners with ambitious businesses and growing enterprises to craft high-impact web applications, responsive websites, brand systems, and digital strategies.
+
+## Core Services
+- [Web Design & Development](https://koiostudio.com/development): Custom responsive websites and high-performance frontend interfaces built with modern web technologies.
+- [UI/UX Design](https://koiostudio.com/designing): User-centered digital product design, wireframing, interactive prototyping, and design systems.
+- [Company Branding](https://koiostudio.com/branding): Complete brand strategy, visual identities, logo design, corporate collateral, and brand guidelines.
+- [Digital Marketing](https://koiostudio.com/marketing): Search engine optimization (SEO), performance marketing, content strategy, and digital growth campaigns.
+
+## Portfolio & Case Studies
+- [Websites Portfolio](https://koiostudio.com/portfolio/websites): Collection of custom marketing websites, corporate portals, and responsive web platforms.
+- [Applications Portfolio](https://koiostudio.com/portfolio/applications): Showcase of web applications, SaaS dashboards, and digital software products.
+- [Branding Portfolio](https://koiostudio.com/portfolio/branding): Visual identity systems, logo designs, brochures, and brand identity projects.
+
+## Company Pages
+- [About Us](https://koiostudio.com/about): Our mission, design philosophy, team expertise, and client commitment.
+- [Blog](https://koiostudio.com/blog): Insights on web development trends, design principles, SEO strategies, and brand positioning.
+- [Contact Us](https://koiostudio.com/contact): Get in touch with our team to discuss project requirements, estimates, and consultations.
+
+## Contact Information
+- Email: info@koios.com
+- Telephone: +91 89097 65654
+- Location: No.315/64, Mallasandra village, Thalaghattapura Post, Bengaluru-560109

@@ -21,7 +21,7 @@ function PortfolioNavbar() {
   return (
     <>
       <div className="portfolio-navbar">
-        <Link to="/portfolio" className="portfolio-navbar-logo">
+        <Link to="/portfolio" className="portfolio-navbar-logo" aria-label="Koios Studio Portfolio Home">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="40"
@@ -68,6 +68,8 @@ function PortfolioNavbar() {
         </nav>
         <div
           className="portfolio-mobile-navbar-open-button mobile"
+          role="button"
+          aria-label="Open mobile navigation menu"
           onClick={toggleMobileNav}
         >
           <svg
@@ -96,6 +98,8 @@ function PortfolioNavbar() {
       >
         <div
           className="portfolio-mobile-navbar-close-button"
+          role="button"
+          aria-label="Close mobile navigation menu"
           onClick={toggleMobileNav}
         >
           <svg

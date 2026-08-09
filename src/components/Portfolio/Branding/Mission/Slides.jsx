@@ -8,11 +8,11 @@ import Img5 from "../../../../assets/Portfolio/Branding/Mission/Slides/Img 5.web
 function Slides() {
   return (
     <div className="portfolio-branding-mission-slides">
-      <img src={Img1} />
-      <img src={Img2} />
-      <img src={Img3} />
-      <img src={Img4} />
-      <img src={Img5} />
+      <img src={Img1} alt="Brand presentation deck slide 1 showcase" />
+      <img src={Img2} alt="Brand presentation deck slide 2 showcase" />
+      <img src={Img3} alt="Brand presentation deck slide 3 showcase" />
+      <img src={Img4} alt="Brand presentation deck slide 4 showcase" />
+      <img src={Img5} alt="Brand presentation deck slide 5 showcase" />
     </div>
   );
 }

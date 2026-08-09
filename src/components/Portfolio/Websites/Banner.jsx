@@ -7,7 +7,7 @@ import DesktopBannerImg2 from "../../../assets/Portfolio/Websites/Desktop Banner
 function Banner() {
   return (
     <div className="portfolio-websites-banner" id="banner">
-      <img src={DesktopBanner} className="portfolio-home-banner-background" />
+      <img src={DesktopBanner} className="portfolio-home-banner-background" alt="Koios Studio website portfolio banner background design" />
       <div className="portfolio-websites-banner-container">
         <div className="portfolio-home-banner-container">
           <section>
@@ -18,7 +18,7 @@ function Banner() {
             </h1>
             <p>Building websites that inspire trust and deliver results.</p>
           </section>
-          <Link to="/contact" className="portfolio-primary-button">
+          <Link to="/contact" className="portfolio-primary-button" aria-label="Build your website with Koios Studio - Contact page">
             <div className="portfolio-primary-button-background"></div>
             <p>Build Your Website with us </p>
           </Link>
@@ -27,14 +27,17 @@ function Banner() {
           <img
             className="portfolio-websites-banner-img"
             src={DesktopBannerImg}
+            alt="Web development project showcase desktop banner preview 1"
           />
           <img
             src={DesktopBannerImg1}
             className="portfolio-websites-banner-img-1"
+            alt="Web development project showcase desktop banner preview 2"
           ></img>
           <img
             src={DesktopBannerImg2}
             className="portfolio-websites-banner-img-2"
+            alt="Web development project showcase desktop banner preview 3"
           ></img>
         </div>
       </div>

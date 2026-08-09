@@ -15,7 +15,7 @@ function Footer() {
   return (
     <>
       <footer>
-        <Link to="/" className="navbar-logo">
+        <Link to="/" className="navbar-logo" aria-label="Koios Studio Home">
           <img src={Logo} alt="Koiostudio Logo" />
         </Link>
         <div className="footer-container">
@@ -148,11 +148,11 @@ function Footer() {
                 </a>
               </div>
               <div className="footer-more-links">
-                <Link to="/">
+                <Link to="/" aria-label="Read Koios Studio Privacy Policy">
                   <p>Privacy Policy</p>
                 </Link>
                 <p>|</p>
-                <Link to="/">
+                <Link to="/" aria-label="Read Koios Studio Terms of Service">
                   <p>Terms of Service</p>
                 </Link>
               </div>

@@ -5,7 +5,7 @@ function Logos() {
   return (
     <div className="portfolio-branding-mission-logos">
       <div className="portfolio-branding-mission-logos-columns">
-        <img src={AllLogos} />
+        <img src={AllLogos} alt="Collection of client brand logo designs created by Koios Studio" />
       </div>
     </div>
   );

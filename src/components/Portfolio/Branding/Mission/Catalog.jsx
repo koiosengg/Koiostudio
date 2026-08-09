@@ -9,12 +9,12 @@ import Img6 from "../../../../assets/Portfolio/Branding/Mission/Catalog/Img 6.we
 function Catalog() {
   return (
     <div className="portfolio-branding-mission-catalog">
-      <img src={Img1} />
-      <img src={Img2} />
-      <img src={Img3} />
-      <img src={Img4} />
-      <img src={Img5} />
-      <img src={Img6} />
+      <img src={Img1} alt="Product catalog page design sample 1" />
+      <img src={Img2} alt="Product catalog page design sample 2" />
+      <img src={Img3} alt="Product catalog page design sample 3" />
+      <img src={Img4} alt="Product catalog page design sample 4" />
+      <img src={Img5} alt="Product catalog page design sample 5" />
+      <img src={Img6} alt="Product catalog page design sample 6" />
     </div>
   );
 }

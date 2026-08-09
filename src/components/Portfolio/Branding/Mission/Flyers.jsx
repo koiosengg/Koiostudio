@@ -7,10 +7,10 @@ import Img4 from "../../../../assets/Portfolio/Branding/Mission/Flyers/Img 4.web
 function Flyers() {
   return (
     <div className="portfolio-branding-mission-flyers">
-      <img src={Img1} />
-      <img src={Img2} />
-      <img src={Img3} />
-      <img src={Img4} />
+      <img src={Img1} alt="Marketing flyer design sample 1" />
+      <img src={Img2} alt="Marketing flyer design sample 2" />
+      <img src={Img3} alt="Marketing flyer design sample 3" />
+      <img src={Img4} alt="Marketing flyer design sample 4" />
     </div>
   );
 }

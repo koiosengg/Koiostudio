@@ -8,6 +8,7 @@ function Banner() {
   const hasFadedIn = useRef(false);
 
   useEffect(() => {
+    const currentBanner = bannerRef.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !hasFadedIn.current) {
@@ -18,10 +19,10 @@ function Banner() {
       { threshold: 0.3 }
     );
 
-    if (bannerRef.current) observer.observe(bannerRef.current);
+    if (currentBanner) observer.observe(currentBanner);
 
     return () => {
-      if (bannerRef.current) observer.unobserve(bannerRef.current);
+      if (currentBanner) observer.unobserve(currentBanner);
     };
   }, []);
 
@@ -29,13 +30,13 @@ function Banner() {
     <section className="home-banner" ref={bannerRef}>
       <img
         src={DesktopBackground}
-        alt="Home banner background"
+        alt="Decorative Koios Studio home banner glowing background design"
         style={{ opacity }}
         className="home-banner-background desktop"
       />
       <img
         src={MobileBackground}
-        alt="Home banner background"
+        alt="Decorative Koios Studio home banner glowing background design"
         style={{ opacity }}
         className="home-banner-background mobile"
       />

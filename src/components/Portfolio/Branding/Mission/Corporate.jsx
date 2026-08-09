@@ -8,11 +8,11 @@ import Img5 from "../../../../assets/Portfolio/Branding/Mission/Corporate/Img 5.
 function Corporate() {
   return (
     <div className="portfolio-branding-mission-corporate">
-      <img src={Img1} />
-      <img src={Img2} />
-      <img src={Img3} />
-      <img src={Img4} />
-      <img src={Img5} />
+      <img src={Img1} alt="Corporate branding identity collateral 1" />
+      <img src={Img2} alt="Corporate branding identity collateral 2" />
+      <img src={Img3} alt="Corporate branding identity collateral 3" />
+      <img src={Img4} alt="Corporate branding identity collateral 4" />
+      <img src={Img5} alt="Corporate branding identity collateral 5" />
     </div>
   );
 }

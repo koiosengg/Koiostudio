@@ -7,7 +7,7 @@ function Responsive() {
   return (
     <div className="portfolio-websites-responsive">
       <div className="portfolio-section-heading">
-        <img src={HeadingDesign} className="portfolio-section-heading-img" />
+        <img src={HeadingDesign} className="portfolio-section-heading-img" alt="Decorative heading accent design" />
         <h2>
           <span>Responsive Design </span> that feels Right
         </h2>
@@ -18,13 +18,13 @@ function Responsive() {
           experiences that not only look stunning but also connect in the right
           way, every time.
         </p>
-        <a href="#footer" className="portfolio-primary-button">
+        <a href="#footer" className="portfolio-primary-button" aria-label="Scroll to contact form: Your turn to shine">
           <div className="portfolio-primary-button-background"></div>
           <p>Your turn to shine</p>
         </a>
       </div>
       <div className="portfolio-websites-responsive-img">
-        <img src={ResponsiveImg} />
+        <img src={ResponsiveImg} alt="Preview of responsive web design across desktop and mobile screens" />
       </div>
     </div>
   );

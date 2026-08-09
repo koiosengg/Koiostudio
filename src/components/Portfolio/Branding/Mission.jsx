@@ -30,7 +30,7 @@ function Mission() {
           <img
             src={HeadingDesign}
             className="portfolio-section-heading-img"
-            alt="Section Heading"
+            alt="Decorative section heading accent design"
           />
           <h2>
             Your Brand Our <span>Mission </span>

@@ -119,6 +119,7 @@ function PortfolioProjects() {
             className="portfolio-websites-projects-control"
             onClick={handlePrev}
             disabled={slideIndex === 0}
+            aria-label="Previous project slide"
             style={{ opacity: slideIndex === 0 ? 0.2 : 1, pointerEvents: slideIndex === 0 ? "none" : "auto" }}
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -129,6 +130,7 @@ function PortfolioProjects() {
             className="portfolio-websites-projects-control"
             onClick={handleNext}
             disabled={slideIndex >= totalSlides - visibleSlides}
+            aria-label="Next project slide"
             style={{ opacity: slideIndex >= totalSlides - visibleSlides ? 0.2 : 1, pointerEvents: slideIndex >= totalSlides - visibleSlides ? "none" : "auto" }}
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -148,9 +150,9 @@ function PortfolioProjects() {
           }}
         >
           {projects.map((project, idx) => (
-            <Link key={idx} to={project.to} className="portfolio-websites-projects-set">
+            <Link key={idx} to={project.to} className="portfolio-websites-projects-set" aria-label={`View ${project.title} project details`}>
               <div className="portfolio-websites-projects-set-img">
-                <img src={project.img} alt={project.title} />
+                <img src={project.img} alt={`Screenshot of ${project.title} project`} />
               </div>
               <div className="portfolio-websites-projects-set-info">
                 <section>

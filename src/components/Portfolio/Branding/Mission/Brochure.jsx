@@ -7,10 +7,10 @@ import Img4 from "../../../../assets/Portfolio/Branding/Mission/Brochure/Img 4.w
 function Brochure() {
   return (
     <div className="portfolio-branding-mission-brochure">
-      <img src={Img1} />
-      <img src={Img2} />
-      <img src={Img3} />
-      <img src={Img4} />
+      <img src={Img1} alt="Corporate brochure design sample 1" />
+      <img src={Img2} alt="Corporate brochure design sample 2" />
+      <img src={Img3} alt="Corporate brochure design sample 3" />
+      <img src={Img4} alt="Corporate brochure design sample 4" />
     </div>
   );
 }

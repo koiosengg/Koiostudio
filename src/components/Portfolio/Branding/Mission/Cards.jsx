@@ -8,14 +8,14 @@ import Hamora from "../../../../assets/Portfolio/Branding/Mission/Cards/Hamora.w
 function Cards() {
   return (
     <div className="portfolio-branding-mission-cards">
-      <img src={GCS} />
-      <img src={Rudrappa} />
-      <img src={Innocrate} />
-      <img src={Prakash} />
-      <img src={Hamora} />
-      <img src={Innocrate} />
-      <img src={Prakash} />
-      <img src={Hamora} />
+      <img src={GCS} alt="GCS business card brand identity design" />
+      <img src={Rudrappa} alt="Rudrappa business card brand identity design" />
+      <img src={Innocrate} alt="Innocrate business card brand identity design" />
+      <img src={Prakash} alt="Prakash business card brand identity design" />
+      <img src={Hamora} alt="Hamora business card brand identity design" />
+      <img src={Innocrate} alt="Innocrate business card stationery design showcase" />
+      <img src={Prakash} alt="Prakash business card stationery design showcase" />
+      <img src={Hamora} alt="Hamora business card stationery design showcase" />
     </div>
   );
 }

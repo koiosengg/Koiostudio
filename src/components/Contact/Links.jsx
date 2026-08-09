@@ -6,12 +6,12 @@ function Links() {
     <section className="contact-links">
       <img
         src={DesktopBackground}
-        alt="Background"
+        alt="Decorative background grid design"
         className="contact-links-background desktop"
       />
       <img
         src={MobileBackground}
-        alt="Background"
+        alt="Decorative background grid design"
         className="contact-links-background mobile"
       />
       <div className="template-heading">
@@ -26,6 +26,7 @@ function Links() {
         <a
           href="mailto:info@koios.com"
           target="_blank"
+          aria-label="Send email to info@koios.com"
           className="contact-links-set white-top-border"
         >
           <div className="contact-links-set-heading">
@@ -48,6 +49,7 @@ function Links() {
         <a
           href="https://maps.app.goo.gl/5e5LEQWqokpB7SZK8"
           target="_blank"
+          aria-label="Open Koios Studio office location in Google Maps"
           className="contact-links-set white-top-border"
         >
           <div className="contact-links-set-heading">
@@ -72,7 +74,8 @@ function Links() {
         </a>
         <a
           href="tel:+918909765654"
-          target="'_blank"
+          target="_blank"
+          aria-label="Call Koios Studio at +91 89097 65654"
           className="contact-links-set white-top-border"
         >
           <div className="contact-links-set-heading">

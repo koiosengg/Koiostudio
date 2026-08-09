@@ -56,7 +56,7 @@ function Navbar() {
   return (
     <header>
       <div className="navbar-container">
-        <Link to="/" className="navbar-logo">
+        <Link to="/" className="navbar-logo" aria-label="Koios Studio Home">
           <img src={Logo} alt="Koiostudio Logo" />
         </Link>
         <nav className="desktop">
@@ -114,7 +114,7 @@ function Navbar() {
           <Link to="/blog">Blog</Link>
         </nav>
         <div className="navbar-buttons desktop">
-          <Link to="/#portfolio" className="portfolio-btn">
+          <Link to="/portfolio" className="portfolio-btn">
             Our Portfolio
           </Link>
           <Link to="/contact" className="primary-btn">

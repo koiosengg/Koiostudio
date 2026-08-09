@@ -10,13 +10,13 @@ import Img7 from "../../../../assets/Portfolio/Branding/Mission/Listings/Img 7.w
 function Listings() {
   return (
     <div className="portfolio-branding-mission-listings">
-      <img src={Img1} />
-      <img src={Img2} />
-      <img src={Img3} />
-      <img src={Img4} />
-      <img src={Img5} />
-      <img src={Img6} />
-      <img src={Img7} />
+      <img src={Img1} alt="Brand product listing design 1 showcase" />
+      <img src={Img2} alt="Brand product listing design 2 showcase" />
+      <img src={Img3} alt="Brand product listing design 3 showcase" />
+      <img src={Img4} alt="Brand product listing design 4 showcase" />
+      <img src={Img5} alt="Brand product listing design 5 showcase" />
+      <img src={Img6} alt="Brand product listing design 6 showcase" />
+      <img src={Img7} alt="Brand product listing design 7 showcase" />
     </div>
   );
 }
