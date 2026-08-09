@@ -16,6 +16,12 @@ body,
   position: relative;
   background: var(--Black-Primary, #121212);
   font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Navbar */

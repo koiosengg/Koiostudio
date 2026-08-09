@@ -12,7 +12,11 @@ function About() {
           className="home-about-background desktop"
           alt="About Banner"
         />
-        <img src={MobileBackground} className="home-about-background mobile" />
+        <img
+          src={MobileBackground}
+          className="home-about-background mobile"
+          alt="About mobile background"
+        />
         <div className="home-about-text-container">
           <div className="template-heading">
             <p>About Us</p>

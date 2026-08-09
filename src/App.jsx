@@ -26,7 +26,7 @@ function App() {
     <BrowserRouter>
       <ScrollToTop />
       <Navbar />
-      <Suspense fallback={null}>
+      <Suspense fallback={<div style={{ minHeight: "100vh" }} />}>
         <Routes>
           <Route path="/">
             <Route index element={<Home />} />
