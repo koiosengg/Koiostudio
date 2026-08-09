@@ -31,10 +31,10 @@ import AerovidyaImg from "../../../assets/Portfolio/Branding/Projects/Aerovidya.
 import MotardImg from "../../../assets/Portfolio/Branding/Projects/Motard.webp";
 import CoffeeCultureImg from "../../../assets/Portfolio/Branding/Projects/Coffee Culture.webp";
 
-function Projects() {
+function Projects({ heading, currentProjectTitle }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const slides = [
+  const rawSlides = [
     { img: NEStructures, title: "NE Structures", desc: "Construction Industries", toLink: "/portfolio/projects/NE_Structures" },
     { img: Mobiglide, title: "Mobiglide", desc: "Human Resources", toLink: "/portfolio/projects/Mobiglide" },
     { img: XLR8, title: "XLR8", desc: "EV & Automobile Go-kart", toLink: "/portfolio/projects/XLR8" },
@@ -67,6 +67,10 @@ function Projects() {
     { img: MotardImg, title: "Motard", desc: "Biking Club & Gear", toLink: "/portfolio/projects/Motard" },
   ];
 
+  const slides = currentProjectTitle
+    ? rawSlides.filter((s) => s.title.toLowerCase() !== currentProjectTitle.toLowerCase())
+    : rawSlides;
+
   const slideWidth = 406 + 16;
 
   const handleNext = () => {
@@ -84,11 +88,17 @@ function Projects() {
   return (
     <section className="template gallery">
       <div className="template-heading">
-        <p>Gallery of Success</p>
-        <h2>
-          Showcasing<br />
-          Creativity &amp; Impact
-        </h2>
+        {heading ? (
+          <h2>{heading}</h2>
+        ) : (
+          <>
+            <p>Gallery of Success</p>
+            <h2>
+              Showcasing<br />
+              Creativity &amp; Impact
+            </h2>
+          </>
+        )}
       </div>
 
       <div className="gallery-container">
@@ -123,7 +133,9 @@ function Projects() {
                       className="tertiary-btn"
                       aria-label={`Read more about ${slide.title} project`}
                     >
-                      <p>Read More</p>
+                      <p>
+                        Read More <span className="sr-only">about {slide.title}</span>
+                      </p>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="8"

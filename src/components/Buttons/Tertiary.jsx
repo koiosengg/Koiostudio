@@ -1,11 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Tertiary({ toLink, buttonLabel, ariaLabel }) {
+function Tertiary({ toLink, buttonLabel, ariaLabel, srText }) {
   const computedAriaLabel = ariaLabel || (typeof buttonLabel === "string" ? buttonLabel : undefined);
+  
+  let extraContext = srText;
+  if (!extraContext && typeof ariaLabel === "string") {
+    extraContext = ariaLabel.replace(/^read\s+more\s*/i, "").trim();
+  }
+
   return (
     <Link to={toLink} className="tertiary-btn" aria-label={computedAriaLabel}>
-      <p>{buttonLabel}</p>
+      <p>
+        {buttonLabel}
+        {extraContext && <span className="sr-only"> {extraContext}</span>}
+      </p>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="8"

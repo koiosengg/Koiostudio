@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import HeadingDesign from "../../assets/Portfolio/Section Heading Design.webp";
-import PortfolioProjects from "./PortfolioProjects";
+import Projects from "@/components/Portfolio/Websites/Projects";
 
 /**
  * Reusable project detail page template used by all individual project pages.
@@ -140,7 +140,7 @@ function ProjectPage({
       )}
 
       {/* Other Projects */}
-      <PortfolioProjects heading="Other Projects" currentProjectTitle={title} />
+      <Projects heading="Other Projects" currentProjectTitle={title} />
     </div>
   );
 }
