@@ -43,7 +43,13 @@ function ProjectPage({
             <p>{industry}</p>
           </section>
           {websiteUrl && (
-            <a href={websiteUrl} target="_blank" rel="noopener noreferrer" className="portfolio-primary-button">
+            <a
+              href={websiteUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="portfolio-primary-button"
+              aria-label={`Visit ${title} live website`}
+            >
               <div className="portfolio-primary-button-background"></div>
               <p>Visit Website</p>
             </a>
@@ -53,13 +59,13 @@ function ProjectPage({
 
       {/* Cover */}
       <div className="portfolio-projects-cover">
-        <img src={cover} alt={`${title} cover`} />
+        <img src={cover} alt={`${title} project cover image`} />
       </div>
 
       {/* Design Secrets */}
       <div className="portfolio-projects-info-container">
         <div className="portfolio-section-heading">
-          <img src={HeadingDesign} className="portfolio-section-heading-img" alt="section heading" />
+          <img src={HeadingDesign} className="portfolio-section-heading-img" alt="Decorative section heading accent design" />
           <h2>
             <span>Design </span>Secrets
           </h2>
@@ -87,7 +93,7 @@ function ProjectPage({
       {/* Development Strategies */}
       <div className="portfolio-projects-info-container">
         <div className="portfolio-section-heading">
-          <img src={HeadingDesign} className="portfolio-section-heading-img" alt="section heading" />
+          <img src={HeadingDesign} className="portfolio-section-heading-img" alt="Decorative section heading accent design" />
           <h2>
             <span>Development </span>Strategies
           </h2>
@@ -100,7 +106,7 @@ function ProjectPage({
         <div className="portfolio-projects-gallery">
           {!isBranding && (
             <div className="portfolio-section-heading">
-              <img src={HeadingDesign} className="portfolio-section-heading-img" alt="section heading" />
+              <img src={HeadingDesign} className="portfolio-section-heading-img" alt="Decorative section heading accent design" />
               <h2>Wireframes</h2>
             </div>
           )}
@@ -111,12 +117,12 @@ function ProjectPage({
                   return (
                     <section key={imgIdx}>
                       {imgSrc.map((s, i) => (
-                        <img key={i} src={s} alt={`${title} brand image`} />
+                        <img key={i} src={s} alt={`${title} brand design preview ${i + 1}`} />
                       ))}
                     </section>
                   );
                 }
-                return <img key={imgIdx} src={imgSrc} alt={`${title} brand image`} />;
+                return <img key={imgIdx} src={imgSrc} alt={`${title} brand design preview ${imgIdx + 1}`} />;
               })}
             </div>
           ) : (
@@ -124,7 +130,7 @@ function ProjectPage({
               {images.map((row, rowIdx) => (
                 <section key={rowIdx}>
                   {row.map((imgSrc, imgIdx) => (
-                    <img key={imgIdx} src={imgSrc} alt={`${title} wireframe`} />
+                    <img key={imgIdx} src={imgSrc} alt={`${title} wireframe design preview ${rowIdx + 1}-${imgIdx + 1}`} />
                   ))}
                 </section>
               ))}
@@ -134,7 +140,7 @@ function ProjectPage({
       )}
 
       {/* Other Projects */}
-      <PortfolioProjects />
+      <PortfolioProjects heading="Other Projects" currentProjectTitle={title} />
     </div>
   );
 }

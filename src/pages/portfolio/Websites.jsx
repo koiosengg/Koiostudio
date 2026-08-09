@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
-import "./portfolio.css";
-import Banner from "./Branding/Banner";
-import Sidebar from "./Sidebar";
-import Gallery from "./Branding/Gallery";
-import Designs from "./Branding/Designs";
-import Mission from "./Branding/Mission";
+import "@/components/Portfolio/portfolio.css";
+import Banner from "@/components/Portfolio/Websites/Banner";
+import Sidebar from "@/components/Portfolio/Sidebar";
+import Responsive from "@/components/Portfolio/Websites/Responsive";
+import Projects from "@/components/Portfolio/Websites/Projects";
 
-function Branding() {
+function Websites() {
   const [isOnBanner, setIsOnBanner] = useState(true);
 
   const handleScroll = () => {
@@ -25,15 +24,13 @@ function Branding() {
   }, []);
 
   return (
-    <div className="portfolio portfolio-branding">
+    <div className="portfolio portfolio-website">
       <Banner />
       <Sidebar isOnBanner={isOnBanner} />
-      <Designs />
-      <Mission />
-      <Gallery />
+      <Responsive />
+      <Projects />
     </div>
   );
 }
 
-export default Branding;
-
+export default Websites;

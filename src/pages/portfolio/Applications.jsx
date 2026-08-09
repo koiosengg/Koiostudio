@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import "./portfolio.css";
-import Banner from "./Applications/Banner";
-import Sidebar from "./Sidebar";
-import Numbers from "./Applications/Numbers";
-import Gallery from "./Applications/Gallery";
+import "@/components/Portfolio/portfolio.css";
+import Banner from "@/components/Portfolio/Applications/Banner";
+import Sidebar from "@/components/Portfolio/Sidebar";
+import Numbers from "@/components/Portfolio/Applications/Numbers";
+import Projects from "@/components/Portfolio/Applications/Projects";
 
 function Applications() {
   const [isOnBanner, setIsOnBanner] = useState(true);
@@ -28,10 +28,9 @@ function Applications() {
       <Banner />
       <Sidebar isOnBanner={isOnBanner} />
       <Numbers />
-      <Gallery />
+      <Projects />
     </div>
   );
 }
 
 export default Applications;
-

@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Tertiary({ toLink, buttonLabel }) {
+function Tertiary({ toLink, buttonLabel, ariaLabel }) {
+  const computedAriaLabel = ariaLabel || (typeof buttonLabel === "string" ? buttonLabel : undefined);
   return (
-    <Link to={toLink} className="tertiary-btn">
+    <Link to={toLink} className="tertiary-btn" aria-label={computedAriaLabel}>
       <p>{buttonLabel}</p>
       <svg
         xmlns="http://www.w3.org/2000/svg"

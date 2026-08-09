@@ -1,13 +1,13 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Banner from "./Blogs/Banner";
-import OurBlogs from "./Blogs/OurBlogs";
-import Vision from "./Blogs/Vision";
-import Gallery from "./Home/Gallery";
-import FAQ from "./Home/FAQ";
-import InnerPage from "./Blogs/InnerPage";
-import Connection from "./Blogs/Connection";
-import Blog1 from "./Blogs/Blog/Blog1";
+import Banner from "@/components/Blogs/Banner";
+import OurBlogs from "@/components/Blogs/OurBlogs";
+import Vision from "@/components/Blogs/Vision";
+import Projects from "@/components/Portfolio/Websites/Projects";
+import FAQ from "@/components/Home/FAQ";
+import InnerPage from "@/components/Blogs/InnerPage";
+import Connection from "@/components/Blogs/Connection";
+import Blog1 from "@/components/Blogs/Blog/Blog1";
 
 function Blog() {
   return (
@@ -19,7 +19,7 @@ function Blog() {
             <Banner />
             <OurBlogs />
             <Vision />
-            <Gallery />
+            <Projects />
             <FAQ />
             <Connection />
           </>

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
 import Tertiary from "../../Buttons/Tertiary";
 import NEStructures from "../../../assets/Portfolio/Websites/Projects/NE Structures.webp";
 import Mobiglide from "../../../assets/Portfolio/Websites/Projects/Mobiglide.webp";
@@ -34,15 +33,6 @@ import CoffeeCultureImg from "../../../assets/Portfolio/Branding/Projects/Coffee
 
 function Projects() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const location = useLocation();
-  const path = location.pathname;
-
-  const projectTitle =
-    path === "/portfolio/websites"
-      ? "Showcasing\nCreativity & Impact"
-      : path.startsWith("/portfolio/projects/")
-        ? "Our Other Projects"
-        : "";
 
   const slides = [
     { img: NEStructures, title: "NE Structures", desc: "Construction Industries", toLink: "/portfolio/projects/NE_Structures" },
@@ -131,6 +121,7 @@ function Projects() {
                       target="_blank"
                       rel="noreferrer"
                       className="tertiary-btn"
+                      aria-label={`Read more about ${slide.title} project`}
                     >
                       <p>Read More</p>
                       <svg
@@ -147,7 +138,11 @@ function Projects() {
                       </svg>
                     </a>
                   ) : (
-                    <Tertiary toLink={slide.toLink} buttonLabel="Read More" />
+                    <Tertiary
+                      toLink={slide.toLink}
+                      buttonLabel="Read More"
+                      ariaLabel={`Read more about ${slide.title} project`}
+                    />
                   )}
                 </div>
               </div>

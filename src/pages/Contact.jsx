@@ -1,7 +1,7 @@
 import React from "react";
-import Banner from "./Contact/Banner";
-import Glow from "./Contact/Glow";
-import Links from "./Contact/Links";
+import Banner from "@/components/Contact/Banner";
+import Glow from "@/components/Contact/Glow";
+import Links from "@/components/Contact/Links";
 
 function Contact() {
   return (

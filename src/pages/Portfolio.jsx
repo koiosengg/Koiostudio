@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
-import "./Portfolio/portfolio.css";
-import PortfolioBanner from "./Home/PortfolioBanner";
-import Sidebar from "./Portfolio/Sidebar";
-import Marquee from "./Portfolio/Home/Marquee";
-import Services from "./Portfolio/Home/Services";
-import ViewProjects from "./Portfolio/Home/ViewProjects";
-import Numbers from "./Portfolio/Home/Numbers";
-import Gallery from "./Portfolio/Home/Gallery";
-import Identities from "./Portfolio/Home/Identities";
-import FAQ from "./Portfolio/Home/FAQ";
-import Testimony from "./Portfolio/Home/Testimony";
-import Socials from "./Portfolio/Home/Socials";
-import Footer from "./Portfolio/Home/Footer";
+import "@/components/Portfolio/portfolio.css";
+import PortfolioBanner from "@/components/Home/PortfolioBanner";
+import Sidebar from "@/components/Portfolio/Sidebar";
+import Marquee from "@/components/Portfolio/Home/Marquee";
+import Services from "@/components/Portfolio/Home/Services";
+import ViewProjects from "@/components/Portfolio/Home/ViewProjects";
+import Numbers from "@/components/Portfolio/Home/Numbers";
+import Projects from "@/components/Portfolio/Websites/Projects";
+import Identities from "@/components/Portfolio/Home/Identities";
+import FAQ from "@/components/Portfolio/Home/FAQ";
+import Testimony from "@/components/Portfolio/Home/Testimony";
+import Socials from "@/components/Portfolio/Home/Socials";
+import Footer from "@/components/Portfolio/Home/Footer";
 
 function Portfolio() {
   const [isOnBanner, setIsOnBanner] = useState(true);
@@ -39,7 +39,7 @@ function Portfolio() {
       <Services />
       <ViewProjects />
       <Numbers />
-      <Gallery />
+      <Projects />
       <Identities />
       <FAQ />
       <Testimony />

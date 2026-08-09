@@ -25,7 +25,7 @@ function OurBlogs() {
                 egestas cursus varius ultrices odio.
               </p>
             </div>
-            <Tertiary toLink="/blog/blog-1" buttonLabel="Read More" />
+            <Tertiary toLink="/blog/blog-1" buttonLabel="Read More" ariaLabel="Read more about From Idea to Impact: The Future of Creative Agencies" />
           </div>
         </div>
         <div className="our-blogs-set white-top-border blog-hover">
@@ -42,7 +42,7 @@ function OurBlogs() {
                 egestas cursus varius ultrices odio.
               </p>
             </div>
-            <Tertiary toLink="/blog/blog-1" buttonLabel="Read More" />
+            <Tertiary toLink="/blog/blog-1" buttonLabel="Read More" ariaLabel="Read more about Consistency is Key: How Unified Design Builds Stronger Brands" />
           </div>
         </div>
         <div className="our-blogs-set white-top-border blog-hover">
@@ -57,7 +57,7 @@ function OurBlogs() {
                 egestas cursus varius ultrices odio.
               </p>
             </div>
-            <Tertiary toLink="/blog/blog-1" buttonLabel="Read More" />
+            <Tertiary toLink="/blog/blog-1" buttonLabel="Read More" ariaLabel="Read more about From Idea to Impact: The Future of Creative Agencies article" />
           </div>
         </div>
         <div className="our-blogs-set white-top-border blog-hover">
@@ -72,7 +72,7 @@ function OurBlogs() {
                 egestas cursus varius ultrices odio.
               </p>
             </div>
-            <Tertiary toLink="/blog/blog-1" buttonLabel="Read More" />
+            <Tertiary toLink="/blog/blog-1" buttonLabel="Read More" ariaLabel="Read more about Creative agency workflow article" />
           </div>
         </div>
       </div>

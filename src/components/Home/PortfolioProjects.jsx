@@ -39,41 +39,14 @@ const ArrowIcon = () => (
   </svg>
 );
 
-function PortfolioProjects() {
+function PortfolioProjects({ heading = "Projects", currentProjectTitle }) {
   const containerRef = useRef(null);
   const [slideIndex, setSlideIndex] = useState(0);
   const [slideWidth, setSlideWidth] = useState(0);
   const [totalSlides, setTotalSlides] = useState(0);
   const [visibleSlides, setVisibleSlides] = useState(window.innerWidth < 1200 ? 1 : 4);
 
-  useEffect(() => {
-    const updateLayout = () => {
-      const newVisibleSlides = window.innerWidth < 1200 ? 1 : 4;
-      setVisibleSlides(newVisibleSlides);
-
-      if (containerRef.current) {
-        const sets = containerRef.current.querySelectorAll(".portfolio-websites-projects-set");
-        setTotalSlides(sets.length);
-        const containerWidth = containerRef.current.clientWidth;
-        const calculatedWidth = (containerWidth - 12 * (newVisibleSlides - 1)) / newVisibleSlides;
-        setSlideWidth(calculatedWidth);
-      }
-    };
-
-    updateLayout();
-    window.addEventListener("resize", updateLayout);
-    return () => window.removeEventListener("resize", updateLayout);
-  }, []);
-
-  const handlePrev = () => {
-    if (slideIndex > 0) setSlideIndex((prev) => prev - 1);
-  };
-
-  const handleNext = () => {
-    if (slideIndex < totalSlides - visibleSlides) setSlideIndex((prev) => prev + 1);
-  };
-
-  const projects = [
+  const rawProjects = [
     { to: "/portfolio/projects/Mobiglide", img: Mobiglide, title: "Mobiglide", industry: "Human Resources" },
     { to: "/portfolio/projects/NE_Structures", img: NEStructures, title: "NE Structures", industry: "Construction Industries" },
     { to: "/portfolio/projects/ISK_Auto_Industries", img: ISKAutoIndustries, title: "ISK Auto Industries", industry: "Automotive Component Manufacturers" },
@@ -107,12 +80,43 @@ function PortfolioProjects() {
     { to: "/portfolio/projects/Green_Tara", img: GreenTaraImg, title: "Green Tara", industry: "Eco Wellness" },
   ];
 
+  const projects = currentProjectTitle
+    ? rawProjects.filter((p) => p.title.toLowerCase() !== currentProjectTitle.toLowerCase())
+    : rawProjects;
+
+  useEffect(() => {
+    const updateLayout = () => {
+      const newVisibleSlides = window.innerWidth < 1200 ? 1 : 4;
+      setVisibleSlides(newVisibleSlides);
+
+      if (containerRef.current) {
+        const sets = containerRef.current.querySelectorAll(".portfolio-websites-projects-set");
+        setTotalSlides(sets.length);
+        const containerWidth = containerRef.current.clientWidth;
+        const calculatedWidth = (containerWidth - 12 * (newVisibleSlides - 1)) / newVisibleSlides;
+        setSlideWidth(calculatedWidth);
+      }
+    };
+
+    updateLayout();
+    window.addEventListener("resize", updateLayout);
+    return () => window.removeEventListener("resize", updateLayout);
+  }, []);
+
+  const handlePrev = () => {
+    if (slideIndex > 0) setSlideIndex((prev) => prev - 1);
+  };
+
+  const handleNext = () => {
+    if (slideIndex < totalSlides - visibleSlides) setSlideIndex((prev) => prev + 1);
+  };
+
   return (
     <div className="portfolio-websites-projects">
       <div className="portfolio-websites-projects-heading">
         <div className="portfolio-section-heading">
-          <img src={HeadingDesign} className="portfolio-section-heading-img" alt="section heading design" />
-          <h2>Projects</h2>
+          <img src={HeadingDesign} className="portfolio-section-heading-img" alt="Decorative section heading design border" />
+          <h2>{heading}</h2>
         </div>
         <div className="portfolio-websites-projects-controls">
           <button

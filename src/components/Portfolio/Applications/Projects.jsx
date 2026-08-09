@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
 import Tertiary from "../../Buttons/Tertiary";
 import LMG from "../../../assets/Portfolio/Applications/Projects/LMG.webp";
 import Negilu from "../../../assets/Portfolio/Applications/Projects/Negilu.webp";
@@ -11,13 +10,6 @@ import GreenTaraImg from "../../../assets/Projects/Green Tara/1.webp";
 
 function Projects() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const location = useLocation();
-  const path = location.pathname;
-
-  const projectTitle =
-    path === "/portfolio/applications"
-      ? "Showcasing\nCreativity & Impact"
-      : "Our Other Projects";
 
   const slides = [
     { img: Negilu, title: "Negilu", desc: "Agriculture & Agritech", toLink: "/portfolio/projects/Negilu" },
@@ -72,7 +64,11 @@ function Projects() {
                     <h3>{slide.title}</h3>
                     <p>{slide.desc}</p>
                   </div>
-                  <Tertiary toLink={slide.toLink} buttonLabel="Read More" />
+                  <Tertiary
+                    toLink={slide.toLink}
+                    buttonLabel="Read More"
+                    ariaLabel={`Read more about ${slide.title} project`}
+                  />
                 </div>
               </div>
             ))}

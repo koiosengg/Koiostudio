@@ -10,6 +10,7 @@ function About() {
         <img
           src={DesktopBackground}
           className="home-about-background desktop"
+          alt="About Banner"
         />
         <img src={MobileBackground} className="home-about-background mobile" />
         <div className="home-about-text-container">
