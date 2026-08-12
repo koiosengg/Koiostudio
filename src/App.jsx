@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import Glow from "@/components/Glow";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 // Lazy load page components for route-based code splitting
 const Home = lazy(() => import("@/pages/Home"));
@@ -56,6 +57,7 @@ function App() {
       </Suspense>
       <Footer />
       <Glow />
+      <WhatsAppButton />
     </BrowserRouter>
   );
 }

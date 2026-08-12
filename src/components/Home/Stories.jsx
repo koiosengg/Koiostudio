@@ -10,7 +10,6 @@ function Stories() {
   });
   const [hasCounted, setHasCounted] = useState(false);
   const numberSectionRef = useRef(null);
-  const searchInputRef = useRef(null);
   const [searchTerm, setSearchTerm] = useState("");
 
   const pages = [
@@ -46,10 +45,6 @@ function Stories() {
   );
 
   useEffect(() => {
-    if (searchInputRef.current) {
-      searchInputRef.current.focus();
-    }
-
     const observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
@@ -96,79 +91,79 @@ function Stories() {
   }, [hasCounted]);
 
   return (
-    <section className="home-stories">
-      <img src={Stars} className="home-stories-stars" alt="Stars" />
+    <div className="home-stories-main">
+      <section className="home-stories">
+        <img src={Stars} className="home-stories-stars" alt="Stars" />
 
-      <div className="home-stories-left">
-        <div className="home-stories-left-text">
-          <h2>We Got You Covered</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur. Venenatis sapien id ultrices
-            sed mauris ut et
-          </p>
-        </div>
-
-        <div className="home-stories-left-search">
-          <input
-            ref={searchInputRef}
-            id="search"
-            type="text"
-            placeholder="Search pages..."
-            autoFocus
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-
-          <div className="home-stories-left-search-container no-scrollbar">
-            {filteredPages.length > 0 ? (
-              filteredPages.map((page, index) => (
-                <Link
-                  key={index}
-                  to={page.link}
-                  className="home-stories-left-search-set"
-                >
-                  <h3>{page.title}</h3>
-                  <p>{page.desc}</p>
-                </Link>
-              ))
-            ) : (
-              <div className="home-stories-left-search-set">
-                <p>No results found</p>
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-
-      <div className="home-stories-right" ref={numberSectionRef}>
-        <div className="home-stories-right-text">
-          <h2>Our Success Stories</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur. Venenatis sapien id ultrices
-            sed mauris ut et
-          </p>
-        </div>
-
-        <div className="home-stories-right-numbers">
-          <div className="home-stories-right-numbers-set">
-            <h3>{counts.clients}</h3>
-            <p>Clients</p>
+        <div className="home-stories-left">
+          <div className="home-stories-left-text">
+            <h2>We Got You Covered</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Venenatis sapien id ultrices
+              sed mauris ut et
+            </p>
           </div>
 
-          <div className="home-stories-right-numbers-set">
-            <h3>
-              {counts.projects < 10 ? `0${counts.projects}` : counts.projects}
-            </h3>
-            <p>Projects</p>
-          </div>
+          <div className="home-stories-left-search">
+            <input
+              id="search"
+              type="text"
+              placeholder="Search pages..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
 
-          <div className="home-stories-right-numbers-set">
-            <h3>{counts.team}</h3>
-            <p>Team Members</p>
+            <div className="home-stories-left-search-container no-scrollbar">
+              {filteredPages.length > 0 ? (
+                filteredPages.map((page, index) => (
+                  <Link
+                    key={index}
+                    to={page.link}
+                    className="home-stories-left-search-set"
+                  >
+                    <h3>{page.title}</h3>
+                    <p>{page.desc}</p>
+                  </Link>
+                ))
+              ) : (
+                <div className="home-stories-left-search-set">
+                  <p>No results found</p>
+                </div>
+              )}
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+
+        <div className="home-stories-right" ref={numberSectionRef}>
+          <div className="home-stories-right-text">
+            <h2>Our Success Stories</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Venenatis sapien id ultrices
+              sed mauris ut et
+            </p>
+          </div>
+
+          <div className="home-stories-right-numbers">
+            <div className="home-stories-right-numbers-set">
+              <h3>{counts.clients}</h3>
+              <p>Clients</p>
+            </div>
+
+            <div className="home-stories-right-numbers-set">
+              <h3>
+                {counts.projects < 10 ? `0${counts.projects}` : counts.projects}
+              </h3>
+              <p>Projects</p>
+            </div>
+
+            <div className="home-stories-right-numbers-set">
+              <h3>{counts.team}</h3>
+              <p>Team Members</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }
 

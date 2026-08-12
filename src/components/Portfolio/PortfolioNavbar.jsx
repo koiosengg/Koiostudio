@@ -18,10 +18,17 @@ function PortfolioNavbar() {
     }
   };
 
+  const handleLogoClick = () => {
+    if (isMobileNavOpen) {
+      setIsMobileNavOpen(false);
+    }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <>
       <div className="portfolio-navbar">
-        <Link to="/portfolio" className="portfolio-navbar-logo" aria-label="Koios Studio Portfolio Home">
+        <Link to="/" className="portfolio-navbar-logo" aria-label="Koios Studio Home" onClick={handleLogoClick}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="40"

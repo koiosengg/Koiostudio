@@ -66,7 +66,7 @@ function Testimony() {
           }}
         >
           {slides.map((slide, index) => (
-            <div className="home-testimony-set white-top-border small-hover" key={index}>
+            <div className="home-testimony-set white-top-border" key={index}>
               <div className="home-testimony-set-text">
                 <span>“</span> <p>{slide.desc}</p>
               </div>

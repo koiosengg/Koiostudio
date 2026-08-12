@@ -49,6 +49,13 @@ function Navbar() {
     }
   };
 
+  const handleLogoClick = () => {
+    if (isMobileNavOpen) {
+      setIsMobileNavOpen(false);
+    }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   if (isPortfolioPage) {
     return <PortfolioNavbar />;
   }
@@ -56,7 +63,7 @@ function Navbar() {
   return (
     <header>
       <div className="navbar-container">
-        <Link to="/" className="navbar-logo" aria-label="Koios Studio Home">
+        <Link to="/" className="navbar-logo" aria-label="Koios Studio Home" onClick={handleLogoClick}>
           <img src={Logo} alt="Koiostudio Logo" />
         </Link>
         <nav className="desktop">

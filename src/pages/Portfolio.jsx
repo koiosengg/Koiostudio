@@ -7,6 +7,7 @@ import Services from "@/components/Portfolio/Home/Services";
 import ViewProjects from "@/components/Portfolio/Home/ViewProjects";
 import Numbers from "@/components/Portfolio/Home/Numbers";
 import Projects from "@/components/Portfolio/Websites/Projects";
+import Gallery from "@/components/Portfolio/Home/Gallery";
 import Identities from "@/components/Portfolio/Home/Identities";
 import FAQ from "@/components/Portfolio/Home/FAQ";
 import Testimony from "@/components/Portfolio/Home/Testimony";
@@ -40,6 +41,7 @@ function Portfolio() {
       <ViewProjects />
       <Numbers />
       <Projects />
+      <Gallery />
       <Identities />
       <FAQ />
       <Testimony />

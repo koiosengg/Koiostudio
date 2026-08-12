@@ -14,11 +14,15 @@ function Services({ hide }) {
     const imgHeight = img.offsetHeight;
     const moveY = imgHeight - divHeight;
 
-    img.style.transform = `translateY(-${moveY}px)`;
+    if (moveY > 0) {
+      img.style.transition = "transform 20s linear";
+      img.style.transform = `translateY(-${moveY}px)`;
+    }
   };
 
   const handleMouseLeave = (e) => {
     const img = e.currentTarget.querySelector("img");
+    img.style.transition = "transform 1s ease-out";
     img.style.transform = "translateY(0)";
   };
 

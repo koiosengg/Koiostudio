@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "@/components/Portfolio/portfolio.css";
 import Banner from "@/components/Portfolio/Applications/Banner";
 import Sidebar from "@/components/Portfolio/Sidebar";
+import Gallery from "@/components/Portfolio/Applications/Gallery";
 import Numbers from "@/components/Portfolio/Applications/Numbers";
 import Projects from "@/components/Portfolio/Applications/Projects";
 
@@ -24,9 +25,10 @@ function Applications() {
   }, []);
 
   return (
-    <div className="portfolio">
+    <div className="portfolio portfolio-application">
       <Banner />
       <Sidebar isOnBanner={isOnBanner} />
+      <Gallery />
       <Numbers />
       <Projects />
     </div>

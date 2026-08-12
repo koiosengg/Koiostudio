@@ -10,6 +10,19 @@ import Jukebox from "../../assets/Home/Pride/Jukebox.webp";
 import Prima from "../../assets/Home/Pride/Prima.webp";
 import CilkenCave from "../../assets/Home/Pride/CilkenCave.webp";
 
+const logos = [
+  { src: Mahi, alt: "Mahi" },
+  { src: AllOk, alt: "AllOk" },
+  { src: Jason, alt: "Jason" },
+  { src: TMS, alt: "TMS" },
+  { src: XLR8, alt: "XLR8" },
+  { src: Muth, alt: "Muth" },
+  { src: Malgudi, alt: "Malgudi" },
+  { src: Jukebox, alt: "Jukebox" },
+  { src: Prima, alt: "Prima" },
+  { src: CilkenCave, alt: "CilkenCave" },
+];
+
 function Pride() {
   return (
     <section className="template home-pride-template">
@@ -23,46 +36,16 @@ function Pride() {
 
       <div className="home-pride">
         <div className="home-pride-marquee">
-          <img src={Mahi} alt="Mahi" />
-          <img src={AllOk} alt="AllOk" />
-          <img src={Jason} alt="Jason" />
-          <img src={TMS} alt="TMS" />
-          <img src={XLR8} alt="XLR8" />
-          <img src={Muth} alt="Muth" />
-          <img src={Malgudi} alt="Malgudi" />
-          <img src={Jukebox} alt="Jukebox" />
-          <img src={Prima} alt="Prima" />
-          <img src={CilkenCave} alt="CilkenCave" />
-          <img src={Mahi} alt="Mahi" />
-          <img src={AllOk} alt="AllOk" />
-          <img src={Jason} alt="Jason" />
-          <img src={TMS} alt="TMS" />
-          <img src={XLR8} alt="XLR8" />
-          <img src={Muth} alt="Muth" />
-          <img src={Malgudi} alt="Malgudi" />
-          <img src={Jukebox} alt="Jukebox" />
-          <img src={Prima} alt="Prima" />
-          <img src={CilkenCave} alt="CilkenCave" />
-          <img src={Mahi} alt="Mahi" />
-          <img src={AllOk} alt="AllOk" />
-          <img src={Jason} alt="Jason" />
-          <img src={TMS} alt="TMS" />
-          <img src={XLR8} alt="XLR8" />
-          <img src={Muth} alt="Muth" />
-          <img src={Malgudi} alt="Malgudi" />
-          <img src={Jukebox} alt="Jukebox" />
-          <img src={Prima} alt="Prima" />
-          <img src={CilkenCave} alt="CilkenCave" />
-          <img src={Mahi} alt="Mahi" />
-          <img src={AllOk} alt="AllOk" />
-          <img src={Jason} alt="Jason" />
-          <img src={TMS} alt="TMS" />
-          <img src={XLR8} alt="XLR8" />
-          <img src={Muth} alt="Muth" />
-          <img src={Malgudi} alt="Malgudi" />
-          <img src={Jukebox} alt="Jukebox" />
-          <img src={Prima} alt="Prima" />
-          <img src={CilkenCave} alt="CilkenCave" />
+          <div className="home-pride-track">
+            {logos.concat(logos).map((logo, index) => (
+              <img key={`t1-${index}`} src={logo.src} alt={logo.alt} />
+            ))}
+          </div>
+          <div className="home-pride-track" aria-hidden="true">
+            {logos.concat(logos).map((logo, index) => (
+              <img key={`t2-${index}`} src={logo.src} alt={logo.alt} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
