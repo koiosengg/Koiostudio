@@ -66,7 +66,9 @@ const INITIAL_STATE = {
   targetClients: "",
   openForReferrals: "",
   referralTypes: "",
-  portfolioLinks: "",
+  websiteUrl: "",
+  portfolioUrl: "",
+  linkedinUrl: "",
   introPitch: "",
 };
 
@@ -141,7 +143,9 @@ function ConnectionsForm() {
     } catch (err) {
       console.error("Submission error:", err);
       setStatus("error");
-      setErrorMessage("Something went wrong while sending your submission. Please try again.");
+      setErrorMessage(
+        "Something went wrong while sending your submission. Please try again.",
+      );
     }
   };
 
@@ -156,38 +160,51 @@ function ConnectionsForm() {
       {/* Header Card matching Google Form description */}
       <div className="conn-form-header-card">
         <div className="conn-header-accent-bar" />
-        <div className="conn-badge">
-          <span className="conn-pulse-dot" />
-          <span>Mahi's Circle</span>
-        </div>
         <h1 className="conn-form-main-title">
           Mahi’s Circle – Trusted Connections & Referrals
         </h1>
         <div className="conn-form-main-desc">
           <p>Welcome to Mahi’s Circle.</p>
           <p>
-            I use this space to understand what you do, what you offer, and how I can introduce you to the right people when opportunities show up.
+            I use this space to understand what you do, what you offer, and how
+            I can introduce you to the right people when opportunities show up.
           </p>
           <p>
-            Share your details, your services, and anything you want others in the network to know about you.
+            Share your details, your services, and anything you want others in
+            the network to know about you.
           </p>
           <p>
-            <strong>My goal is simple:</strong> help great people meet other great people.
+            <strong>My goal is simple:</strong> help great people meet other
+            great people.
           </p>
         </div>
-        <div className="conn-required-indicator">* Indicates required question</div>
+        <div className="conn-required-indicator">
+          * Indicates required question
+        </div>
       </div>
 
       {status === "success" ? (
         <div className="conn-question-card conn-success-card">
           <div className="conn-success-icon">
-            <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <svg
+              width="38"
+              height="38"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
               <polyline points="20 6 9 17 4 12"></polyline>
             </svg>
           </div>
-          <h2 className="conn-success-title">Your response has been recorded.</h2>
+          <h2 className="conn-success-title">
+            Your response has been recorded.
+          </h2>
           <p className="conn-success-desc">
-            Thank you for sharing your details. When an aligned opportunity shows up, we'll reach out directly.
+            Thank you for sharing your details. When an aligned opportunity
+            shows up, we'll reach out directly.
           </p>
           <div className="conn-success-actions">
             <button onClick={resetForm} className="conn-btn-primary">
@@ -318,7 +335,9 @@ function ConnectionsForm() {
           {/* Question 7: Company / Brand Name */}
           <div className="conn-question-card">
             <label className="conn-q-title" htmlFor="companyName">
-              Your Company / Brand Name ( If you have multiple verticals - you can fill this form again with that particular vertical) <span className="req">*</span>
+              Your Company / Brand Name ( If you have multiple verticals - you
+              can fill this form again with that particular vertical){" "}
+              <span className="req">*</span>
             </label>
             <input
               id="companyName"
@@ -412,7 +431,8 @@ function ConnectionsForm() {
               Keywords that describe what you do.
             </label>
             <div className="conn-q-subtext">
-              Example: branding, reels, social media, content writing, fitness coaching, etc.
+              Example: branding, reels, social media, content writing, fitness
+              coaching, etc.
             </div>
             <textarea
               id="keywords"
@@ -460,7 +480,8 @@ function ConnectionsForm() {
               Who do you usually work with?
             </label>
             <div className="conn-q-subtext">
-              (Example: startups, e-commerce brands, founders, real estate, corporate teams, etc.)
+              (Example: startups, e-commerce brands, founders, real estate,
+              corporate teams, etc.)
             </div>
             <textarea
               id="targetClients"
@@ -508,27 +529,61 @@ function ConnectionsForm() {
             />
           </div>
 
-          {/* Question 16: Links */}
+          {/* Question 16a: Website Link (Required) */}
           <div className="conn-question-card">
-            <label className="conn-q-title" htmlFor="portfolioLinks">
-              Your Website / Portfolio / LinkedIn Link
+            <label className="conn-q-title" htmlFor="websiteUrl">
+              Website Link <span className="req">*</span>
             </label>
-            <div className="conn-q-subtext">(Add as many links as you want)</div>
-            <textarea
-              id="portfolioLinks"
-              name="portfolioLinks"
-              placeholder="Your answer"
-              value={formData.portfolioLinks}
+            <input
+              id="websiteUrl"
+              name="websiteUrl"
+              type="url"
+              placeholder="https://yourwebsite.com"
+              value={formData.websiteUrl}
               onChange={handleChange}
-              rows={2}
-              className="conn-textarea"
+              required
+              className="conn-input"
+            />
+          </div>
+
+          {/* Question 16b: Portfolio Link (Required) */}
+          <div className="conn-question-card">
+            <label className="conn-q-title" htmlFor="portfolioUrl">
+              Portfolio Link <span className="req">*</span>
+            </label>
+            <input
+              id="portfolioUrl"
+              name="portfolioUrl"
+              type="url"
+              placeholder="https://yourportfolio.com or Behance/Dribbble/Drive link"
+              value={formData.portfolioUrl}
+              onChange={handleChange}
+              required
+              className="conn-input"
+            />
+          </div>
+
+          {/* Question 16c: LinkedIn Profile Link */}
+          <div className="conn-question-card">
+            <label className="conn-q-title" htmlFor="linkedinUrl">
+              LinkedIn Profile Link
+            </label>
+            <input
+              id="linkedinUrl"
+              name="linkedinUrl"
+              type="url"
+              placeholder="https://linkedin.com/in/username"
+              value={formData.linkedinUrl}
+              onChange={handleChange}
+              className="conn-input"
             />
           </div>
 
           {/* Question 17: Elevator Pitch */}
           <div className="conn-question-card">
             <label className="conn-q-title" htmlFor="introPitch">
-              If I introduces you to someone amazing, how should they introduce you?
+              If I introduces you to someone amazing, how should I introduce
+              you?
             </label>
             <textarea
               id="introPitch"
@@ -542,7 +597,14 @@ function ConnectionsForm() {
           </div>
 
           {errorMessage && (
-            <div style={{ color: "#ef4444", fontSize: "0.95rem", textAlign: "center", marginBottom: "16px" }}>
+            <div
+              style={{
+                color: "#ef4444",
+                fontSize: "0.95rem",
+                textAlign: "center",
+                marginBottom: "16px",
+              }}
+            >
               {errorMessage}
             </div>
           )}

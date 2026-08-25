@@ -39,6 +39,7 @@ function App() {
             <Route path="blog/*" element={<Blogs />} />
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="mahi/connections" element={<Connections />} />
             <Route path="connections" element={<Connections />} />
             <Route path="connections/mahi" element={<Connections />} />
             <Route path="circle" element={<Connections />} />
