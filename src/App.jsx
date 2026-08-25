@@ -15,6 +15,7 @@ const Branding = lazy(() => import("@/pages/Branding"));
 const Marketing = lazy(() => import("@/pages/Marketing"));
 const About = lazy(() => import("@/pages/About"));
 const Contact = lazy(() => import("@/pages/Contact"));
+const Connections = lazy(() => import("@/pages/Connections"));
 const Blogs = lazy(() => import("@/pages/Blogs"));
 const PortfolioHome = lazy(() => import("@/pages/Portfolio"));
 const PortfolioWebsites = lazy(() => import("@/pages/portfolio/Websites"));
@@ -38,6 +39,9 @@ function App() {
             <Route path="blog/*" element={<Blogs />} />
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="connections" element={<Connections />} />
+            <Route path="connections/mahi" element={<Connections />} />
+            <Route path="circle" element={<Connections />} />
 
             {/* Portfolio Main & Sub-categories */}
             <Route path="portfolio" element={<PortfolioHome />} />

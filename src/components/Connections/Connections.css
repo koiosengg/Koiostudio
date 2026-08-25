@@ -1,0 +1,516 @@
+/* Connections / Mahi's Circle Luxury Theme */
+
+:root {
+  --conn-amber: #bf7c30;
+  --conn-amber-light: #e69d45;
+  --conn-amber-glow: rgba(191, 124, 48, 0.18);
+  --conn-dark-bg: var(--Black-Primary, #121212);
+  --conn-card-bg: rgba(26, 26, 30, 0.7);
+  --conn-card-border: rgba(255, 255, 255, 0.09);
+  --conn-card-hover: rgba(255, 255, 255, 0.15);
+  --conn-text-primary: #ffffff;
+  --conn-text-secondary: #a2a7b5;
+  --conn-text-muted: #646877;
+  --conn-input-bg: rgba(18, 18, 22, 0.85);
+  --conn-input-border: rgba(255, 255, 255, 0.14);
+  --conn-input-focus: #bf7c30;
+}
+
+.connections-page {
+  position: relative;
+  background-color: var(--conn-dark-bg);
+  color: var(--conn-text-primary);
+  min-height: 100vh;
+  padding: 130px 20px 80px;
+  overflow-x: hidden;
+}
+
+/* Background Ambient Glows */
+.connections-glow-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.conn-glow-orb-1 {
+  position: absolute;
+  top: 2%;
+  right: -8%;
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle, rgba(191, 124, 48, 0.15) 0%, rgba(191, 124, 48, 0) 70%);
+  filter: blur(80px);
+}
+
+.conn-glow-orb-2 {
+  position: absolute;
+  top: 45%;
+  left: -12%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(100, 70, 240, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+  filter: blur(100px);
+}
+
+.conn-glow-orb-3 {
+  position: absolute;
+  bottom: 5%;
+  right: -5%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(191, 124, 48, 0.12) 0%, rgba(0, 0, 0, 0) 70%);
+  filter: blur(90px);
+}
+
+/* Form Main Wrapper */
+.conn-form-container {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Header Card */
+.conn-form-header-card {
+  position: relative;
+  background: var(--conn-card-bg);
+  border: 1px solid var(--conn-card-border);
+  border-radius: 20px;
+  padding: 40px 36px 30px;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  overflow: hidden;
+}
+
+.conn-header-accent-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: linear-gradient(90deg, #bf7c30 0%, #e69d45 60%, #ffd080 100%);
+}
+
+.conn-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: rgba(191, 124, 48, 0.12);
+  border: 1px solid rgba(191, 124, 48, 0.35);
+  color: var(--conn-amber-light);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.conn-pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #e69d45;
+  animation: connPulse 2s infinite ease-in-out;
+}
+
+@keyframes connPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.5;
+  }
+}
+
+.conn-form-main-title {
+  font-size: clamp(1.8rem, 3.4vw, 2.3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #ffffff;
+  margin-bottom: 18px;
+}
+
+.conn-form-main-desc {
+  font-size: 0.96rem;
+  color: var(--conn-text-secondary);
+  line-height: 1.7;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.conn-form-main-desc strong {
+  color: #f1f3f7;
+}
+
+.conn-required-indicator {
+  font-size: 0.84rem;
+  color: #ef4444;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Question List & Modular Question Cards */
+.conn-questions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.conn-question-card {
+  position: relative;
+  background: var(--conn-card-bg);
+  border: 1px solid var(--conn-card-border);
+  border-radius: 16px;
+  padding: 28px 30px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: border-color 0.25s ease;
+}
+
+.conn-question-card:focus-within {
+  border-color: rgba(191, 124, 48, 0.6);
+}
+
+.conn-q-title {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #f1f3f8;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.conn-q-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.conn-q-title-row .conn-q-title {
+  margin-bottom: 0;
+}
+
+.conn-q-title span.req {
+  color: #ef4444;
+  font-weight: 700;
+  margin-left: 4px;
+}
+
+.conn-q-subtext {
+  font-size: 0.82rem;
+  color: var(--conn-text-muted);
+  margin-bottom: 12px;
+}
+
+/* Inputs & Textareas */
+.conn-input,
+.conn-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--conn-input-bg);
+  border: 1px solid var(--conn-input-border);
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 0.94rem;
+  font-family: inherit;
+  transition: all 0.25s ease;
+  outline: none;
+}
+
+.conn-input:focus,
+.conn-textarea:focus {
+  border-color: var(--conn-amber-light);
+  background: rgba(18, 18, 24, 0.95);
+}
+
+.conn-input::placeholder,
+.conn-textarea::placeholder {
+  color: #4f5362;
+}
+
+.conn-textarea {
+  resize: vertical;
+  min-height: 80px;
+  line-height: 1.6;
+}
+
+.conn-input-other {
+  margin-top: 10px;
+}
+
+/* Radio & Options Grid */
+.conn-options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.conn-options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.conn-radio-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.92rem;
+  color: #d8dbe2;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+  user-select: none;
+}
+
+.conn-radio-label:hover {
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+}
+
+.conn-radio-label input[type="radio"] {
+  accent-color: var(--conn-amber);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* Quick Toggle Checkbox */
+.conn-checkbox-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--conn-amber-light);
+  cursor: pointer;
+  user-select: none;
+}
+
+.conn-checkbox-toggle input {
+  accent-color: var(--conn-amber);
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+
+/* Submit Row */
+.conn-form-submit-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.conn-submit-btn {
+  padding: 12px 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #e69d45 0%, #bf7c30 100%);
+  color: #121214;
+  font-size: 0.98rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.conn-submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #f0aa52 0%, #cf8835 100%);
+}
+
+.conn-submit-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.conn-clear-btn {
+  background: none;
+  border: none;
+  color: var(--conn-amber-light);
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.conn-clear-btn:hover {
+  background: rgba(191, 124, 48, 0.12);
+  color: #ffdfa9;
+}
+
+.conn-privacy-note {
+  font-size: 0.76rem;
+  color: var(--conn-text-muted);
+  text-align: left;
+  margin-top: -6px;
+}
+
+/* Spinner */
+.conn-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(0, 0, 0, 0.25);
+  border-top-color: #121214;
+  border-radius: 50%;
+  animation: connSpin 0.7s infinite linear;
+}
+
+@keyframes connSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Success Card */
+.conn-success-card {
+  text-align: center;
+  padding: 50px 30px;
+}
+
+.conn-success-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(191, 124, 48, 0.15);
+  border: 2px solid var(--conn-amber-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  color: var(--conn-amber-light);
+  animation: connPopIn 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes connPopIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.conn-success-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.conn-success-desc {
+  font-size: 1rem;
+  color: var(--conn-text-secondary);
+  line-height: 1.65;
+  max-width: 480px;
+  margin: 0 auto 30px;
+}
+
+.conn-success-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.conn-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #e69d45 0%, #bf7c30 100%);
+  color: #121214;
+  font-weight: 600;
+  font-size: 0.92rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.conn-btn-primary:hover {
+  transform: translateY(-2px);
+  color: #000;
+}
+
+.conn-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 24px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #e2e8f0;
+  font-size: 0.92rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.conn-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+/* Responsiveness */
+@media (max-width: 680px) {
+  .connections-page {
+    padding: 100px 14px 60px;
+  }
+
+  .conn-form-header-card {
+    padding: 30px 20px 24px;
+  }
+
+  .conn-question-card {
+    padding: 22px 18px;
+  }
+
+  .conn-options-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .conn-form-submit-row {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .conn-submit-btn {
+    width: 100%;
+  }
+
+  .conn-clear-btn {
+    text-align: center;
+  }
+}
