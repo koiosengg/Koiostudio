@@ -23,6 +23,12 @@ const PortfolioApplications = lazy(() => import("@/pages/portfolio/Applications"
 const PortfolioBranding = lazy(() => import("@/pages/portfolio/Branding"));
 const ProjectDetailPage = lazy(() => import("@/pages/portfolio/ProjectDetailPage"));
 
+// Lazy load onboarding pages
+const OnboardingHub = lazy(() => import("@/pages/onboarding/OnboardingHub"));
+const AdsOnboarding = lazy(() => import("@/pages/onboarding/AdsOnboarding"));
+const LogoBrandingOnboarding = lazy(() => import("@/pages/onboarding/LogoBrandingOnboarding"));
+const BrandingPackagingOnboarding = lazy(() => import("@/pages/onboarding/BrandingPackagingOnboarding"));
+
 function App() {
   return (
     <BrowserRouter>
@@ -43,6 +49,16 @@ function App() {
             <Route path="connections" element={<Connections />} />
             <Route path="connections/mahi" element={<Connections />} />
             <Route path="circle" element={<Connections />} />
+
+            {/* Client Onboarding Routes */}
+            <Route path="onboarding" element={<OnboardingHub />} />
+            <Route path="onboarding/ads" element={<AdsOnboarding />} />
+            <Route path="onboarding/logo-and-branding" element={<LogoBrandingOnboarding />} />
+            <Route path="onboarding/logo-branding" element={<LogoBrandingOnboarding />} />
+            <Route path="onboarding/branding" element={<LogoBrandingOnboarding />} />
+            <Route path="onboarding/branding-and-packaging" element={<BrandingPackagingOnboarding />} />
+            <Route path="onboarding/branding-packaging" element={<BrandingPackagingOnboarding />} />
+            <Route path="onboarding/packaging" element={<BrandingPackagingOnboarding />} />
 
             {/* Portfolio Main & Sub-categories */}
             <Route path="portfolio" element={<PortfolioHome />} />
