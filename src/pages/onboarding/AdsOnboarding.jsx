@@ -268,11 +268,8 @@ function AdsOnboarding() {
             <div
               style={{ display: "flex", gap: "14px", justifyContent: "center" }}
             >
-              <Link to="/onboarding" className="ob-btn-primary">
-                Back to Onboarding Portal
-              </Link>
-              <Link to="/" className="ob-btn-secondary">
-                Go to Homepage
+              <Link to="/" className="ob-btn-primary">
+                Return to Homepage
               </Link>
             </div>
           </div>
@@ -439,8 +436,8 @@ function AdsOnboarding() {
                 </div>
 
                 <div className="ob-nav-row">
-                  <Link to="/onboarding" className="ob-btn-secondary">
-                    ← Portal Home
+                  <Link to="/" className="ob-btn-secondary">
+                    ← Back to Home
                   </Link>
                   <button
                     type="button"

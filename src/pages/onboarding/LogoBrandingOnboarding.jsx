@@ -311,11 +311,8 @@ function LogoBrandingOnboarding() {
             <div
               style={{ display: "flex", gap: "14px", justifyContent: "center" }}
             >
-              <Link to="/onboarding" className="ob-btn-primary">
-                Back to Portal
-              </Link>
-              <Link to="/" className="ob-btn-secondary">
-                Explore Koiostudio
+              <Link to="/" className="ob-btn-primary">
+                Return to Homepage
               </Link>
             </div>
           </div>
@@ -530,8 +527,8 @@ function LogoBrandingOnboarding() {
                 </div>
 
                 <div className="ob-nav-row">
-                  <Link to="/onboarding" className="ob-btn-secondary">
-                    ← Portal Home
+                  <Link to="/" className="ob-btn-secondary">
+                    ← Back to Home
                   </Link>
                   <button
                     type="button"
