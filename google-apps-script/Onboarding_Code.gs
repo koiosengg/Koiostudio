@@ -1,26 +1,23 @@
 /**
  * ==============================================================================
- * KOIOSTUDIO - SCRIPT 2: CLIENT ONBOARDING (3 FORMS)
+ * KOIOSTUDIO - SCRIPT 2: CLIENT ONBOARDING (2 FORMS)
  * Attach this script to your dedicated Onboarding Google Sheet.
  * Handles:
  *  1. Meta & Google Ads Onboarding (/onboarding/ads)
  *  2. Logo & Brand Discovery Questionnaire (/onboarding/logo-and-branding)
- *  3. Branding & Packaging Intake (/onboarding/branding-and-packaging)
  *
  * Features:
  *  - Appends submission rows to dedicated tabs in the Google Sheet
  *  - Generates a styled Google Document (.docx / Word format, NOT PDF)
- *  - Emails the .docx document and Google Doc link to the Owner (Mahi)
+ *  - Emails the .docx document and Google Doc link to the Owner (Koiostudio)
  *  - Sends a branded confirmation email to the Client & Owner
  * ==============================================================================
  */
 
 const CONFIG = {
-  OWNER_EMAIL: "mahi@koiostudio.com", // <-- Mahi's email address
-  OWNER_NAME: "Mahi",
-  STUDIO_NAME: "Koiostudio",
+  OWNER_EMAIL: "info@koiostudio.com", // <-- Owner & studio notification email
+  OWNER_NAME: "Koiostudio",
   STUDIO_PHONE: "+91 7338658118",
-  STUDIO_EMAIL: "info@koiostudio.com",
   STUDIO_WEBSITE: "https://koiostudio.com",
   FOLDER_NAME: "Koiostudio Onboarding Documents", // Google Drive folder where docs are saved
 };
@@ -31,28 +28,19 @@ function doPost(e) {
     const data = JSON.parse(rawData);
 
     const formType = data.formType || "Client Onboarding";
-    const ss = SpreadsheetApp.getActiveSpreadsheet();
-
     let docUrl = "";
     let docxBlob = null;
     let clientEmail = data.email || data.contactEmail || "";
     let clientName = data.contactPerson || "Valued Client";
     let brandName = data.brandName || data.businessName || data.companyName || "Brand";
 
-    // 1. Log to Google Sheet & Create Document
+    // 1. Create Document & Save to Drive
     if (formType.includes("Ads Onboarding")) {
-      handleAdsOnboardingSheet(ss, data);
       const docResult = createAdsOnboardingDoc(data);
       docUrl = docResult.url;
       docxBlob = docResult.docxBlob;
-    } else if (formType.includes("Logo") || formType.includes("Discovery")) {
-      handleLogoBrandingSheet(ss, data);
+    } else if (formType.includes("Logo") || formType.includes("Discovery") || formType.includes("Branding")) {
       const docResult = createLogoBrandingDoc(data);
-      docUrl = docResult.url;
-      docxBlob = docResult.docxBlob;
-    } else if (formType.includes("Packaging")) {
-      handlePackagingSheet(ss, data);
-      const docResult = createPackagingDoc(data);
       docUrl = docResult.url;
       docxBlob = docResult.docxBlob;
     }
@@ -61,7 +49,7 @@ function doPost(e) {
     sendNotificationToOwner(formType, data, brandName, clientName, clientEmail, docUrl, docxBlob);
 
     if (clientEmail) {
-      sendConfirmationToClient(formType, data, brandName, clientName, clientEmail);
+      sendConfirmationToClient(formType, data, brandName, clientName, clientEmail, docxBlob);
     }
 
     return ContentService.createTextOutput(
@@ -93,87 +81,9 @@ function doGet(e) {
   ).setMimeType(ContentService.MimeType.JSON);
 }
 
-// ==============================================================================
-// GOOGLE SHEETS LOGGING HANDLERS
-// ==============================================================================
 
-function getOrCreateSheet(ss, sheetName, headers) {
-  let sheet = ss.getSheetByName(sheetName);
-  if (!sheet) {
-    sheet = ss.insertSheet(sheetName);
-    sheet.appendRow(headers);
-    const headerRange = sheet.getRange(1, 1, 1, headers.length);
-    headerRange.setBackground("#111827");
-    headerRange.setFontColor("#F9FAFB");
-    headerRange.setFontWeight("bold");
-    sheet.setFrozenRows(1);
-  }
-  return sheet;
-}
 
-function handleAdsOnboardingSheet(ss, d) {
-  const headers = [
-    "Timestamp", "Business Name", "Website", "Industry", "Contact Person", "Designation",
-    "Phone", "Email", "GST Number", "Business Overview", "Campaign Goals", "Objective Details",
-    "Target Age", "Target Gender", "Target Locations", "Target Languages", "Target Interests",
-    "Target Income Group", "Competitors", "Products to Advertise", "Google Ads Budget", "Meta Ads Budget",
-    "Daily Budget", "Duration", "Current Channels", "Previous Ads Experience", "Previous Ad Details",
-    "USP", "Offers", "Creative Assets", "Google Access", "Meta Access", "CMS", "Website Login",
-    "Tracking Setup", "Lead Management", "Target CPL", "Target ROAS", "Monthly Lead Target",
-    "Reporting Frequency", "Additional Notes"
-  ];
-  const sheet = getOrCreateSheet(ss, "Ads Onboarding", headers);
-  sheet.appendRow([
-    new Date(), d.businessName || "", d.website || "", d.industry || "", d.contactPerson || "", d.designation || "",
-    d.phone || "", d.email || "", d.gstNumber || "", d.businessOverview || "", d.campaignGoals || "", d.primaryObjectiveDetails || "",
-    d.targetAge || "", d.targetGender || "", d.targetLocations || "", d.targetLanguages || "", d.targetInterests || "",
-    d.targetIncomeGroup || "", d.competitors || "", d.productsToAdvertise || "", d.googleAdsBudget || "", d.metaAdsBudget || "",
-    d.dailyBudgetPreference || "", d.expectedCampaignDuration || "", d.currentChannels || "", d.previousAdExperience || "", d.previousAdDetails || "",
-    d.usp || "", d.currentOffers || "", d.creativeAssets || "", d.googleAccess || "", d.metaAccess || "", d.cms || "", d.websiteLogin || "",
-    d.trackingSetup || "", d.leadManagement || "", d.targetCPL || "", d.targetROAS || "", d.monthlyLeadTarget || "",
-    d.reportingFrequency || "", d.additionalNotes || ""
-  ]);
-}
 
-function handleLogoBrandingSheet(ss, d) {
-  const headers = [
-    "Timestamp", "Brand Name", "Spelling / Style", "Story & Meaning", "Tagline", "Tagline Open to Suggestions",
-    "Contact Person", "Phone", "Email", "Social Links", "Business Overview", "Brand Values",
-    "Desired Emotions", "Brand Personality", "Business Type", "Delivery Scale", "Ideal Customer",
-    "Target Age Groups", "Product Offerings", "Hero Products", "Has Existing Logo", "Existing Logo Feedback",
-    "Preferred Logo Types", "Logo Feel", "Preferred Shapes", "Elements Wanted", "Elements Avoid",
-    "Preferred Colors", "Avoid Colors", "Color Moods", "Font Styles", "3 Brand Words", "Brand Personified",
-    "Print Collaterals", "Digital Collaterals", "Competitor References", "Moodboard Links", "Vision Future",
-    "Deadline / Launch Date", "Final Notes"
-  ];
-  const sheet = getOrCreateSheet(ss, "Logo & Branding", headers);
-  sheet.appendRow([
-    new Date(), d.brandName || "", d.brandNameSpelling || "", d.brandStoryMeaning || "", d.tagline || "", d.taglineOpenToSuggestions || "",
-    d.contactPerson || "", d.contactPhone || "", d.contactEmail || "", d.socialLinks || "", d.businessOverview || "", d.brandValues || "",
-    d.desiredEmotions || "", d.brandPersonality || "", d.businessType || "", d.deliveryScale || "", d.idealCustomer || "",
-    d.targetAgeGroups || "", d.productOfferings || "", d.heroProducts || "", d.hasExistingLogo || "", d.existingLogoFeedback || "",
-    d.preferredLogoTypes || "", d.logoFeel || "", d.preferredShapes || "", d.elementsWanted || "", d.elementsAvoid || "",
-    d.preferredColors || "", d.avoidColors || "", d.colorMoods || "", d.fontStyles || "", d.brandVoiceThreeWords || "", d.brandPersonified || "",
-    d.printCollaterals || "", d.digitalCollaterals || "", d.competitorReferences || "", d.moodboardLinks || "", d.visionFuture || "",
-    d.deadlineOrLaunchDate || "", d.finalNotes || ""
-  ]);
-}
-
-function handlePackagingSheet(ss, d) {
-  const headers = [
-    "Timestamp", "Brand Name", "Contact Person", "Phone", "Email", "Industry", "Current Website",
-    "Target Launch Date", "Project Objective", "Packaging Types", "SKU Count", "Product Dimensions",
-    "Has Existing Dielines", "Packaging Materials", "Finishing Preferences", "Mandatory Regulatory Elements",
-    "Printer Details", "Collaterals Needed", "Reference Links", "Competitor References", "Budget Range", "Final Instructions"
-  ];
-  const sheet = getOrCreateSheet(ss, "Packaging Onboarding", headers);
-  sheet.appendRow([
-    new Date(), d.brandName || "", d.contactPerson || "", d.contactPhone || "", d.contactEmail || "", d.industry || "", d.currentWebsite || "",
-    d.targetLaunchDate || "", d.projectObjective || "", d.packagingTypes || "", d.skuCount || "", d.productDimensions || "",
-    d.hasExistingDielines || "", d.packagingMaterials || "", d.finishingPreferences || "", d.mandatoryElements || "",
-    d.printerDetails || "", d.collateralsNeeded || "", d.referenceDriveLinks || "", d.competitorReferences || "", d.budgetRange || "", d.finalInstructions || ""
-  ]);
-}
 
 // ==============================================================================
 // GOOGLE DRIVE & DOC GENERATION (IN WORD .DOCX FORMAT, NOT PDF)
@@ -352,62 +262,7 @@ function createLogoBrandingDoc(d) {
   return { url: doc.getUrl(), id: doc.getId(), docxBlob: docxBlob };
 }
 
-function createPackagingDoc(d) {
-  const brandName = d.brandName || "Client";
-  const docTitle = "Packaging Design Brief - " + brandName;
-  const doc = DocumentApp.create(docTitle);
-  const body = doc.getBody();
 
-  formatDocHeader(body, "KOIOSTUDIO | PACKAGING DESIGN", "Branding & Packaging Design Intake Brief", brandName);
-
-  addSectionTitle(body, "1. Brand & Project Information");
-  addKeyValueTable(body, [
-    ["Brand / Company Name", d.brandName || "N/A"],
-    ["Contact Person", d.contactPerson || "N/A"],
-    ["Contact Phone", d.contactPhone || "N/A"],
-    ["Contact Email", d.contactEmail || "N/A"],
-    ["Industry / Category", d.industry || "N/A"],
-    ["Current Website / Social Media", d.currentWebsite || "N/A"],
-    ["Target Launch Date", d.targetLaunchDate || "N/A"],
-    ["Project Objective", d.projectObjective || "N/A"],
-  ]);
-
-  addSectionTitle(body, "2. Packaging Scope, SKUs & Dimensions");
-  addKeyValueTable(body, [
-    ["Packaging Types Required", d.packagingTypes || "N/A"],
-    ["Total SKU Count", d.skuCount || "N/A"],
-    ["Product Dimensions & Net Weight", d.productDimensions || "N/A"],
-    ["Existing Dielines Status", d.hasExistingDielines || "N/A"],
-    ["Packaging Material Preferences", d.packagingMaterials || "N/A"],
-  ]);
-
-  addSectionTitle(body, "3. Finishing, Printing & Regulatory Requirements");
-  addKeyValueTable(body, [
-    ["Finishing Preferences", d.finishingPreferences || "N/A"],
-    ["Mandatory Regulatory Elements", d.mandatoryElements || "N/A"],
-    ["Printer / Manufacturer Details", d.printerDetails || "N/A"],
-  ]);
-
-  addSectionTitle(body, "4. Collaterals, References & Production Budget");
-  addKeyValueTable(body, [
-    ["Additional Packaging Collaterals", d.collateralsNeeded || "N/A"],
-    ["Drive / Dropbox Asset Links", d.referenceDriveLinks || "N/A"],
-    ["Competitor / Benchmark Packaging", d.competitorReferences || "N/A"],
-    ["Target Production Budget", d.budgetRange || "N/A"],
-    ["Final Instructions & Notes", d.finalInstructions || "N/A"],
-  ]);
-
-  doc.saveAndClose();
-
-  const file = DriveApp.getFileById(doc.getId());
-  const folder = getOrCreateTargetFolder();
-  folder.addFile(file);
-  DriveApp.getRootFolder().removeFile(file);
-
-  const docxBlob = exportDocAsDocx(doc.getId(), docTitle);
-
-  return { url: doc.getUrl(), id: doc.getId(), docxBlob: docxBlob };
-}
 
 function formatDocHeader(body, subtitle, title, clientName) {
   const pSub = body.appendParagraph(subtitle);
@@ -523,8 +378,8 @@ function sendNotificationToOwner(formType, data, brandName, clientName, clientEm
   MailApp.sendEmail(emailOptions);
 }
 
-function sendConfirmationToClient(formType, data, brandName, clientName, clientEmail) {
-  const subject = `We've received your onboarding submission – ${CONFIG.STUDIO_NAME}`;
+function sendConfirmationToClient(formType, data, brandName, clientName, clientEmail, docxBlob) {
+  const subject = `We've received your onboarding submission – ${CONFIG.OWNER_NAME}`;
 
   const htmlBody = `
     <div style="font-family: Arial, sans-serif; color: #1f2937; line-height: 1.6; max-width: 600px; margin: 0 auto;">
@@ -558,7 +413,7 @@ function sendConfirmationToClient(formType, data, brandName, clientName, clientE
           <tr>
             <td>
               <strong>Koiostudio Team</strong><br>
-              Email: <a href="mailto:${CONFIG.STUDIO_EMAIL}" style="color: #d97706;">${CONFIG.STUDIO_EMAIL}</a><br>
+              Email: <a href="mailto:${CONFIG.OWNER_EMAIL}" style="color: #d97706;">${CONFIG.OWNER_EMAIL}</a><br>
               Phone: ${CONFIG.STUDIO_PHONE}<br>
               Web: <a href="${CONFIG.STUDIO_WEBSITE}" style="color: #d97706;">${CONFIG.STUDIO_WEBSITE}</a>
             </td>
@@ -568,10 +423,16 @@ function sendConfirmationToClient(formType, data, brandName, clientName, clientE
     </div>
   `;
 
-  MailApp.sendEmail({
+  const emailOptions = {
     to: clientEmail,
     subject: subject,
     htmlBody: htmlBody,
-    replyTo: CONFIG.STUDIO_EMAIL
-  });
+    replyTo: CONFIG.OWNER_EMAIL
+  };
+
+  if (docxBlob) {
+    emailOptions.attachments = [docxBlob];
+  }
+
+  MailApp.sendEmail(emailOptions);
 }

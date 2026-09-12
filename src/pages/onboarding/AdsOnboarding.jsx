@@ -1058,10 +1058,10 @@ function AdsOnboarding() {
                     {status === "submitting" ? (
                       <>
                         <span className="ob-spinner" />
-                        <span>Submitting Onboarding...</span>
+                        <span>Submitting...</span>
                       </>
                     ) : (
-                      <span>Complete & Submit Questionnaire ✓</span>
+                      <span>Submit</span>
                     )}
                   </button>
                 </div>

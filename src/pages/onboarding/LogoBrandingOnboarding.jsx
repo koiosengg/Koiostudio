@@ -1145,10 +1145,10 @@ function LogoBrandingOnboarding() {
                     {status === "submitting" ? (
                       <>
                         <span className="ob-spinner" />
-                        <span>Submitting Brand Discovery...</span>
+                        <span>Submitting...</span>
                       </>
                     ) : (
-                      <span>Complete Brand Discovery ✓</span>
+                      <span>Submit</span>
                     )}
                   </button>
                 </div>
