@@ -51,8 +51,6 @@ function App() {
             {/* Client Onboarding Routes */}
             <Route path="onboarding/ads" element={<AdsOnboarding />} />
             <Route path="onboarding/logo-and-branding" element={<LogoBrandingOnboarding />} />
-            <Route path="onboarding/logo-branding" element={<LogoBrandingOnboarding />} />
-            <Route path="onboarding/branding" element={<LogoBrandingOnboarding />} />
 
             {/* Portfolio Main & Sub-categories */}
             <Route path="portfolio" element={<PortfolioHome />} />

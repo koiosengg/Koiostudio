@@ -194,12 +194,14 @@ function AdsOnboarding() {
     };
 
     try {
-      await fetch(ADS_ONBOARDING_ENDPOINT, {
+      const res = await fetch(ADS_ONBOARDING_ENDPOINT, {
         method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "application/json" },
+        // text/plain avoids CORS preflight — GAS parses via e.postData.contents
+        headers: { "Content-Type": "text/plain;charset=UTF-8" },
         body: JSON.stringify(payload),
       });
+      const data = await res.json();
+      if (data.status !== "success") throw new Error(data.message || "Submission failed");
       setStatus("success");
     } catch (err) {
       console.error(err);
