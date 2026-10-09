@@ -148,11 +148,11 @@ function Footer() {
                 </a>
               </div>
               <div className="footer-more-links">
-                <Link to="/" aria-label="Read Koios Studio Privacy Policy">
+                <Link to="/privacy-policy" aria-label="Read Koios Studio Privacy Policy">
                   <p>Privacy Policy</p>
                 </Link>
                 <p>|</p>
-                <Link to="/" aria-label="Read Koios Studio Terms of Service">
+                <Link to="/privacy-policy" aria-label="Read Koios Studio Terms of Service">
                   <p>Terms of Service</p>
                 </Link>
               </div>

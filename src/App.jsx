@@ -22,6 +22,7 @@ const PortfolioWebsites = lazy(() => import("@/pages/portfolio/Websites"));
 const PortfolioApplications = lazy(() => import("@/pages/portfolio/Applications"));
 const PortfolioBranding = lazy(() => import("@/pages/portfolio/Branding"));
 const ProjectDetailPage = lazy(() => import("@/pages/portfolio/ProjectDetailPage"));
+const PrivacyPolicy = lazy(() => import("@/pages/PrivacyPolicy"));
 
 // Lazy load onboarding pages
 const AdsOnboarding = lazy(() => import("@/pages/onboarding/AdsOnboarding"));
@@ -43,6 +44,7 @@ function App() {
             <Route path="blog/*" element={<Blogs />} />
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="privacy-policy" element={<PrivacyPolicy />} />
             <Route path="mahi/connections" element={<Connections />} />
             <Route path="connections" element={<Connections />} />
             <Route path="connections/mahi" element={<Connections />} />
