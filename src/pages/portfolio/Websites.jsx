@@ -3,7 +3,8 @@ import "@/components/Portfolio/portfolio.css";
 import Banner from "@/components/Portfolio/Websites/Banner";
 import Sidebar from "@/components/Portfolio/Sidebar";
 import Responsive from "@/components/Portfolio/Websites/Responsive";
-import Projects from "@/components/Portfolio/Websites/Projects";
+import Projects from "@/components/Portfolio/Projects";
+import { WEBSITE_PROJECTS } from "@/data/portfolioProjects";
 
 function Websites() {
   const [isOnBanner, setIsOnBanner] = useState(true);
@@ -28,7 +29,7 @@ function Websites() {
       <Banner />
       <Sidebar isOnBanner={isOnBanner} />
       <Responsive />
-      <Projects />
+      <Projects slides={WEBSITE_PROJECTS} />
     </div>
   );
 }

@@ -3,7 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import Banner from "@/components/Blogs/Banner";
 import OurBlogs from "@/components/Blogs/OurBlogs";
 import Vision from "@/components/Blogs/Vision";
-import Projects from "@/components/Portfolio/Websites/Projects";
+import Projects from "@/components/Portfolio/Projects";
+import { WEBSITE_PROJECTS } from "@/data/portfolioProjects";
 import FAQ from "@/components/Home/FAQ";
 import InnerPage from "@/components/Blogs/InnerPage";
 import Connection from "@/components/Blogs/Connection";
@@ -19,7 +20,7 @@ function Blog() {
             <Banner />
             <OurBlogs />
             <Vision />
-            <Projects />
+            <Projects slides={WEBSITE_PROJECTS} />
             <FAQ />
             <Connection />
           </>

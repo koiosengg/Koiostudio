@@ -6,7 +6,8 @@ import Marquee from "@/components/Portfolio/Home/Marquee";
 import Services from "@/components/Portfolio/Home/Services";
 import ViewProjects from "@/components/Portfolio/Home/ViewProjects";
 import Numbers from "@/components/Portfolio/Home/Numbers";
-import Projects from "@/components/Portfolio/Websites/Projects";
+import Projects from "@/components/Portfolio/Projects";
+import { WEBSITE_PROJECTS } from "@/data/portfolioProjects";
 import Gallery from "@/components/Portfolio/Home/Gallery";
 import Identities from "@/components/Portfolio/Home/Identities";
 import FAQ from "@/components/Portfolio/Home/FAQ";
@@ -40,7 +41,7 @@ function Portfolio() {
       <Services />
       <ViewProjects />
       <Numbers />
-      <Projects />
+      <Projects slides={WEBSITE_PROJECTS} />
       <Gallery />
       <Identities />
       <FAQ />

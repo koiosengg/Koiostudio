@@ -3,7 +3,8 @@ import "@/components/Portfolio/portfolio.css";
 import Banner from "@/components/Portfolio/Branding/Banner";
 import Sidebar from "@/components/Portfolio/Sidebar";
 import Designs from "@/components/Portfolio/Branding/Designs";
-import Projects from "@/components/Portfolio/Branding/Projects";
+import Projects from "@/components/Portfolio/Projects";
+import { BRANDING_PROJECTS } from "@/data/portfolioProjects";
 import Mission from "@/components/Portfolio/Branding/Mission";
 import Gallery from "@/components/Portfolio/Branding/Gallery";
 
@@ -32,7 +33,7 @@ function Branding() {
       <Designs />
       <Gallery />
       <Mission />
-      <Projects />
+      <Projects slides={BRANDING_PROJECTS} />
     </div>
   );
 }

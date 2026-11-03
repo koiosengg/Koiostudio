@@ -6,7 +6,8 @@ import Problems from "@/components/Home/Problems";
 import Stories from "@/components/Home/Stories";
 import About from "@/components/Home/About";
 import Industries from "@/components/Home/Industries";
-import Projects from "@/components/Portfolio/Websites/Projects";
+import Projects from "@/components/Portfolio/Projects";
+import { WEBSITE_PROJECTS } from "@/data/portfolioProjects";
 import Creations from "@/components/Home/Creations";
 import Testimony from "@/components/Home/Testimony";
 import FAQ from "@/components/Home/FAQ";
@@ -22,7 +23,7 @@ function Home() {
       <Stories />
       <About />
       <Industries />
-      <Projects />
+      <Projects slides={WEBSITE_PROJECTS} />
       <Creations />
       <Testimony />
       <FAQ />

@@ -4,7 +4,8 @@ import Banner from "@/components/Portfolio/Applications/Banner";
 import Sidebar from "@/components/Portfolio/Sidebar";
 import Gallery from "@/components/Portfolio/Applications/Gallery";
 import Numbers from "@/components/Portfolio/Applications/Numbers";
-import Projects from "@/components/Portfolio/Applications/Projects";
+import Projects from "@/components/Portfolio/Projects";
+import { APPLICATION_PROJECTS } from "@/data/portfolioProjects";
 
 function Applications() {
   const [isOnBanner, setIsOnBanner] = useState(true);
@@ -30,7 +31,7 @@ function Applications() {
       <Sidebar isOnBanner={isOnBanner} />
       <Gallery />
       <Numbers />
-      <Projects />
+      <Projects slides={APPLICATION_PROJECTS} />
     </div>
   );
 }

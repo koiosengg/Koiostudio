@@ -5,7 +5,8 @@ import WhyUs from "@/components/Development/WhyUs";
 import Types from "@/components/Development/Types";
 import Services from "@/components/Designing/Services";
 import Testimony from "@/components/Home/Testimony";
-import Projects from "@/components/Portfolio/Websites/Projects";
+import Projects from "@/components/Portfolio/Projects";
+import { WEBSITE_PROJECTS } from "@/data/portfolioProjects";
 import FAQ from "@/components/Home/FAQ";
 import Connection from "@/components/Home/Connection";
 
@@ -18,7 +19,7 @@ function Development() {
       <Types />
       <Services hide="development" />
       <Testimony />
-      <Projects />
+      <Projects slides={WEBSITE_PROJECTS} />
       <FAQ />
       <Connection />
     </>
