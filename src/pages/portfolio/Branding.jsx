@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "@/components/Portfolio/portfolio.css";
 import Banner from "@/components/Portfolio/Branding/Banner";
 import Sidebar from "@/components/Portfolio/Sidebar";
 import Designs from "@/components/Portfolio/Branding/Designs";
@@ -30,10 +29,10 @@ function Branding() {
     <div className="portfolio portfolio-branding">
       <Banner />
       <Sidebar isOnBanner={isOnBanner} />
-      <Designs />
+      <Projects slides={BRANDING_PROJECTS} />
       <Gallery />
       <Mission />
-      <Projects slides={BRANDING_PROJECTS} />
+      <Designs />
     </div>
   );
 }

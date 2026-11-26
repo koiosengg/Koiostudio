@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "@/components/Portfolio/portfolio.css";
 import Banner from "@/components/Portfolio/Applications/Banner";
 import Sidebar from "@/components/Portfolio/Sidebar";
 import Gallery from "@/components/Portfolio/Applications/Gallery";
@@ -29,9 +28,9 @@ function Applications() {
     <div className="portfolio portfolio-application">
       <Banner />
       <Sidebar isOnBanner={isOnBanner} />
-      <Gallery />
-      <Numbers />
       <Projects slides={APPLICATION_PROJECTS} />
+      <Numbers />
+      <Gallery />
     </div>
   );
 }

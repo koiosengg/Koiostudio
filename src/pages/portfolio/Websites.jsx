@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "@/components/Portfolio/portfolio.css";
 import Banner from "@/components/Portfolio/Websites/Banner";
 import Sidebar from "@/components/Portfolio/Sidebar";
 import Responsive from "@/components/Portfolio/Websites/Responsive";
@@ -28,8 +27,8 @@ function Websites() {
     <div className="portfolio portfolio-website">
       <Banner />
       <Sidebar isOnBanner={isOnBanner} />
-      <Responsive />
       <Projects slides={WEBSITE_PROJECTS} />
+      <Responsive />
     </div>
   );
 }

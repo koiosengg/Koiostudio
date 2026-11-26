@@ -90,7 +90,7 @@ function Footer() {
           <div className="footer-container-bottom">
             <hr></hr>
             <div className="footer-bottom">
-              <p>© 2024 All rights reserved.</p>
+              <p>© 2026 All rights reserved.</p>
               <div className="footer-socials">
                 <a href="#" aria-label="Instagram">
                   <svg
@@ -148,11 +148,17 @@ function Footer() {
                 </a>
               </div>
               <div className="footer-more-links">
-                <Link to="/privacy-policy" aria-label="Read Koios Studio Privacy Policy">
+                <Link
+                  to="/privacy-policy"
+                  aria-label="Read Koios Studio Privacy Policy"
+                >
                   <p>Privacy Policy</p>
                 </Link>
                 <p>|</p>
-                <Link to="/privacy-policy" aria-label="Read Koios Studio Terms of Service">
+                <Link
+                  to="/privacy-policy"
+                  aria-label="Read Koios Studio Terms of Service"
+                >
                   <p>Terms of Service</p>
                 </Link>
               </div>

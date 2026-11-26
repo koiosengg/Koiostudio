@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "@/components/Portfolio/portfolio.css";
 import PortfolioBanner from "@/components/Home/PortfolioBanner";
 import Sidebar from "@/components/Portfolio/Sidebar";
 import Marquee from "@/components/Portfolio/Home/Marquee";
