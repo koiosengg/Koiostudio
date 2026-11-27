@@ -1,0 +1,21 @@
+{
+  "specVersion": "0.91",
+  "host": {
+    "displayName": "KOIOS Studio",
+    "identifier": "koiostudio.com"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:koiostudio.com:docs:llms-txt",
+      "displayName": "KOIOS Studio Overview & Services",
+      "type": "text/markdown",
+      "url": "https://koiostudio.com/llms.txt",
+      "description": "Overview of KOIOS Studio's web design, custom web application development, company branding, digital marketing services, portfolio, and contact information.",
+      "representativeQueries": [
+        "What services does KOIOS Studio offer?",
+        "Show me KOIOS Studio's portfolio and case studies",
+        "How can I contact KOIOS Studio for a web design or branding project?"
+      ]
+    }
+  ]
+}

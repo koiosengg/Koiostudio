@@ -14,6 +14,19 @@
     ],
     "headers": [
       {
+        "source": "/.well-known/ard.json",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/json; charset=utf-8"
+          },
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          }
+        ]
+      },
+      {
         "source": "**/*.@(js|css|woff|woff2|ttf|otf|eot)",
         "headers": [
           {
